@@ -82,5 +82,6 @@ Slider.defaultProps = {
   dots: true,
   arrows: true,
   items: [],
+  size:"fullScreen"
 };
 Slider.autoPlayFlag = null;
