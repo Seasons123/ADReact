@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 
 import Slider from './Slider/Slider';
 
+
+
 const IMAGE_DATA = [
   {
     src: require('./images/fullScreen/1.jpg'),
@@ -24,6 +26,7 @@ const IMAGE_DATA = [
 render(
   <Slider
     items={IMAGE_DATA}
+    size={"fullScreen"}
     speed={1.2}
     delay={2.1}
     pause={true}

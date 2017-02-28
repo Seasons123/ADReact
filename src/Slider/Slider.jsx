@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Slider.css';
+import './css/Slider.css';
 
 import SliderItem from './SliderItem/SliderItem';
 import SliderDots from './SliderDots/SliderDots';
@@ -46,9 +46,10 @@ export default class Slider extends Component {
 
   render() {
     let count = this.props.items.length;
+    let size = this.props.size;
 
     let itemNodes = this.props.items.map((item, idx) => {
-      return <SliderItem item={item} count={count} key={'item' + idx} />;
+      return <SliderItem item={item} count={count} size={size} key={'item' + idx} />;
     });
 
     let arrowsNode = <SliderArrows turn={this.turn.bind(this)}/>;
