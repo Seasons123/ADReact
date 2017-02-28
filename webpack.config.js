@@ -36,14 +36,7 @@ var config = {
         loader: 'babel?presets[]=es2015&presets[]=react',
         exclude: /node_modules/
       },
-      {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'sass'],
-      },
-      {
-        test: /\.css$/,
-        loaders: ['style', 'css'],
-      },
+        { test: /\.css$/, loader: "style!css" },
       {
         test: /\.json$/,
         loader: 'json',

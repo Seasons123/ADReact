@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-require('./Slider.scss');
+import './Slider.css';
 
 import SliderItem from './SliderItem/SliderItem';
 import SliderDots from './SliderDots/SliderDots';
