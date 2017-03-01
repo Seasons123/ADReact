@@ -45,11 +45,6 @@ export default class Slider extends Component {
     this.goPlay();
   }
 
-  function (){
-      let size = this.props.size;
-      className=size;
-  }
-
   render() {
     let count = this.props.items.length;
     let size = this.props.size;
