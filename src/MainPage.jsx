@@ -9,35 +9,31 @@ const IMAGE_DATA = [
     {
         src: require('./images/size7(1008.331)/1.jpg'),
         alt: 'images-1',
-      /*size: 'fullScreen'*/
     },
     {
         src: require('./images/size7(1008.331)/2.jpg'),
         alt: 'images-2',
-      /*size: 'fullScreen'*/
     },
     {
         src: require('./images/size7(1008.331)/1.jpg'),
         alt: 'images-3',
-      /*size: 'fullScreen'*/
     },
 ];
 
 var MainPage=React.createClass({
   render:function(){
+
     return(
-
-      <Slider
-          items={IMAGE_DATA}
-          size={"size7"}
-          speed={1.2}
-          delay={2.1}
-          pause={true}
-          autoplay={true}
-          dots={true}
-          arrows={true}
-      />
-
+          <Slider
+              items={IMAGE_DATA}
+              size={"size7"}
+              speed={1.2}
+              delay={2.1}
+              pause={true}
+              autoplay={true}
+              dots={true}
+              arrows={true}
+          />
     );
   },
 });

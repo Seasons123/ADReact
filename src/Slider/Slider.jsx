@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/Slider.css';
+import './css/pictureSize.css';
 
 import SliderItem from './SliderItem/SliderItem';
 import SliderDots from './SliderDots/SliderDots';
@@ -44,6 +45,11 @@ export default class Slider extends Component {
     this.goPlay();
   }
 
+  function (){
+      let size = this.props.size;
+      className=size;
+  }
+
   render() {
     let count = this.props.items.length;
     let size = this.props.size;
@@ -57,18 +63,20 @@ export default class Slider extends Component {
     let dotsNode = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
     return (
-      <div
-        className="slider"
-        onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
-          <ul style={{
-              left: -100 * this.state.nowLocal + "%",
-              transitionDuration: this.props.speed + "s",
-              width: this.props.items.length * 100 + "%"
-            }}>
-              {itemNodes}
-          </ul>
-          {this.props.arrows?arrowsNode:null}
-          {this.props.dots?dotsNode:null}
+        <div  className={this.props.size}>
+            <div
+            className="slider"
+            onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
+              <ul style={{
+                  left: -100 * this.state.nowLocal + "%",
+                  transitionDuration: this.props.speed + "s",
+                  width: this.props.items.length * 100 + "%"
+                }}>
+                  {itemNodes}
+              </ul>
+              {this.props.arrows?arrowsNode:null}
+              {this.props.dots?dotsNode:null}
+            </div>
         </div>
       );
   }
