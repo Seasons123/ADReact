@@ -27,7 +27,7 @@ var MainPage=React.createClass({
           <Slider
               items={IMAGE_DATA}
               size={"size7"}
-              speed={1.2}
+              speed={0.4}
               delay={2.1}
               pause={true}
               autoplay={true}
