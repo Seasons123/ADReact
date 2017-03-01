@@ -5,7 +5,7 @@ var isProduction = function () {
   return process.env.NODE_ENV === 'production';
 };
 
-var entry = './src/index.js';
+var entry = './index.js';
 var outputPath = './dist';
 
 var plugins = [];
