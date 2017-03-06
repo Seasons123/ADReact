@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import '../../slider/css/SliderItem.css';
 
