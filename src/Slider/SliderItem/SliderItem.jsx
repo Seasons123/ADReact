@@ -15,7 +15,7 @@ export default class SliderItem extends Component {
         for(let i = 0; i < count; i++) {
               if(i === this.props.nowLocal){
                   texts[i] = (
-                      <div key={'text' + i} className="text" style={{color: item.textColor}}>
+                      <div key={'text' + i} className={item.textPosition} style={{color: item.textColor}}>
                           <TweenOne animation={{x: 100, opacity: 0, type: 'from', delay: 200}} name="TweenOne">
                               <h1>{item.textHeader}</h1>
                           </TweenOne>
@@ -27,7 +27,6 @@ export default class SliderItem extends Component {
                   )
               }
         }
-
 
         return (
             <li className="slider-item" style={{width: width}}>
