@@ -9,6 +9,10 @@ const IMAGE_DATA = [
     {
         src: require('./images/size7(1008.331)/1.jpg'),
         alt: 'images-1',
+        textHeader:'Banner animation demo',
+        textOne:'Today is not another day ,today I will create something beautiful ',
+        textTwo:'Study hard , play harder',
+        textColor:'#323232'
     },
     {
         src: require('./images/size7(1008.331)/2.jpg'),
@@ -17,6 +21,10 @@ const IMAGE_DATA = [
     {
         src: require('./images/size7(1008.331)/1.jpg'),
         alt: 'images-3',
+        textHeader:'Banner animation demo picture 3',
+        textOne:'Today is not another day ,today I will create something beautiful ',
+        textTwo:'Study hard , play harder',
+        textColor:'#323232'
     },
 ];
 

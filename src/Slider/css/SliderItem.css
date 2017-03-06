@@ -1,0 +1,9 @@
+.slider-item{
+  position:relative;
+}
+.slider-item .text{
+  position:absolute;
+  left:60px;
+  top:10px;
+  z-index: 1000;
+}

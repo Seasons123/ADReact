@@ -48,9 +48,10 @@ export default class Slider extends Component {
   render() {
     let count = this.props.items.length;
     let size = this.props.size;
+    let nowLocal = this.state.nowLocal;
 
     let itemNodes = this.props.items.map((item, idx) => {
-      return <SliderItem item={item} count={count} size={size} key={'item' + idx} />;
+      return <SliderItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
     });
 
     let arrowsNode = <SliderArrows turn={this.turn.bind(this)}/>;
