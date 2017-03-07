@@ -1,19 +1,93 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './css/Slider.css';
 import './css/pictureSize.css';
+import './css/banner.css';
 
 import SliderItem from './SliderItem/SliderItem';
 import SliderDots from './SliderDots/SliderDots';
 import SliderArrows from './SliderArrows/SliderArrows';
-
+//alipay start
+import QueueAnim from 'rc-queue-anim';
+import BannerAnim from 'rc-banner-anim';
+import TweenOne from 'rc-tween-one';
+const { Element } = BannerAnim;
+const BgElement = Element.BgElement;
+//alipay end
 export default class Slider extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super(...arguments);
     this.state = {
       nowLocal: 0,
+      children: [
+        <Element key="element1" prefixCls="banner-user-elem">
+          <BgElement key="bg" className="bg "
+                     style={{
+                         backgroundImage:'url(' + this.props.items[0].src + ')',
+                         backgroundSize: 'cover',
+                         backgroundPosition: 'center',
+                     }}
+          />
+          <QueueAnim name="QueueAnim">
+            <h1 key="h1">{this.props.items[0].textHeader}</h1>
+            <p key="p">{this.props.items[0].textOne}</p>
+          </QueueAnim>
+          <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
+              {this.props.items[0].textTwo}
+          </TweenOne>
+        </Element>,
+        <Element key="element2" prefixCls="banner-user-elem">
+          <BgElement key="bg" className="bg"
+                     style={{
+                         backgroundImage: 'url(' + this.props.items[1].src + ')',
+                         backgroundSize: 'cover',
+                         backgroundPosition: 'center',
+                     }}
+          />
+          <QueueAnim name="QueueAnim">
+            <h1 key="h1">{this.props.items[1].textHeader}</h1>
+            <p key="p">{this.props.items[1].textOne}</p>
+          </QueueAnim>
+          <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
+              {this.props.items[1].textTwo}
+          </TweenOne>
+        </Element>
+      ],
     };
+    [].forEach((method) => this[method] = this[method].bind(this));
   }
+    componentDidMount2() {
+        const children = this.state.children;
 
+        setTimeout(() => {
+            children.push(
+                <Element key="element3" prefixCls="banner-user-elem">
+                  <BgElement key="bg" className="bg"
+                             style={{
+                                 backgroundImage: 'url(' + this.props.items[2].src + ')',
+                                 backgroundSize: 'cover',
+                                 backgroundPosition: 'center',
+                             }}
+                  />
+                  <QueueAnim name="QueueAnim">
+                    <h1 key="h1">{this.props.items[2].textHeader}</h1>
+                    <p key="p">{this.props.items[2].textOne}</p>
+                  </QueueAnim>
+                  <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
+                      {this.props.items[2].textTwo}
+                  </TweenOne>
+                </Element>
+            );
+            this.setState({
+                children,
+            });
+        }, 2000);
+    }
+
+
+
+
+
+  /*old slider code start*/
   // 向前向后多少
   turn(n) {
     console.log();
@@ -26,7 +100,6 @@ export default class Slider extends Component {
     }
     this.setState({nowLocal: _n});
   }
-
   // 开始自动轮播
   goPlay() {
     if(this.props.autoplay) {
@@ -35,47 +108,61 @@ export default class Slider extends Component {
       }, this.props.delay * 1000);
     }
   }
-
   // 暂停自动轮播
   pausePlay() {
     clearInterval(this.autoPlayFlag);
   }
-
   componentDidMount() {
-    this.goPlay();
+    if(this.props.animType =="Slider"){
+        this.goPlay();
+    }else{
+        this.componentDidMount2();
+    }
+
   }
+  /*old slider code end*/
 
   render() {
-    let count = this.props.items.length;
-    let size = this.props.size;
-    let nowLocal = this.state.nowLocal;
+    if(this.props.animType =="Slider"){
+        let count = this.props.items.length;
+        let size = this.props.size;
+        let nowLocal = this.state.nowLocal;
 
-    let itemNodes = this.props.items.map((item, idx) => {
-      return <SliderItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
-    });
+        let itemNodes = this.props.items.map((item, idx) => {
+            return <SliderItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
+        });
 
-    let arrowsNode = <SliderArrows turn={this.turn.bind(this)}/>;
+        let arrowsNode = <SliderArrows turn={this.turn.bind(this)}/>;
 
-    let dotsNode = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
+        let dotsNode = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
-    return (
-        <div  className={this.props.size}>
-            <div
-            className="slider"
-            onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
-              <ul style={{
-                  left: -100 * this.state.nowLocal + "%",
-                  transitionDuration: this.props.speed + "s",
-                  width: this.props.items.length * 100 + "%"
+        return (
+            <div  className={this.props.size}>
+              <div
+                  className="slider"
+                  onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
+                <ul style={{
+                    left: -100 * this.state.nowLocal + "%",
+                    transitionDuration: this.props.speed + "s",
+                    width: this.props.items.length * 100 + "%"
                 }}>
-                  {itemNodes}
-              </ul>
-              {this.props.arrows?arrowsNode:null}
-              {this.props.dots?dotsNode:null}
+                    {itemNodes}
+                </ul>
+                  {this.props.arrows?arrowsNode:null}
+                  {this.props.dots?dotsNode:null}
+              </div>
             </div>
-        </div>
-      );
+        );
+     }
+    else{
+        return (
+            <BannerAnim type={this.props.animType}>
+                {this.state.children}
+            </BannerAnim>
+        );
+    }
   }
+
 }
 
 Slider.defaultProps = {
@@ -86,6 +173,8 @@ Slider.defaultProps = {
   dots: true,
   arrows: true,
   items: [],
-  size:"fullScreen"
+  size:"fullScreen",
+  animType:"Slider"
 };
 Slider.autoPlayFlag = null;
+
