@@ -19,7 +19,7 @@ export default class Slider extends Component {
     this.state = {
       nowLocal: 0,
       children: [
-        <Element key="element1" prefixCls="banner-user-elem">
+        <Element key="element1" prefixCls="banner-user-elem" >
           <BgElement key="bg" className="bg "
                      style={{
                          backgroundImage:'url(' + this.props.items[0].src + ')',
@@ -27,15 +27,17 @@ export default class Slider extends Component {
                          backgroundPosition: 'center',
                      }}
           />
-          <QueueAnim name="QueueAnim">
-            <h1 key="h1">{this.props.items[0].textHeader}</h1>
-            <p key="p">{this.props.items[0].textOne}</p>
-          </QueueAnim>
-          <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
-              {this.props.items[0].textTwo}
-          </TweenOne>
+          <div  className={this.props.items[0].textPosition} style={{color:this.props.items[0].textColor}}>
+              <QueueAnim name="QueueAnim">
+                <h1 key="h1">{this.props.items[0].textHeader}</h1>
+                <p key="p">{this.props.items[0].textOne}</p>
+              </QueueAnim>
+              <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
+                  {this.props.items[0].textTwo}
+              </TweenOne>
+          </div>
         </Element>,
-        <Element key="element2" prefixCls="banner-user-elem">
+        <Element key="element2" prefixCls="banner-user-elem" >
           <BgElement key="bg" className="bg"
                      style={{
                          backgroundImage: 'url(' + this.props.items[1].src + ')',
@@ -43,13 +45,15 @@ export default class Slider extends Component {
                          backgroundPosition: 'center',
                      }}
           />
-          <QueueAnim name="QueueAnim">
-            <h1 key="h1">{this.props.items[1].textHeader}</h1>
-            <p key="p">{this.props.items[1].textOne}</p>
-          </QueueAnim>
-          <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
-              {this.props.items[1].textTwo}
-          </TweenOne>
+          <div  className={this.props.items[1].textPosition} style={{color: this.props.items[1].textColor}}>
+              <QueueAnim name="QueueAnim">
+                <h1 key="h1">{this.props.items[1].textHeader}</h1>
+                <p key="p">{this.props.items[1].textOne}</p>
+              </QueueAnim>
+              <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
+                  {this.props.items[1].textTwo}
+              </TweenOne>
+          </div>
         </Element>
       ],
     };
@@ -60,7 +64,7 @@ export default class Slider extends Component {
 
         setTimeout(() => {
             children.push(
-                <Element key="element3" prefixCls="banner-user-elem">
+                <Element key="element3" prefixCls="banner-user-elem" >
                   <BgElement key="bg" className="bg"
                              style={{
                                  backgroundImage: 'url(' + this.props.items[2].src + ')',
@@ -68,13 +72,15 @@ export default class Slider extends Component {
                                  backgroundPosition: 'center',
                              }}
                   />
-                  <QueueAnim name="QueueAnim">
-                    <h1 key="h1">{this.props.items[2].textHeader}</h1>
-                    <p key="p">{this.props.items[2].textOne}</p>
-                  </QueueAnim>
-                  <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
-                      {this.props.items[2].textTwo}
-                  </TweenOne>
+                  <div  className={this.props.items[2].textPosition} style={{color: this.props.items[2].textColor}}>
+                      <QueueAnim name="QueueAnim" >
+                        <h1 key="h1">{this.props.items[2].textHeader}</h1>
+                        <p key="p">{this.props.items[2].textOne}</p>
+                      </QueueAnim>
+                      <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2" >
+                          {this.props.items[2].textTwo}
+                      </TweenOne>
+                  </div>
                 </Element>
             );
             this.setState({
@@ -156,7 +162,7 @@ export default class Slider extends Component {
      }
     else{
         return (
-            <div  className={this.props.size}>
+            <div  className={this.props.size }>
                 <BannerAnim type={this.props.animType}>
                     {this.state.children}
                 </BannerAnim>

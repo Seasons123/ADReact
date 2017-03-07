@@ -7,7 +7,8 @@
   height: 100%;
 }
 .banner-anim-elem > * {
-  position: relative;
+  /*Comment out temporarily, may cause errors*/
+  /*position: relative;*/
 }
 .banner-anim-elem-mask {
   position: relative;
