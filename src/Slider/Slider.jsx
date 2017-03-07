@@ -156,9 +156,11 @@ export default class Slider extends Component {
      }
     else{
         return (
-            <BannerAnim type={this.props.animType}>
-                {this.state.children}
-            </BannerAnim>
+            <div  className={this.props.size}>
+                <BannerAnim type={this.props.animType}>
+                    {this.state.children}
+                </BannerAnim>
+            </div>
         );
     }
   }

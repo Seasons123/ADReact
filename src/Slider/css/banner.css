@@ -1,7 +1,7 @@
 .banner-anim {
   position: relative;
   overflow: hidden;
-  min-height: 100px;
+  height: 100%;
 }
 .banner-anim-elem {
   height: 100%;
