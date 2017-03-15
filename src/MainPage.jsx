@@ -36,7 +36,8 @@ var MainPage=React.createClass({
     return(
           <Banner
               items={IMAGE_DATA}
-              size={"size5"}
+              width={'960px'}
+              height={'380px'}
               speed={0.4}
               delay={2.1}
               pause={true}

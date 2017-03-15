@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import './css/banner.css';
-import './css/pictureSize.css';
 import './css/banner-anim.css';
 
 import BannerItem from './BannerItem/BannerItem';
@@ -131,11 +130,12 @@ export default class Banner extends Component {
   render() {
     if(this.props.animType =="Slider"){
         let count = this.props.items.length;
-        let size = this.props.size;
+        let width = this.props.width;
+        let height = this.props.height;
         let nowLocal = this.state.nowLocal;
 
         let itemNodes = this.props.items.map((item, idx) => {
-            return <BannerItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
+            return <BannerItem item={item} count={count}  nowLocal={nowLocal} key={'item' + idx} />;
         });
 
         let arrowsNode = <BannerArrows turn={this.turn.bind(this)}/>;
@@ -143,7 +143,7 @@ export default class Banner extends Component {
         let dotsNode = <BannerDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
         return (
-            <div  className={this.props.size}>
+            <div style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
               <div
                   className="slider"
                   onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
@@ -162,7 +162,7 @@ export default class Banner extends Component {
      }
     else{
         return (
-            <div  className={this.props.size }>
+            <div  style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
                 <BannerAnim type={this.props.animType}>
                     {this.state.children}
                 </BannerAnim>
