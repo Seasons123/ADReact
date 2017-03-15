@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import './css/Slider.css';
-import './css/pictureSize.css';
 import './css/banner.css';
+import './css/pictureSize.css';
+import './css/banner-anim.css';
 
-import SliderItem from './SliderItem/SliderItem';
-import SliderDots from './SliderDots/SliderDots';
-import SliderArrows from './SliderArrows/SliderArrows';
+import SliderItem from './BannerItem/BannerItem';
+import SliderDots from './BannerDots/BannerDots';
+import SliderArrows from './BannerArrows/BannerArrows';
 //alipay start
 import QueueAnim from 'rc-queue-anim';
 import BannerAnim from 'rc-banner-anim';
@@ -13,7 +13,7 @@ import TweenOne from 'rc-tween-one';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 //alipay end
-export default class Slider extends Component {
+export default class Banner extends Component {
   constructor() {
     super(...arguments);
     this.state = {
@@ -173,7 +173,7 @@ export default class Slider extends Component {
 
 }
 
-Slider.defaultProps = {
+Banner.defaultProps = {
   speed: 1,
   delay: 2,
   pause: true,
@@ -184,5 +184,5 @@ Slider.defaultProps = {
   size:"fullScreen",
   animType:"Slider"
 };
-Slider.autoPlayFlag = null;
+Banner.autoPlayFlag = null;
 

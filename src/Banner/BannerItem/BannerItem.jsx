@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one';
-import '../../slider/css/SliderItem.css';
+import '../css/BannerItem.css';
 
-export default class SliderItem extends Component {
+export default class BannerItem extends Component {
   constructor(props) {
     super(props);
   }

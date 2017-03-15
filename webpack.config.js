@@ -6,7 +6,7 @@ var isProduction = function () {
 };
 
 var entry = './index.js';
-var outputPath = './dist';
+var outputPath = './build';
 
 var plugins = [];
 if( isProduction() ) {

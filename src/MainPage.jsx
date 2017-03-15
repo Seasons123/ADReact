@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Slider from './Slider/Slider';
+import Banner from './Banner/Banner';
 
 
 
@@ -34,7 +34,7 @@ var MainPage=React.createClass({
   render:function(){
 
     return(
-          <Slider
+          <Banner
               items={IMAGE_DATA}
               size={"size5"}
               speed={0.4}
