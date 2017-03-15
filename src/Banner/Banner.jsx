@@ -3,9 +3,9 @@ import './css/banner.css';
 import './css/pictureSize.css';
 import './css/banner-anim.css';
 
-import SliderItem from './BannerItem/BannerItem';
-import SliderDots from './BannerDots/BannerDots';
-import SliderArrows from './BannerArrows/BannerArrows';
+import BannerItem from './BannerItem/BannerItem';
+import BannerDots from './BannerDots/BannerDots';
+import BannerArrows from './BannerArrows/BannerArrows';
 //alipay start
 import QueueAnim from 'rc-queue-anim';
 import BannerAnim from 'rc-banner-anim';
@@ -135,12 +135,12 @@ export default class Banner extends Component {
         let nowLocal = this.state.nowLocal;
 
         let itemNodes = this.props.items.map((item, idx) => {
-            return <SliderItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
+            return <BannerItem item={item} count={count} size={size} nowLocal={nowLocal} key={'item' + idx} />;
         });
 
-        let arrowsNode = <SliderArrows turn={this.turn.bind(this)}/>;
+        let arrowsNode = <BannerArrows turn={this.turn.bind(this)}/>;
 
-        let dotsNode = <SliderDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
+        let dotsNode = <BannerDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
         return (
             <div  className={this.props.size}>
