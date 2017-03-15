@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import './css/banner.css';
 import './css/banner-anim.css';
 
-import BannerItem from './BannerItem/BannerItem';
-import BannerDots from './BannerDots/BannerDots';
-import BannerArrows from './BannerArrows/BannerArrows';
+import BannerItem from './Animation/slider/BannerItem';
+import BannerDots from './Animation/slider/BannerDots';
+import BannerArrows from './Animation/slider/BannerArrows';
 //alipay start
 import QueueAnim from 'rc-queue-anim';
 import BannerAnim from 'rc-banner-anim';
@@ -130,8 +130,6 @@ export default class Banner extends Component {
   render() {
     if(this.props.animType =="Slider"){
         let count = this.props.items.length;
-        let width = this.props.width;
-        let height = this.props.height;
         let nowLocal = this.state.nowLocal;
 
         let itemNodes = this.props.items.map((item, idx) => {

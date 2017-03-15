@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one';
-import '../css/BannerItem.css';
+import '../../css/BannerItem.css';
 
 export default class BannerItem extends Component {
   constructor(props) {
