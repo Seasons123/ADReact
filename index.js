@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import App from './src/App.jsx';
-import MainPage from './src/MainPage.jsx';
+import App from './ad/App.jsx';
+import MainPage from './ad/MainPage.jsx';
 
 render((
     <Router history={browserHistory}>
