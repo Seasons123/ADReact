@@ -44,7 +44,7 @@ var MainPage=React.createClass({
               autoplay={true}
               dots={true}
               arrows={true}
-              animType={"slider"}
+              animType={"Slider"}
           />
     );
   },
