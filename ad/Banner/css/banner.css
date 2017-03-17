@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
 }
+.adRoot{
+  margin-top:18px;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 .slider {
   overflow: hidden;
@@ -30,8 +35,8 @@
 
 .slider .slider-arrow {
   display: inline-block;
-  color: #fff;
-  font-size: 50px;
+  color: #efefef;
+  font-size: 45px;
   position: absolute;
   top: 50%;
   margin-top: -50px;
@@ -63,20 +68,22 @@
 
 .slider .slider-dots-wrap .slider-dot {
   display: inline-block;
-  width: 6px;
-  height: 6px;
-  border: 3px solid #ccc;
+  width: 10px;
+  height: 10px;
+  /*border: 3px solid #ccc;*/
+  background:  #ccc;
   margin: 6px;
   cursor: pointer;
   border-radius: 20px;
 }
 
 .slider .slider-dots-wrap .slider-dot:hover {
-  border: 3px solid #868686;
+  /*border: 3px solid #868686;*/
+  background: #fff;
 }
 
 .slider .slider-dots-wrap .slider-dot.slider-dot-selected {
-  background: #ccc;
+  background: #fff;
 }
 
 

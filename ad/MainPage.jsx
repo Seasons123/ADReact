@@ -38,13 +38,13 @@ var MainPage=React.createClass({
               items={IMAGE_DATA}
               width={'960px'}
               height={'380px'}
-              speed={0.4}
-              delay={2.1}
+              speed={0.6}
+              delay={2.6}
               pause={true}
               autoplay={true}
               dots={true}
               arrows={true}
-              animType={"grid"}
+              animType={"slider"}
           />
     );
   },
