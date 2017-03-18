@@ -5,4 +5,3 @@ npm install -d
 npm run server
 // 开发环境打包依赖
 
-s
