@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "description": "react plug-in",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-runtime": "6.x",
+    "rc-tween-one": "~1.0.0",
+    "style-utils": "~0.1.10",
+    "tween-functions": "1.x"
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "devDependencies": {
     "babel-core": "^6.5.2",
     "babel-loader": "^6.2.3",
@@ -13,23 +21,39 @@
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "node-sass": "^3.4.2",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+
+    "expect.js": "0.3.x",
+    "pre-commit": "1.x",
+    "rc-tools": "5.x",
+    "react": "15.x",
+    "react-addons-test-utils": "15.x",
+    "react-dom": "15.x",
+    "rc-queue-anim": "0.11.x"
   },
   "scripts": {
     "clean": "rm -rf dist",
     "dist": "npm run clean && NODE_ENV=production webpack --progress --colors",
     "server": "node devServer.js",
-    "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js  --progress --colors --watch"
+    "build": "npm run clean && NODE_ENV=development webpack --config webpack.config.js  --progress --colors --watch",
+
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub --babel-runtime",
+    "lint": "rc-tools run lint",
+    "karma": "rc-tools run karma",
+    "saucelabs": "rc-tools run saucelabs",
+    "test": "rc-tools run test",
+    "chrome-test": "rc-tools run chrome-test",
+    "coverage": "rc-tools run coverage"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TongchengQiu/react-slider.git"
+    "url": "https://github.com/Seasons123/ADReact.git"
   },
-  "author": "qiutc",
+  "author": "peichunyan",
   "license": "ISC"
 }
