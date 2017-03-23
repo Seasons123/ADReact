@@ -6,9 +6,9 @@ import BannerItem from './Animation/slider/BannerItem';
 import BannerDots from './Animation/slider/BannerDots';
 import BannerArrows from './Animation/slider/BannerArrows';
 //alipay start
-import QueueAnim from 'rc-queue-anim';
-import BannerAnim from 'rc-banner-anim';
-import TweenOne from 'rc-tween-one';
+import QueueAnim from './Animation/QueueAnim/index';
+import BannerAnim from './Animation/BannerAnim/index';
+import TweenOne from './Animation/TweenOne/index';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 //alipay end
