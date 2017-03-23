@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import App from './ad/App.jsx';
+import App from 'App.jsx';
 import MainPage from './ad/MainPage.jsx';
 
 render((
