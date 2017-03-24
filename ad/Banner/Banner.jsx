@@ -5,13 +5,13 @@ import './css/banner-anim.css';
 import BannerItem from './Animation/slider/BannerItem';
 import BannerDots from './Animation/slider/BannerDots';
 import BannerArrows from './Animation/slider/BannerArrows';
-//alipay start
+
 import QueueAnim from './Animation/QueueAnim/index';
 import BannerAnim from './Animation/BannerAnim/index';
 import TweenOne from './Animation/TweenOne/index';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
-//alipay end
+
 export default class Banner extends Component {
   constructor() {
     super(...arguments);
