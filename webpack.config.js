@@ -33,7 +33,7 @@ var config = {
     loaders: [
       {
         test: /(\.jsx|\.js)$/,
-        loader: 'babel?presets[]=es2015&presets[]=react',
+        loader: 'babel?presets[]=es2015&presets[]=react&presets[]=stage-0',
         exclude: /node_modules/
       },
         { test: /\.css$/, loader: "style!css" },
