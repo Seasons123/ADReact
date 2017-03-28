@@ -1,6 +1,6 @@
 /* eslint-disable */
 /**
- * Created by jljsj on 15/12/22.
+ * Created by pcy 17/3/28.
  * The algorithm is GSAP BezierPlugin VERSION: beta 1.3.4
  */
 import {

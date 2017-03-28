@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
 /**
- * Created by jljsj on 16/1/27.
+ * Created by pcy 17/3/28.
  */
 import easingTypes from './easing';
 import _plugin from './plugins';
