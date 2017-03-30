@@ -30,14 +30,6 @@ class TweenOne extends Component {
     this.start();
   }
 
-
-
-
-
-
-
-
-
   start = () => {
     this.updateAnim = null;
     const props = this.props;
@@ -58,8 +50,6 @@ class TweenOne extends Component {
     }
     this.rafID = ticker.add(this.raf);
   }
-
-
 
   frame = () => {
     let moment = (ticker.frame - this.startFrame) * perFrame + this.startMoment;
