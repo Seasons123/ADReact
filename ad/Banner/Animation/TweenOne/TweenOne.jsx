@@ -20,7 +20,6 @@ class TweenOne extends Component {
     this.paused = this.props.paused;
     this.reverse = this.props.reverse;
     this.onChange = this.props.onChange;
-    this.newMomentAnim = false;
     this.updateAnim = null;
   }
 
@@ -87,30 +86,6 @@ class TweenOne extends Component {
 
   render() {
     const props = { ...this.props };
-    [
-      'animation',
-      'component',
-      'reverseDelay',
-      'attr',
-      'paused',
-      'reverse',
-      'moment',
-      'resetStyleBool',
-      'updateReStart',
-      'willChange',
-    ].forEach(key => delete props[key]);
-    props.style = { ...this.props.style };
-    Object.keys(props.style).forEach(p => {
-      if (p.match(/filter/i)) {
-        ['Webkit', 'Moz', 'Ms', 'ms'].forEach(prefix =>
-          props.style[`${prefix}Filter`] = props.style[p]);
-      }
-    });
-    props.component = typeof props.component === 'function' ?
-      this.props.componentReplace : props.component;
-    if (!props.component) {
-      delete props.component;
-    }
     return React.createElement(this.props.component, props);
   }
 }
