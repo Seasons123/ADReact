@@ -6,9 +6,8 @@ import BannerItem from './Animation/slider/BannerItem';
 import BannerDots from './Animation/slider/BannerDots';
 import BannerArrows from './Animation/slider/BannerArrows';
 
-import QueueAnim from './Animation/QueueAnim/index';
-import BannerAnim from './Animation/BannerAnim/index';
-import TweenOne from './Animation/TweenOne/index';
+import QueueAnim from './Animation/QueueAnim/QueueAnim';
+import BannerAnim from './Animation/BannerAnim/BannerAnim';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 

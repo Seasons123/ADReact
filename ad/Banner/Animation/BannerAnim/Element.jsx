@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import BgElement from './BgElement';
-import TweenOne from '../TweenOne/index';
+import TweenOne from '../TweenOne/TweenOne';
 import ticker from '../TweenOne/ticker';
 import ease from 'tween-functions';
 import {
