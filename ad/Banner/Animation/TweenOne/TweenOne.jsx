@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import ReactDom from 'react-dom';
-import { dataToArray, objectEqual } from './util';
+import { dataToArray } from './util';
 import { stylesToCss } from 'style-utils';
 import TimeLine from './TimeLine';
 import plugins from './plugins';
