@@ -30,90 +30,13 @@ class TweenOne extends Component {
     this.start();
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.onChange = nextProps.onChange;
-    // 跳帧事件 moment;
-    const newMoment = nextProps.moment;
-    this.newMomentAnim = false;
-    if (typeof newMoment === 'number' && newMoment !== this.moment) {
-      this.startMoment = newMoment;
-      this.startFrame = ticker.frame;
-      if (this.rafID === -1 && !nextProps.paused) {
-        this.timeLine.resetAnimData();
-        const style = nextProps.style;
-        this.dom.setAttribute('style', '');
-        Object.keys(style).forEach(key => {
-          this.dom.style[key] = stylesToCss(key, style[key]);
-        });
-        this.play();
-      } else {
-        this.newMomentAnim = true;
-      }
-    }
-    // 动画处理
-    const newAnimation = nextProps.animation;
-    const currentAnimation = this.props.animation;
-    const equal = objectEqual(currentAnimation, newAnimation);
-    const styleEqual = objectEqual(this.props.style, nextProps.style);
-    // 如果 animation 不同， 在下一帧重新动画
-    if (!equal) {
-      if (this.rafID !== -1) {
-        this.updateAnim = 'update';
-      } else if (nextProps.updateReStart) {
-        this.startFrame = ticker.frame;
-        this.updateAnim = 'start';
-      }
-    }
 
-    if (!styleEqual) {
-      // 在动画时更改了 style, 作为更改开始数值。
-      if (this.rafID !== -1) {
-        this.updateStartStyle = true;
-      }
-    }
 
-    // 暂停倒放
-    if (this.paused !== nextProps.paused || this.reverse !== nextProps.reverse) {
-      this.paused = nextProps.paused;
-      this.reverse = nextProps.reverse;
-      if (this.paused) {
-        this.cancelRequestAnimationFrame();
-      } else {
-        if (this.reverse && nextProps.reverseDelay) {
-          this.cancelRequestAnimationFrame();
-          ticker.timeout(this.restart, nextProps.reverseDelay);
-        } else {
-          this.restart();
-        }
-      }
-    }
-  }
 
-  componentDidUpdate() {
-    // 样式更新了后再执行动画；
-    if (this.updateAnim === 'start') {
-      this.start();
-    }
 
-    if (this.updateStartStyle && !this.updateAnim) {
-      this.timeLine.reStart(this.props.style);
-      this.updateStartStyle = false;
-    }
 
-    if (this.newMomentAnim) {
-      this.raf();
-    }
-  }
 
-  componentWillUnmount() {
-    this.cancelRequestAnimationFrame();
-  }
 
-  restart = () => {
-    this.startMoment = this.timeLine.progressTime;
-    this.startFrame = ticker.frame;
-    this.play();
-  }
 
   start = () => {
     this.updateAnim = null;
@@ -136,16 +59,7 @@ class TweenOne extends Component {
     this.rafID = ticker.add(this.raf);
   }
 
-  updateAnimFunc = () => {
-    this.cancelRequestAnimationFrame();
-    this.startFrame = ticker.frame;
-    if (this.updateAnim === 'update') {
-      if (this.props.resetStyleBool && this.timeLine) {
-        this.timeLine.resetDefaultStyle();
-      }
-      this.startMoment = 0;
-    }
-  }
+
 
   frame = () => {
     let moment = (ticker.frame - this.startFrame) * perFrame + this.startMoment;
