@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import BgElement from './BgElement';
-import TweenOne from 'rc-tween-one';
-import ticker from 'rc-tween-one/lib/ticker';
+import TweenOne from '../TweenOne/index';
+import ticker from '../TweenOne/ticker';
 import ease from 'tween-functions';
 import {
   getGsapType,
