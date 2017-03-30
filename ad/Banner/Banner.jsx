@@ -29,11 +29,11 @@ export default class Banner extends Component {
           <div  className={this.props.items[0].textPosition} style={{color:this.props.items[0].textColor}}>
               <QueueAnim name="QueueAnim">
                 <h1 key="h1">{this.props.items[0].textHeader}</h1>
-                <p key="p">{this.props.items[0].textOne}</p>
               </QueueAnim>
-              <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
-                  {this.props.items[0].textTwo}
-              </TweenOne>
+              <QueueAnim name="QueueAnim" type="bottom">
+                  <p key="p1">{this.props.items[0].textOne}</p>
+                  <p key="p2">{this.props.items[0].textTwo}</p>
+              </QueueAnim>
           </div>
         </Element>,
         <Element key="element2" prefixCls="banner-user-elem" >
@@ -46,12 +46,12 @@ export default class Banner extends Component {
           />
           <div  className={this.props.items[1].textPosition} style={{color: this.props.items[1].textColor}}>
               <QueueAnim name="QueueAnim">
-                <h1 key="h1">{this.props.items[1].textHeader}</h1>
-                <p key="p">{this.props.items[1].textOne}</p>
+                  <h1 key="h1">{this.props.items[1].textHeader}</h1>
               </QueueAnim>
-              <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2">
-                  {this.props.items[1].textTwo}
-              </TweenOne>
+              <QueueAnim name="QueueAnim" type="bottom">
+                  <p key="p1">{this.props.items[1].textOne}</p>
+                  <p key="p2">{this.props.items[1].textTwo}</p>
+              </QueueAnim>
           </div>
         </Element>
       ],
@@ -72,13 +72,13 @@ export default class Banner extends Component {
                              }}
                   />
                   <div  className={this.props.items[2].textPosition} style={{color: this.props.items[2].textColor}}>
-                      <QueueAnim name="QueueAnim" >
-                        <h1 key="h1">{this.props.items[2].textHeader}</h1>
-                        <p key="p">{this.props.items[2].textOne}</p>
+                      <QueueAnim name="QueueAnim">
+                          <h1 key="h1">{this.props.items[2].textHeader}</h1>
                       </QueueAnim>
-                      <TweenOne animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} name="TweenOne2" >
-                          {this.props.items[2].textTwo}
-                      </TweenOne>
+                      <QueueAnim name="QueueAnim" type="bottom">
+                          <p key="p1">{this.props.items[2].textOne}</p>
+                          <p key="p2">{this.props.items[2].textTwo}</p>
+                      </QueueAnim>
                   </div>
                 </Element>
             );
