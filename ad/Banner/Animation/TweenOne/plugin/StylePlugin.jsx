@@ -10,7 +10,7 @@ import cssList, {
   splitFilterToObject,
   getTransform,
   stylesToCss,
-} from 'style-utils';
+} from './styleUtils';
 import { startConvertToEndUnit, getTransformValue } from '../util.js';
 import _plugin from '../plugins';
 

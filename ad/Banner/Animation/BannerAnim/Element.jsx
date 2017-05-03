@@ -9,7 +9,7 @@ import {
   isConvert,
   stylesToCss,
   checkStyleName,
-} from 'style-utils';
+} from '../TweenOne/plugin/styleUtils';
 import {
   currentScrollTop,
   currentScrollLeft,

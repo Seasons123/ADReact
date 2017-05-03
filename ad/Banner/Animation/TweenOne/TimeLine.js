@@ -10,7 +10,7 @@ import {
   parseColor,
   toFixed,
   stylesToCss,
-} from 'style-utils';
+} from '../TweenOne/plugin/styleUtils';
 import { startConvertToEndUnit } from './util.js';
 const DEFAULT_EASING = 'easeInOutQuad';
 const DEFAULT_DURATION = 450;

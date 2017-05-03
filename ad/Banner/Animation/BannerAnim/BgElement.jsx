@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   stylesToCss,
-} from 'style-utils';
+} from '../TweenOne/plugin/styleUtils';
 import {
   currentScrollTop,
   toArrayChildren,
