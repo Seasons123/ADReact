@@ -1,15 +1,12 @@
 命令
 
 npm install
-
 //安装依赖
 
 webpack
-
 //打包
 
 npm run server
-
 // 开发环境运行
 
 
