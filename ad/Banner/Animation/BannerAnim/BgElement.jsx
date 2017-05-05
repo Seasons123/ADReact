@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   stylesToCss,
-} from '../TweenOne/plugin/styleUtils';
+} from '../TweenOneAnim/plugin/styleUtils';
 import {
   currentScrollTop,
   toArrayChildren,
   windowHeight,
 } from './utils';
 import animType from './anim';
-import TimeLine from '../TweenOne/TimeLine';
+import TimeLine from '../TweenOneAnim/TimeLine';
 
 export default class BgElement extends React.Component {
   constructor() {
