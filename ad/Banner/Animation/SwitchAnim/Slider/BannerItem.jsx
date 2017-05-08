@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TweenOne from '../TweenOneAnim/TweenOneAnim';
-import '../../css/BannerItem.css';
+import TweenOne from '../../TweenOneAnim/TweenOneAnim';
+import '../../../css/BannerItem.css';
 
 export default class BannerItem extends Component {
   constructor(props) {
