@@ -10,7 +10,7 @@ import {
   parseColor,
   toFixed,
   stylesToCss,
-} from './/plugin/styleUtils';
+} from './plugin/styleUtils';
 import { startConvertToEndUnit } from './util.js';
 const DEFAULT_EASING = 'easeInOutQuad';
 const DEFAULT_DURATION = 450;
