@@ -88,7 +88,8 @@ export default class Grid extends Component {
     render() {
             return (
                 <div  style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
-                    <BannerAnim type={this.props.animType}>
+                    <BannerAnim   type={this.props.animType}
+                                   autoPlay={this.props.autoPlay}>
                         {this.state.children}
                     </BannerAnim>
                 </div>

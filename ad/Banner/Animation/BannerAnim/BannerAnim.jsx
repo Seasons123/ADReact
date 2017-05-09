@@ -306,6 +306,7 @@ BannerAnim.defaultProps = {
   arrow: true,
   thumb: true,
   autoPlaySpeed: 5000,
+  autoPlay: false,
   dragPlay: true,
   onChange: () => {
   },
