@@ -19,20 +19,20 @@ export default class Slider extends Component {
         console.log();
         var _n = this.state.nowLocal + n;
         if(_n < 0) {
-            _n = _n + this.props.items.length;
+            _n = _n + this.props.data.items.length;
         }
-        if(_n >= this.props.items.length) {
-            _n = _n - this.props.items.length;
+        if(_n >= this.props.data.items.length) {
+            _n = _n - this.props.data.items.length;
         }
         this.setState({nowLocal: _n});
     }
 
     // 开始自动轮播
     goPlay() {
-        if(this.props.autoPlay) {
+        if(this.props.data.autoPlay) {
             this.autoPlayFlag = setInterval(() => {
                 this.turn(1);
-            }, this.props.autoPlaySpeed);
+            }, this.props.data.autoPlaySpeed);
         }
     }
 
@@ -46,10 +46,10 @@ export default class Slider extends Component {
     }
 
     render() {
-        let count = this.props.items.length;
+        let count = this.props.data.items.length;
         let nowLocal = this.state.nowLocal;
 
-        let itemNodes = this.props.items.map((item, idx) => {
+        let itemNodes = this.props.data.items.map((item, idx) => {
             return <BannerItem item={item} count={count}  nowLocal={nowLocal} key={'item' + idx} />;
         });
 
@@ -58,19 +58,19 @@ export default class Slider extends Component {
         let thumbNode = <Bannerthumb turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
         return (
-            <div style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
+            <div style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
                 <div
                     className="slider"
-                    onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
+                    onMouseOver={this.props.data.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.data.pause?this.goPlay.bind(this):null}>
                     <ul style={{
                         left: -100 * this.state.nowLocal + "%",
-                        transitionDuration: this.props.duration + "ms",
-                        width: this.props.items.length * 100 + "%"
+                        transitionDuration: this.props.data.duration + "ms",
+                        width: this.props.data.items.length * 100 + "%"
                     }}>
                         {itemNodes}
                     </ul>
-                    {this.props.arrow?arrowNode:null}
-                    {this.props.thumb?thumbNode:null}
+                    {this.props.data.arrow?arrowNode:null}
+                    {this.props.data.thumb?thumbNode:null}
                 </div>
             </div>
         );

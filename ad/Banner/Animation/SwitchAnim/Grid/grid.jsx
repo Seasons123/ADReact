@@ -17,36 +17,36 @@ export default class Grid extends Component {
                 <Element key="element1" prefixCls="banner-user-elem" >
                     <BgElement key="bg" className="bg "
                                style={{
-                                   backgroundImage:'url(' + this.props.items[0].src + ')',
+                                   backgroundImage:'url(' + this.props.data.items[0].src + ')',
                                    backgroundSize: 'cover',
                                    backgroundPosition: 'center',
                                }}
                     />
-                    <div  className={this.props.items[0].textPosition} style={{color:this.props.items[0].textColor}}>
+                    <div  className={this.props.data.items[0].textPosition} style={{color:this.props.data.items[0].textColor}}>
                         <QueueAnim name="QueueAnim">
-                            <h1 key="h1">{this.props.items[0].textHeader}</h1>
+                            <h1 key="h1">{this.props.data.items[0].textHeader}</h1>
                         </QueueAnim>
                         <QueueAnim name="QueueAnim" type="bottom">
-                            <p key="p1">{this.props.items[0].textOne}</p>
-                            <p key="p2">{this.props.items[0].textTwo}</p>
+                            <p key="p1">{this.props.data.items[0].textOne}</p>
+                            <p key="p2">{this.props.data.items[0].textTwo}</p>
                         </QueueAnim>
                     </div>
                 </Element>,
                 <Element key="element2" prefixCls="banner-user-elem" >
                     <BgElement key="bg" className="bg"
                                style={{
-                                   backgroundImage: 'url(' + this.props.items[1].src + ')',
+                                   backgroundImage: 'url(' + this.props.data.items[1].src + ')',
                                    backgroundSize: 'cover',
                                    backgroundPosition: 'center',
                                }}
                     />
-                    <div  className={this.props.items[1].textPosition} style={{color: this.props.items[1].textColor}}>
+                    <div  className={this.props.data.items[1].textPosition} style={{color: this.props.data.items[1].textColor}}>
                         <QueueAnim name="QueueAnim">
-                            <h1 key="h1">{this.props.items[1].textHeader}</h1>
+                            <h1 key="h1">{this.props.data.items[1].textHeader}</h1>
                         </QueueAnim>
                         <QueueAnim name="QueueAnim" type="bottom">
-                            <p key="p1">{this.props.items[1].textOne}</p>
-                            <p key="p2">{this.props.items[1].textTwo}</p>
+                            <p key="p1">{this.props.data.items[1].textOne}</p>
+                            <p key="p2">{this.props.data.items[1].textTwo}</p>
                         </QueueAnim>
                     </div>
                 </Element>
@@ -62,18 +62,18 @@ export default class Grid extends Component {
                 <Element key="element3" prefixCls="banner-user-elem" >
                     <BgElement key="bg" className="bg"
                                style={{
-                                   backgroundImage: 'url(' + this.props.items[2].src + ')',
+                                   backgroundImage: 'url(' + this.props.data.items[2].src + ')',
                                    backgroundSize: 'cover',
                                    backgroundPosition: 'center',
                                }}
                     />
-                    <div  className={this.props.items[2].textPosition} style={{color: this.props.items[2].textColor}}>
+                    <div  className={this.props.data.items[2].textPosition} style={{color: this.props.data.items[2].textColor}}>
                         <QueueAnim name="QueueAnim">
-                            <h1 key="h1">{this.props.items[2].textHeader}</h1>
+                            <h1 key="h1">{this.props.data.items[2].textHeader}</h1>
                         </QueueAnim>
                         <QueueAnim name="QueueAnim" type="bottom">
-                            <p key="p1">{this.props.items[2].textOne}</p>
-                            <p key="p2">{this.props.items[2].textTwo}</p>
+                            <p key="p1">{this.props.data.items[2].textOne}</p>
+                            <p key="p2">{this.props.data.items[2].textTwo}</p>
                         </QueueAnim>
                     </div>
                 </Element>
@@ -87,15 +87,15 @@ export default class Grid extends Component {
 
     render() {
             return (
-                <div  style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
+                <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
                     <BannerAnim  type= "grid"
-                                  delay={this.props.delay}
-                                  duration={this.props.duration}
-                                  autoPlaySpeed={this.props.autoPlaySpeed}
-                                  autoPlay={this.props.autoPlay}
-                                  pause={this.props.pause}
-                                  arrow={this.props.arrow}
-                                  thumb={this.props.thumb}>
+                                  delay={this.props.data.delay}
+                                  duration={this.props.data.duration}
+                                  autoPlaySpeed={this.props.data.autoPlaySpeed}
+                                  autoPlay={this.props.data.autoPlay}
+                                  pause={this.props.data.pause}
+                                  arrow={this.props.data.arrow}
+                                  thumb={this.props.data.thumb}>
                         {this.state.children}
                     </BannerAnim>
                 </div>
