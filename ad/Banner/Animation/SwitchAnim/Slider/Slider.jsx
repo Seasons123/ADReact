@@ -3,8 +3,8 @@ import '../../../css/banner.css';
 import '../../../css/banner-anim.css';
 
 import BannerItem from './BannerItem';
-import BannerDots from './BannerDots';
-import BannerArrows from './BannerArrows';
+import Bannerthumb from './Bannerthumb';
+import BannerArrow from './BannerArrow';
 
 export default class Slider extends Component {
     constructor(props) {
@@ -53,9 +53,9 @@ export default class Slider extends Component {
             return <BannerItem item={item} count={count}  nowLocal={nowLocal} key={'item' + idx} />;
         });
 
-        let arrowsNode = <BannerArrows turn={this.turn.bind(this)}/>;
+        let arrowNode = <BannerArrow turn={this.turn.bind(this)}/>;
 
-        let dotsNode = <BannerDots turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
+        let thumbNode = <Bannerthumb turn={this.turn.bind(this)} count={count} nowLocal={this.state.nowLocal} />;
 
         return (
             <div style={{ width:this.props.width, height:this.props.height,margin:'0 auto'}}>
@@ -69,8 +69,8 @@ export default class Slider extends Component {
                     }}>
                         {itemNodes}
                     </ul>
-                    {this.props.arrow?arrowsNode:null}
-                    {this.props.dots?dotsNode:null}
+                    {this.props.arrow?arrowNode:null}
+                    {this.props.thumb?thumbNode:null}
                 </div>
             </div>
         );

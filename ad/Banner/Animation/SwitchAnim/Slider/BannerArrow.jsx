@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BannerArrows extends Component {
+export default class BannerArrow extends Component {
   constructor(props) {
     super(props);
   }

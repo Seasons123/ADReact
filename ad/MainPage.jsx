@@ -43,11 +43,9 @@ var MainPage=React.createClass({
               autoPlaySpeed={5000}
               autoPlay={true}
               pause={false}
-              arrow={false}
-
-              dots={true}
-
-              animType={"grid"}
+              arrow={true}
+              thumb={true}
+              animType={"slider"}
           />
     );
   },

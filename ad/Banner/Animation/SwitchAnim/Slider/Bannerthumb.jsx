@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BannerDots extends Component {
+export default class Bannerthumb extends Component {
   constructor(props) {
     super(props);
   }

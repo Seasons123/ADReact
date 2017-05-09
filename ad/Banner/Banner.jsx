@@ -8,10 +8,9 @@ import Grid from './Animation/SwitchAnim/Grid/Grid';
 export default class Banner extends Component {
 
     render() {
-        if(this.props.animType =="Slider"){
+        if(this.props.animType =="slider".toLowerCase() || this.props.animType =="slider".toUpperCase() || this.props.animType =="Slider"){
             return(
-                <Slider animType={this.props.animType}
-                         items={this.props.items}
+                <Slider items={this.props.items}
                          width={this.props.width}
                          height={this.props.height}
                          delay={this.props.delay}
@@ -19,17 +18,14 @@ export default class Banner extends Component {
                          autoPlaySpeed={this.props.autoPlaySpeed}
                          autoPlay={this.props.autoPlay}
                          pause={this.props.pause}
-
-                         dots={this.props.dots}
                          arrow={this.props.arrow}
-                         >
+                         thumb={this.props.thumb}>
                 </Slider>
             );
         }
-        else{
-            return (
-                <Grid  animType={this.props.animType}
-                        items={this.props.items}
+        if(this.props.animType =="grid".toLowerCase() || this.props.animType =="grid".toUpperCase() || this.props.animType =="Grid"){
+            return(
+                <Grid  items={this.props.items}
                         width={this.props.width}
                         height={this.props.height}
                         delay={this.props.delay}
@@ -37,7 +33,8 @@ export default class Banner extends Component {
                         autoPlaySpeed={this.props.autoPlaySpeed}
                         autoPlay={this.props.autoPlay}
                         pause={this.props.pause}
-                        arrow={this.props.arrow}>
+                        arrow={this.props.arrow}
+                        thumb={this.props.thumb}>
                 </Grid>
             );
         }
@@ -45,25 +42,5 @@ export default class Banner extends Component {
 
 }
 
-
-/*
-* BannerAnim.defaultProps = {
- component: 'div',
- className: 'banner-anim',
- initShow: 0,
- duration: 450,
- delay: 0,
- ease: 'easeInOutQuad',
- arrow: true,
- thumb: true,
- autoPlaySpeed: 5000,
- dragPlay: true,
- onChange: () => {
- },
- onMouseEnter: () => {
- },
- onMouseLeave: () => {
- },
- };*/
 
 
