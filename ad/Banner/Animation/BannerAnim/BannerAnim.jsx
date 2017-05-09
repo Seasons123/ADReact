@@ -46,18 +46,16 @@ class BannerAnim extends Component {
     }
   }
 
-  onMouseEnter = () => {
-    this.props.onMouseEnter();
-    if (this.props.autoPlay) {
-      ticker.clear(this.autoPlayId);
-    }
+    onMouseOver = () => {
+      if(this.props.pause && this.props.autoPlay ) {
+        ticker.clear(this.autoPlayId);
+      }
   }
 
-  onMouseLeave = () => {
-    this.props.onMouseLeave();
-    if (this.props.autoPlay) {
-      this.autoPlay();
-    }
+    onMouseOut = () => {
+     if(this.props.pause && this.props.autoPlay ) {
+        this.autoPlay();
+     }
   }
 
   onTouchStart = (e) => {
@@ -262,8 +260,8 @@ class BannerAnim extends Component {
     props.className = `${props.className} ${prefixCls || ''}`.trim();
     props.style = { ...props.style };
     if (childrenToRender.length > 1 && this.props.dragPlay) {
-      props.onMouseEnter = this.onMouseEnter;
-      props.onMouseLeave = this.onMouseLeave;
+      props.onMouseOver = this.onMouseOver;
+      props.onMouseOut = this.onMouseOut;
       props.onTouchStart = this.onTouchStart;
       props.onMouseDown = this.onTouchStart;
       props.onTouchMove = this.onTouchMove;
@@ -291,8 +289,8 @@ BannerAnim.propTypes = {
   autoPlay: PropTypes.bool,
   autoPlaySpeed: PropTypes.number,
   onChange: PropTypes.func,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func,
+  onMouseOver: PropTypes.func,
+  onMouseOut: PropTypes.func,
   sync: PropTypes.bool,
   dragPlay: PropTypes.bool,
 };
@@ -310,9 +308,9 @@ BannerAnim.defaultProps = {
   dragPlay: true,
   onChange: () => {
   },
-  onMouseEnter: () => {
+  onMouseOver: () => {
   },
-  onMouseLeave: () => {
+  onMouseOut: () => {
   },
 };
 BannerAnim.Arrow = Arrow;

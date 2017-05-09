@@ -32,7 +32,7 @@ export default class Slider extends Component {
         if(this.props.autoplay) {
             this.autoPlayFlag = setInterval(() => {
                 this.turn(1);
-            }, this.props.delay * 1000);
+            }, this.props.autoPlaySpeed);
         }
     }
 
@@ -64,7 +64,7 @@ export default class Slider extends Component {
                     onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
                     <ul style={{
                         left: -100 * this.state.nowLocal + "%",
-                        transitionDuration: this.props.speed + "s",
+                        transitionDuration: this.props.duration + "ms",
                         width: this.props.items.length * 100 + "%"
                     }}>
                         {itemNodes}

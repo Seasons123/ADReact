@@ -38,15 +38,17 @@ var MainPage=React.createClass({
               items={IMAGE_DATA}
               width={'960px'}
               height={'380px'}
-              speed={0.6}
-              delay={2.6}
-              pause={true}
+              delay={0}
+              duration={450}
+              autoPlaySpeed={5000}
               autoPlay={true}
+              pause={false}
+
               dots={true}
               arrows={true}
               animType={"grid"}
 
-              duration={450}
+
               className={"banner-anim"}
           />
     );

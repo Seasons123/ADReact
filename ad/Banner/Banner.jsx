@@ -10,26 +10,33 @@ export default class Banner extends Component {
     render() {
         if(this.props.animType =="Slider"){
             return(
-                <Slider items={this.props.items}
+                <Slider animType={this.props.animType}
+                         items={this.props.items}
                          width={this.props.width}
                          height={this.props.height}
-                         speed={this.props.speed}
                          delay={this.props.delay}
-                         pause={this.props.pause}
+                         duration={this.props.duration}
+                         autoPlaySpeed={this.props.autoPlaySpeed}
                          autoplay={this.props.autoPlay}
+                         pause={this.props.pause}
+
                          dots={this.props.dots}
                          arrows={this.props.arrows}
-                         animType={this.props.animType}>
+                         >
                 </Slider>
             );
         }
         else{
             return (
-                <Grid  items={this.props.items}
+                <Grid  animType={this.props.animType}
+                        items={this.props.items}
                         width={this.props.width}
                         height={this.props.height}
-                        animType={this.props.animType}
-                        autoPlay={this.props.autoPlay}>
+                        delay={this.props.delay}
+                        duration={this.props.duration}
+                        autoPlaySpeed={this.props.autoPlaySpeed}
+                        autoPlay={this.props.autoPlay}
+                        pause={this.props.pause}>
                 </Grid>
             );
         }
