@@ -43,33 +43,15 @@ var MainPage=React.createClass({
               autoPlaySpeed={5000}
               autoPlay={true}
               pause={false}
+              arrow={false}
 
               dots={true}
-              arrows={true}
+
               animType={"grid"}
-
-
-              className={"banner-anim"}
           />
     );
   },
 });
 module.exports=MainPage;
 
-/*
- * BannerAnim.defaultProps = {
 
- duration: 450,
- delay: 0,
- ease: 'easeInOutQuad',
- arrow: true,
- thumb: true,
- autoPlaySpeed: 5000,
- dragPlay: true,
- onChange: () => {
- },
- onMouseEnter: () => {
- },
- onMouseLeave: () => {
- },
- };*/

@@ -29,7 +29,7 @@ export default class Slider extends Component {
 
     // 开始自动轮播
     goPlay() {
-        if(this.props.autoplay) {
+        if(this.props.autoPlay) {
             this.autoPlayFlag = setInterval(() => {
                 this.turn(1);
             }, this.props.autoPlaySpeed);
@@ -69,7 +69,7 @@ export default class Slider extends Component {
                     }}>
                         {itemNodes}
                     </ul>
-                    {this.props.arrows?arrowsNode:null}
+                    {this.props.arrow?arrowsNode:null}
                     {this.props.dots?dotsNode:null}
                 </div>
             </div>

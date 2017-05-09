@@ -17,11 +17,11 @@ export default class Banner extends Component {
                          delay={this.props.delay}
                          duration={this.props.duration}
                          autoPlaySpeed={this.props.autoPlaySpeed}
-                         autoplay={this.props.autoPlay}
+                         autoPlay={this.props.autoPlay}
                          pause={this.props.pause}
 
                          dots={this.props.dots}
-                         arrows={this.props.arrows}
+                         arrow={this.props.arrow}
                          >
                 </Slider>
             );
@@ -36,7 +36,8 @@ export default class Banner extends Component {
                         duration={this.props.duration}
                         autoPlaySpeed={this.props.autoPlaySpeed}
                         autoPlay={this.props.autoPlay}
-                        pause={this.props.pause}>
+                        pause={this.props.pause}
+                        arrow={this.props.arrow}>
                 </Grid>
             );
         }

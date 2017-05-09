@@ -93,7 +93,8 @@ export default class Grid extends Component {
                                   duration={this.props.duration}
                                   autoPlaySpeed={this.props.autoPlaySpeed}
                                   autoPlay={this.props.autoPlay}
-                                  pause={this.props.pause}>
+                                  pause={this.props.pause}
+                                  arrow={this.props.arrow}>
                         {this.state.children}
                     </BannerAnim>
                 </div>
