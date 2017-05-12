@@ -1,5 +1,5 @@
 import React, { PropTypes, Component, createElement } from 'react';
-import TweenOne from './TweenOneAnim';
+import TweenOne from './OneTween';
 import {
   dataToArray,
   toArrayChildren,

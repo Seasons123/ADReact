@@ -2,7 +2,7 @@ import { parsePath, getTransformValue } from '../util';
 import {
   checkStyleName,
   getTransform,
-} from './styleUtils';
+} from 'style-utils';
 
 const PathPlugin = function (target, vars) {
   this.target = target;

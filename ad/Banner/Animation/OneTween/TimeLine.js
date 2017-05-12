@@ -1,6 +1,6 @@
 /* eslint-disable func-names */
 /**
- * Created by pcy 17/3/28.
+ * Created by jljsj on 16/1/27.
  */
 import easingTypes from './easing';
 import _plugin from './plugins';
@@ -10,7 +10,7 @@ import {
   parseColor,
   toFixed,
   stylesToCss,
-} from './plugin/styleUtils';
+} from 'style-utils';
 import { startConvertToEndUnit } from './util.js';
 const DEFAULT_EASING = 'easeInOutQuad';
 const DEFAULT_DURATION = 450;

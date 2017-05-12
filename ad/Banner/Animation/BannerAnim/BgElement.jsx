@@ -9,7 +9,7 @@ import {
   windowHeight,
 } from './utils';
 import animType from './anim';
-import TimeLine from 'rc-tween-one/lib/TimeLine';
+import TimeLine from '../OneTween/TimeLine';
 
 export default class BgElement extends React.Component {
   constructor() {

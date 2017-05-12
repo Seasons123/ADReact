@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Arrow from './Arrow';
 import Element from './Element';
 import Thumb from './Thumb';
-import ticker from 'rc-tween-one/lib/ticker';
+import ticker from '../OneTween/ticker';
 import { toArrayChildren, dataToArray, setAnimCompToTagComp, switchChildren } from './utils';
 import animType from './anim';
 

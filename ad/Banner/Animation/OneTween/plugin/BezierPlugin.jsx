@@ -1,11 +1,12 @@
 /* eslint-disable */
 /**
+ * Created by jljsj on 15/12/22.
  * The algorithm is GSAP BezierPlugin VERSION: beta 1.3.4
  */
 import {
   checkStyleName,
   createMatrix,
-} from './styleUtils';
+} from 'style-utils';
 const _RAD2DEG = 180 / Math.PI;
 const _r1 = [];
 const _r2 = [];

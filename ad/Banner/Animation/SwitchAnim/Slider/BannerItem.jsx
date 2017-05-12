@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TweenOne from '../../TweenOneAnim/index';
+import OneTween from '../../OneTween/index';
 import '../../../css/BannerItem.css';
 
 export default class BannerItem extends Component {
@@ -16,13 +16,13 @@ export default class BannerItem extends Component {
               if(i === this.props.nowLocal){
                   texts[i] = (
                       <div key={'text' + i} className={item.textPosition} style={{color: item.textColor}}>
-                          <TweenOne animation={{x: 100, opacity: 0, type: 'from', delay: 200}} name="TweenOne">
+                          <OneTween animation={{x: 100, opacity: 0, type: 'from', delay: 200}} name="OneTween">
                               <h1>{item.textHeader}</h1>
-                          </TweenOne>
-                          <TweenOne animation={{y: 50, opacity: 0, type: 'from', delay: 200}} name="TweenOne">
+                          </OneTween>
+                          <OneTween animation={{y: 50, opacity: 0, type: 'from', delay: 200}} name="OneTween">
                               <p>{item.textOne}</p>
                               {item.textTwo}
-                          </TweenOne>
+                          </OneTween>
                       </div>
                   )
               }

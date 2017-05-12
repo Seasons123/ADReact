@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import BgElement from './BgElement';
-import TweenOne from 'rc-tween-one';
-import ticker from 'rc-tween-one/lib/ticker';
+import OneTween from '../OneTween/index';
+
+import ticker from '../OneTween/ticker';
 import ease from 'tween-functions';
 import {
   getGsapType,
@@ -214,7 +215,7 @@ class Element extends Component {
     this.show = this.state.show;
     style.zIndex = this.state.show ? 1 : 0;
     props.children = this.props.show && !this.props.sync ? bgElem : this.getChildren();
-    const childrenToRender = React.createElement(TweenOne, props);
+    const childrenToRender = React.createElement(OneTween, props);
     const type = this.state.show ? 'enter' : 'leave';
     return this.props.animType(childrenToRender,
       type,
@@ -252,12 +253,12 @@ class Element extends Component {
       style[this.transform] = null;
       if (!this.state.show) {
         this.enterMouse = null;
-        return React.createElement(TweenOne, props, bgElem);
+        return React.createElement(OneTween, props, bgElem);
       }
       if (this.props.followParallax) {
         props.onMouseMove = this.getFollowMouseMove();
       }
-      return React.createElement(TweenOne, props, this.getChildren());
+      return React.createElement(OneTween, props, this.getChildren());
     }
     return this.animChildren(props, style, bgElem);
   }
