@@ -3,7 +3,9 @@ import './css/banner.css';
 import './css/banner-anim.css';
 
 import Slider from './Animation/SwitchAnim/Slider/Slider';
-import Grid from './Animation/SwitchAnim/Grid/Grid';
+import Grid from './Animation/SwitchAnim/Grid/grid';
+import Vertical from './Animation/SwitchAnim/Vertical/vertical';
+import CustomArrow from './Animation/SwitchAnim/CustomArrow/customArrow';
 
 export default class Banner extends Component {
 
@@ -35,6 +37,18 @@ export default class Banner extends Component {
             return(
                 <Grid  data={ DATA }>
                 </Grid>
+            );
+        }
+        if(this.props.animType =="vertical".toLowerCase() || this.props.animType =="vertical".toUpperCase() || this.props.animType =="Vertical"){
+            return(
+                <Vertical  data={ DATA }>
+                </Vertical>
+            );
+        }
+        if(this.props.animType =="customArrow".toLowerCase() || this.props.animType =="customArrow".toUpperCase() || this.props.animType =="CustomArrow"){
+            return(
+                <CustomArrow  data={ DATA }>
+                </CustomArrow>
             );
         }
     }

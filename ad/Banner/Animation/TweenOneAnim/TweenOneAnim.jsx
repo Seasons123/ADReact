@@ -4,13 +4,16 @@ import { dataToArray } from './util';
 import TimeLine from './TimeLine';
 import plugins from './plugins';
 import ticker from './ticker';
+import TweenOneGroup from './TweenOneGroup';
+import easing from './easing'
+
 
 function noop() {
 }
 
 const perFrame = Math.round(1000 / 60);
 
-class TweenOne extends Component {
+class TweenOneAnim extends Component {
   constructor() {
     super(...arguments);
     this.rafID = -1;
@@ -92,7 +95,7 @@ class TweenOne extends Component {
 
 const objectOrArray = PropTypes.oneOfType([PropTypes.object, PropTypes.array]);
 
-TweenOne.propTypes = {
+TweenOneAnim.propTypes = {
   component: PropTypes.any,
   componentReplace: PropTypes.string,
   animation: objectOrArray,
@@ -109,7 +112,7 @@ TweenOne.propTypes = {
   updateReStart: PropTypes.bool,
 };
 
-TweenOne.defaultProps = {
+TweenOneAnim.defaultProps = {
   component: 'div',
   reverseDelay: 0,
   attr: 'style',
@@ -117,5 +120,5 @@ TweenOne.defaultProps = {
   willChange: true,
   updateReStart: true,
 };
-TweenOne.plugins = plugins;
-export default TweenOne;
+TweenOneAnim.plugins = plugins;
+export default TweenOneAnim;

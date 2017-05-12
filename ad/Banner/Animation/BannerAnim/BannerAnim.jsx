@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Arrow from './Arrow';
 import Element from './Element';
 import Thumb from './Thumb';
-import ticker from '../TweenOneAnim/ticker';
+import ticker from 'rc-tween-one/lib/ticker';
 import { toArrayChildren, dataToArray, setAnimCompToTagComp, switchChildren } from './utils';
 import animType from './anim';
 
@@ -46,16 +46,18 @@ class BannerAnim extends Component {
     }
   }
 
-    onMouseOver = () => {
-      if(this.props.pause && this.props.autoPlay ) {
-        ticker.clear(this.autoPlayId);
-      }
+  onMouseEnter = () => {
+    this.props.onMouseEnter();
+    if (this.props.autoPlay) {
+      ticker.clear(this.autoPlayId);
+    }
   }
 
-    onMouseOut = () => {
-     if(this.props.pause && this.props.autoPlay ) {
-        this.autoPlay();
-     }
+  onMouseLeave = () => {
+    this.props.onMouseLeave();
+    if (this.props.autoPlay) {
+      this.autoPlay();
+    }
   }
 
   onTouchStart = (e) => {
@@ -260,8 +262,8 @@ class BannerAnim extends Component {
     props.className = `${props.className} ${prefixCls || ''}`.trim();
     props.style = { ...props.style };
     if (childrenToRender.length > 1 && this.props.dragPlay) {
-      props.onMouseOver = this.onMouseOver;
-      props.onMouseOut = this.onMouseOut;
+      props.onMouseEnter = this.onMouseEnter;
+      props.onMouseLeave = this.onMouseLeave;
       props.onTouchStart = this.onTouchStart;
       props.onMouseDown = this.onTouchStart;
       props.onTouchMove = this.onTouchMove;
@@ -289,8 +291,8 @@ BannerAnim.propTypes = {
   autoPlay: PropTypes.bool,
   autoPlaySpeed: PropTypes.number,
   onChange: PropTypes.func,
-  onMouseOver: PropTypes.func,
-  onMouseOut: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
   sync: PropTypes.bool,
   dragPlay: PropTypes.bool,
 };
@@ -304,13 +306,12 @@ BannerAnim.defaultProps = {
   arrow: true,
   thumb: true,
   autoPlaySpeed: 5000,
-  autoPlay: false,
   dragPlay: true,
   onChange: () => {
   },
-  onMouseOver: () => {
+  onMouseEnter: () => {
   },
-  onMouseOut: () => {
+  onMouseLeave: () => {
   },
 };
 BannerAnim.Arrow = Arrow;

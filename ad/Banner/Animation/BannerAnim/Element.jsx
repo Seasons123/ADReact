@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import BgElement from './BgElement';
-import TweenOne from '../TweenOneAnim/TweenOneAnim';
-import ticker from '../TweenOneAnim/ticker';
+import TweenOne from 'rc-tween-one';
+import ticker from 'rc-tween-one/lib/ticker';
 import ease from 'tween-functions';
 import {
   getGsapType,
   isConvert,
   stylesToCss,
   checkStyleName,
-} from '../TweenOneAnim/plugin/styleUtils';
+} from 'style-utils';
 import {
   currentScrollTop,
   currentScrollLeft,
