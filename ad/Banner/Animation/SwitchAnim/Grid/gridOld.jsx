@@ -3,13 +3,13 @@ import '../../../css/banner.css';
 import '../../../css/banner-anim.css';
 
 
+
 import QueueAnim from '../../QueueAnim/QueueAnim';
 import BannerAnim from '../../BannerAnim/BannerAnim';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 
-export default class Grid extends React.Component {
-
+export default class Grid extends Component {
     constructor() {
         super(...arguments);
         this.state = {
@@ -49,7 +49,16 @@ export default class Grid extends React.Component {
                             <p key="p2">{this.props.data.items[1].textTwo}</p>
                         </QueueAnim>
                     </div>
-                </Element>,
+                </Element>
+            ],
+        };
+        [].forEach((method) => this[method] = this[method].bind(this));
+    }
+
+    componentDidMount() {
+        const children = this.state.children;
+        setTimeout(() => {
+            children.push(
                 <Element key="element3" prefixCls="banner-user-elem" >
                     <BgElement key="bg" className="bg"
                                style={{
@@ -68,24 +77,30 @@ export default class Grid extends React.Component {
                         </QueueAnim>
                     </div>
                 </Element>
-            ],
-        };
-    }
-    render() {
-        return (
-            <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
-                <BannerAnim type="grid"
-                            delay={this.props.data.delay}
-                            duration={this.props.data.duration}
-                            autoPlaySpeed={this.props.data.autoPlaySpeed}
-                            autoPlay={this.props.data.autoPlay}
-                            pause={this.props.data.pause}
-                            arrow={this.props.data.arrow}
-                            thumb={this.props.data.thumb}>
-                    {this.state.children}
+            );
+            this.setState({
+                children,
+            });
+        }, 2000);
 
-                </BannerAnim>
-            </div>
-        );
     }
+
+    render() {
+            return (
+                <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
+                    <BannerAnim  type= "grid"
+                                  delay={this.props.data.delay}
+                                  duration={this.props.data.duration}
+                                  autoPlaySpeed={this.props.data.autoPlaySpeed}
+                                  autoPlay={this.props.data.autoPlay}
+                                  pause={this.props.data.pause}
+                                  arrow={this.props.data.arrow}
+                                  thumb={this.props.data.thumb}>
+                        {this.state.children}
+                    </BannerAnim>
+                </div>
+            );
+    }
+
 }
+

@@ -4,8 +4,10 @@ import './css/banner-anim.css';
 
 import Slider from './Animation/SwitchAnim/Slider/Slider';
 import Grid from './Animation/SwitchAnim/Grid/grid';
+import GridBar from './Animation/SwitchAnim/GridBar/gridBar';
 import Vertical from './Animation/SwitchAnim/Vertical/vertical';
 import CustomArrow from './Animation/SwitchAnim/CustomArrow/customArrow';
+import CustomThumb from './Animation/SwitchAnim/CustomThumb/customThumb';
 
 export default class Banner extends Component {
 
@@ -39,16 +41,28 @@ export default class Banner extends Component {
                 </Grid>
             );
         }
+        if(this.props.animType =="gridBar" ||  this.props.animType =="GridBar"){
+            return(
+                <GridBar  data={ DATA }>
+                </GridBar>
+            );
+        }
         if(this.props.animType =="vertical".toLowerCase() || this.props.animType =="vertical".toUpperCase() || this.props.animType =="Vertical"){
             return(
                 <Vertical  data={ DATA }>
                 </Vertical>
             );
         }
-        if(this.props.animType =="customArrow".toLowerCase() || this.props.animType =="customArrow".toUpperCase() || this.props.animType =="CustomArrow"){
+        if(this.props.animType =="customArrow" ||  this.props.animType =="CustomArrow"){
             return(
                 <CustomArrow  data={ DATA }>
                 </CustomArrow>
+            );
+        }
+        if(this.props.animType =="customThumb" ||  this.props.animType =="CustomThumb"){
+            return(
+                <CustomThumb  data={ DATA }>
+                </CustomThumb>
             );
         }
     }

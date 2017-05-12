@@ -1,3 +1,5 @@
+/*实现思路二：可以直接按照gridOld的思路来写，只需要把type换成gridBar即可,但是因为setTimeout的延迟，这个交互并不友好
+* 该组件的实现思路是：按照Vertacal组件的方法来写，只需改一下type参数为gridBar*/
 import React, { Component, PropTypes } from 'react';
 import '../../../css/banner.css';
 import '../../../css/banner-anim.css';
@@ -8,7 +10,7 @@ import BannerAnim from '../../BannerAnim/BannerAnim';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
 
-export default class Grid extends React.Component {
+export default class GridBar extends React.Component {
 
     constructor() {
         super(...arguments);
@@ -74,7 +76,7 @@ export default class Grid extends React.Component {
     render() {
         return (
             <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
-                <BannerAnim type="grid"
+                <BannerAnim type="gridBar"
                             delay={this.props.data.delay}
                             duration={this.props.data.duration}
                             autoPlaySpeed={this.props.data.autoPlaySpeed}
