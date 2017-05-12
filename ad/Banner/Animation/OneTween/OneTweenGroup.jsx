@@ -1,5 +1,5 @@
 import React, { PropTypes, Component, createElement } from 'react';
-import TweenOne from './OneTween';
+import OneTween from './OneTween';
 import {
   dataToArray,
   toArrayChildren,
@@ -12,7 +12,7 @@ import {
 function noop() {
 }
 
-class TweenOneGroup extends Component {
+class OneTweenGroup extends Component {
   constructor() {
     super(...arguments);
     this.keysToEnter = [];
@@ -102,7 +102,7 @@ class TweenOneGroup extends Component {
       animation = appear && this.props.enter || null;
     }
     onChange = this.onChange.bind(this, animation, child.key, type);
-    const children = (<TweenOne
+    const children = (<OneTween
       {...child.props}
       willChange={this.props.willChange}
       key={child.key}
@@ -134,7 +134,7 @@ class TweenOneGroup extends Component {
       }
       return this.isTween[child.key] &&
         this.getCoverAnimation(child, i, this.isTween[child.key]) ||
-        React.createElement(TweenOne, { ...child.props, component: child.type, key: child.key });
+        React.createElement(OneTween, { ...child.props, component: child.type, key: child.key });
     });
   }
 
@@ -161,7 +161,7 @@ class TweenOneGroup extends Component {
 const objectOrArray = PropTypes.oneOfType([PropTypes.object, PropTypes.array]);
 const objectOrArrayOrFunc = PropTypes.oneOfType([objectOrArray, PropTypes.func]);
 
-TweenOneGroup.propTypes = {
+OneTweenGroup.propTypes = {
   component: PropTypes.any,
   children: PropTypes.any,
   style: PropTypes.object,
@@ -174,7 +174,7 @@ TweenOneGroup.propTypes = {
   resetStyleBool: PropTypes.bool,
 };
 
-TweenOneGroup.defaultProps = {
+OneTweenGroup.defaultProps = {
   component: 'div',
   appear: true,
   animatingClassName: ['tween-one-entering', 'tween-one-leaving'],
@@ -184,4 +184,4 @@ TweenOneGroup.defaultProps = {
   willChange: true,
   resetStyleBool: true,
 };
-export default TweenOneGroup;
+export default OneTweenGroup;
