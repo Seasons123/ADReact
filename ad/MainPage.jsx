@@ -39,13 +39,13 @@ var MainPage=React.createClass({
               width={'960px'}
               height={'380px'}
               delay={0}
-              duration={450}
+              duration={1450}
               autoPlaySpeed={5000}
               autoPlay={true}
               pause={false}
               arrow={true}
               thumb={true}
-              animType={"grid"}
+              animType={"acrossOverlay"}
           />
     );
   },

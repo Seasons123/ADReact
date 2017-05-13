@@ -3,9 +3,12 @@ import './css/banner.css';
 import './css/banner-anim.css';
 
 import Slider from './Animation/SwitchAnim/Slider/Slider';
+import Across from './Animation/SwitchAnim/Across/across';
+import AcrossOverlay from './Animation/SwitchAnim/AcrossOverlay/acrossOverlay';
 import Grid from './Animation/SwitchAnim/Grid/grid';
 import GridBar from './Animation/SwitchAnim/GridBar/gridBar';
 import Vertical from './Animation/SwitchAnim/Vertical/vertical';
+import VerticalOverlay from './Animation/SwitchAnim/VerticalOverlay/verticalOverlay';
 import CustomArrow from './Animation/SwitchAnim/CustomArrow/customArrow';
 import CustomThumb from './Animation/SwitchAnim/CustomThumb/customThumb';
 
@@ -29,10 +32,23 @@ export default class Banner extends Component {
             thumb:this.props.thumb
         };
 
+
         if(this.props.animType =="slider".toLowerCase() || this.props.animType =="slider".toUpperCase() || this.props.animType =="Slider"){
             return(
                 <Slider data={ DATA }>
                 </Slider>
+            );
+        }
+        if(this.props.animType =="across".toLowerCase() || this.props.animType =="across".toUpperCase() || this.props.animType =="Across"){
+            return(
+                <Across data={ DATA }>
+                </Across>
+            );
+        }
+        if(this.props.animType =="AcrossOverlay".toLowerCase() || this.props.animType =="acrossOverlay"){
+            return(
+                <AcrossOverlay data={ DATA }>
+                </AcrossOverlay>
             );
         }
         if(this.props.animType =="grid".toLowerCase() || this.props.animType =="grid".toUpperCase() || this.props.animType =="Grid"){
@@ -51,6 +67,12 @@ export default class Banner extends Component {
             return(
                 <Vertical  data={ DATA }>
                 </Vertical>
+            );
+        }
+        if(this.props.animType =="VerticalOverlay" || this.props.animType =="verticalOverlay"){
+            return(
+                <VerticalOverlay  data={ DATA }>
+                </VerticalOverlay>
             );
         }
         if(this.props.animType =="customArrow" ||  this.props.animType =="CustomArrow"){
