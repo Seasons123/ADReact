@@ -1,8 +1,8 @@
 // use jsx to render html, do not modify simple.html
 
 import BannerAnim from '../../BannerAnim/BannerAnim';
-import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+import QueueAnim from '../../QueueAnim/QueueAnim';
+import OneTween from '../../OneTween/OneTween';
 import React from 'react';
 
 import '../../../css/banner.css';
@@ -14,8 +14,9 @@ export default class CustomThumb extends React.Component {
     constructor() {
         super(...arguments);
         this.imgArray = [
-            'https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg',
-            'https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg',
+            this.props.data.items[0].src ,
+            this.props.data.items[1].src ,
+            this.props.data.items[2].src
         ];
         this.state = {
             enter: false,
@@ -44,7 +45,15 @@ export default class CustomThumb extends React.Component {
         );
         return (
             <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
-                <BannerAnim onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+                <BannerAnim onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}
+                             onChange={this.onChange}
+                             delay={this.props.data.delay}
+                             duration={this.props.data.duration}
+                             autoPlaySpeed={this.props.data.autoPlaySpeed}
+                             autoPlay={this.props.data.autoPlay}
+                             pause={this.props.data.pause}
+                             arrow={this.props.data.arrow}
+                             thumb={this.props.data.thumb}>
                     <Element key="aaa"
                              prefixCls="banner-user-elem"
                     >
@@ -57,17 +66,15 @@ export default class CustomThumb extends React.Component {
                                 backgroundPosition: 'center',
                             }}
                         />
-                        <QueueAnim key="1" name="QueueAnim">
-                            <h1 key="h1">Ant Motion Demo</h1>
-                            <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
-                        </QueueAnim>
-                        <TweenOne
-                            animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
-                            key="2"
-                            name="TweenOne"
-                        >
-                            Ant Motion Demo.Ant Motion Demo
-                        </TweenOne>
+                        <div  className={this.props.data.items[0].textPosition} style={{color:this.props.data.items[0].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[0].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[0].textOne}</p>
+                                <p key="p2">{this.props.data.items[0].textTwo}</p>
+                            </QueueAnim>
+                        </div>
                     </Element>
                     <Element key="bbb"
                              prefixCls="banner-user-elem"
@@ -81,19 +88,39 @@ export default class CustomThumb extends React.Component {
                                 backgroundPosition: 'center',
                             }}
                         />
-                        <QueueAnim key="1" name="QueueAnim">
-                            <h1 key="h1">Ant Motion Demo</h1>
-                            <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
-                        </QueueAnim>
-                        <TweenOne
-                            animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
-                            key="2"
-                            name="TweenOne"
-                        >
-                            Ant Motion Demo.Ant Motion Demo
-                        </TweenOne>
+                        <div  className={this.props.data.items[1].textPosition} style={{color: this.props.data.items[1].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[1].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[1].textOne}</p>
+                                <p key="p2">{this.props.data.items[1].textTwo}</p>
+                            </QueueAnim>
+                        </div>
                     </Element>
-                    <Thumb prefixCls="user-thumb" key="thumb" component={TweenOne}
+                    <Element key="ccc"
+                             prefixCls="banner-user-elem"
+                    >
+                        <BgElement
+                            key="bg"
+                            className="bg"
+                            style={{
+                                backgroundImage: `url(${this.imgArray[2]})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
+                        />
+                        <div  className={this.props.data.items[2].textPosition} style={{color: this.props.data.items[2].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[2].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[2].textOne}</p>
+                                <p key="p2">{this.props.data.items[2].textTwo}</p>
+                            </QueueAnim>
+                        </div>
+                    </Element>
+                    <Thumb prefixCls="user-thumb" key="thumb" component={OneTween}
                            animation={{ bottom: this.state.enter ? 0 : -70 }}
                     >
                         {thumbChildren}

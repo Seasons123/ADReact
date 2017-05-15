@@ -26,7 +26,7 @@ const IMAGE_DATA = [
         textOne:'Today is not another day ,today I will create something beautiful ',
         textTwo:'Study hard , play harder',
         textColor:'#323232',
-        textPosition:'bottomRight'
+        textPosition:'upRight'
     },
 ];
 
@@ -45,7 +45,7 @@ var MainPage=React.createClass({
               pause={false}
               arrow={true}
               thumb={true}
-              animType={"customArrow"}
+              animType={"customThumb"}
           />
     );
   },

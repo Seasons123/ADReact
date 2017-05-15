@@ -1,8 +1,9 @@
 // use jsx to render html, do not modify simple.html
 
 import BannerAnim from '../../BannerAnim/BannerAnim';
-import QueueAnim from 'rc-queue-anim';
-import TweenOne, { TweenOneGroup } from 'rc-tween-one';
+import QueueAnim from '../../QueueAnim/QueueAnim';
+import OneTween from '../../OneTween/OneTween';
+import OneTweenGroup  from '../../OneTween/OneTweenGroup';
 import React from 'react';
 
 import '../../../css/assets/index.css';
@@ -157,35 +158,35 @@ export default class CustomArrow extends React.Component {
                             </QueueAnim>
                         </div>
                     </Element>
-                    <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={TweenOne}
+                    <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={OneTween}
                            onMouseEnter={this.prevEnter}
                            onMouseLeave={this.prevLeave}
                            animation={{ left: this.state.prevEnter ? 0 : -120 }}
                     >
                         <div className="arrow"></div>
-                        <TweenOneGroup enter={{ opacity: 0, type: 'from' }} leave={{ opacity: 0 }}
+                        <OneTweenGroup enter={{ opacity: 0, type: 'from' }} leave={{ opacity: 0 }}
                                        appear={false} className="img-wrapper" component="ul"
                         >
                             <li
                                 style={{ backgroundImage: `url(${this.imgArray[intArray[0]]})` }}
                                 key={intArray[0]}
                             />
-                        </TweenOneGroup>
+                        </OneTweenGroup>
                     </Arrow>
-                    <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={TweenOne}
+                    <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={OneTween}
                            onMouseEnter={this.nextEnter}
                            onMouseLeave={this.nextLeave}
                            animation={{ right: this.state.nextEnter ? 0 : -120 }}
                     >
                         <div className="arrow"></div>
-                        <TweenOneGroup enter={{ opacity: 0, type: 'from', delay: 200 }} leave={{ opacity: 0 }}
+                        <OneTweenGroup enter={{ opacity: 0, type: 'from', delay: 200 }} leave={{ opacity: 0 }}
                                        className="img-wrapper" component="ul"
                         >
                             <li
                                 style={{ backgroundImage: `url(${this.imgArray[intArray[1]]})` }}
                                 key={intArray[1]}
                             />
-                        </TweenOneGroup>
+                        </OneTweenGroup>
                     </Arrow>
                 </BannerAnim>
             </div>
