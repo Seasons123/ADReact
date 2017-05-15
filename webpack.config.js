@@ -53,6 +53,10 @@ var config = {
         test: /\.html$/,
         loader: 'url?name=[name].[ext]'
       },
+        {
+            test: /\.(mp4)$/,
+            loader: 'file'
+        },
     ],
   },
   plugins: plugins,

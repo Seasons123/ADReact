@@ -28,6 +28,9 @@ const IMAGE_DATA = [
         textColor:'#323232',
         textPosition:'upRight'
     },
+    {
+        src: require('./video/YUNDI.mp4'),
+    }
 ];
 
 var MainPage=React.createClass({
@@ -45,7 +48,7 @@ var MainPage=React.createClass({
               pause={false}
               arrow={true}
               thumb={true}
-              animType={"followMouse"}
+              animType={"videoBg"}
           />
     );
   },
