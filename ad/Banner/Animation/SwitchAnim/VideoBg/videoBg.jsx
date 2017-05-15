@@ -1,5 +1,5 @@
 
-import QueueAnim from '../../QueueAnim/QueueAnim';
+import QueueAnim from '../../../../LowLevelAnim/QueueAnim/QueueAnim';
 import BannerAnim from '../../BannerAnim/BannerAnim';
 import React from 'react';
 

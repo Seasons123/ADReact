@@ -3,7 +3,7 @@ import '../../../css/banner.css';
 import '../../../css/banner-anim.css';
 
 
-import QueueAnim from '../../QueueAnim/QueueAnim';
+import QueueAnim from '../../../../LowLevelAnim/QueueAnim/QueueAnim';
 import BannerAnim from '../../BannerAnim/BannerAnim';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;

@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import BgElement from './BgElement';
-import OneTween from '../OneTween/index';
+import OneTween from '../../../LowLevelAnim/OneTween/index';
 
-import ticker from '../OneTween/ticker';
+import ticker from '../../../LowLevelAnim/OneTween/ticker';
 import ease from 'tween-functions';
 import {
   getGsapType,
