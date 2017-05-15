@@ -5,8 +5,10 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import React from 'react';
 
-import '../../../css/banner.css';
-import '../../../css/banner-anim.css';
+import '../../../css/assets/index.css';
+import '../../../css/assets/bgParallax.css';
+import '../../../css/assets/arrow.css';
+import '../../../css/assets/thumb.css';
 
 const { Element, Arrow } = BannerAnim;
 const BgElement = Element.BgElement;
@@ -14,8 +16,9 @@ export default class CustomArrow extends React.Component {
     constructor() {
         super(...arguments);
         this.imgArray = [
-            'https://os.alipayobjects.com/rmsportal/IhCNTqPpLeTNnwr.jpg',
-            'https://os.alipayobjects.com/rmsportal/uaQVvDrCwryVlbb.jpg',
+            this.props.data.items[0].src ,
+            this.props.data.items[1].src ,
+            this.props.data.items[2].src
         ];
         this.state = {
             intShow: 0,
@@ -79,86 +82,113 @@ export default class CustomArrow extends React.Component {
     render() {
         const intArray = this.getNextPrevNumber();
         return (
-            <BannerAnim onChange={this.onChange}>
-                <Element key="aaa"
-                         prefixCls="banner-user-elem"
-                >
-                    <BgElement
-                        key="bg"
-                        className="bg"
-                        style={{
-                            backgroundImage: `url(${this.imgArray[0]})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    />
-                    <QueueAnim key="1" name="QueueAnim">
-                        <h1 key="h1">Ant Motion Demo</h1>
-                        <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
-                    </QueueAnim>
-                    <TweenOne
-                        animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
-                        key="2"
-                        name="TweenOne"
+            <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
+                <BannerAnim onChange={this.onChange}
+                            delay={this.props.data.delay}
+                            duration={this.props.data.duration}
+                            autoPlaySpeed={this.props.data.autoPlaySpeed}
+                            autoPlay={this.props.data.autoPlay}
+                            pause={this.props.data.pause}
+                            arrow={this.props.data.arrow}
+                            thumb={this.props.data.thumb}>
+                    <Element key="aaa"
+                             prefixCls="banner-user-elem"
                     >
-                        Ant Motion Demo.Ant Motion Demo
-                    </TweenOne>
-                </Element>
-                <Element key="bbb"
-                         prefixCls="banner-user-elem"
-                >
-                    <BgElement
-                        key="bg"
-                        className="bg"
-                        style={{
-                            backgroundImage: `url(${this.imgArray[1]})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                        }}
-                    />
-                    <QueueAnim key="1" name="QueueAnim">
-                        <h1 key="h1">Ant Motion Demo</h1>
-                        <p key="p">Ant Motion Demo.Ant Motion Demo.Ant Motion Demo.Ant Motion Demo</p>
-                    </QueueAnim>
-                    <TweenOne
-                        animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }}
-                        key="2"
-                        name="TweenOne"
-                    >
-                        Ant Motion Demo.Ant Motion Demo
-                    </TweenOne>
-                </Element>
-                <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={TweenOne}
-                       onMouseEnter={this.prevEnter}
-                       onMouseLeave={this.prevLeave}
-                       animation={{ left: this.state.prevEnter ? 0 : -120 }}
-                >
-                    <div className="arrow"></div>
-                    <TweenOneGroup enter={{ opacity: 0, type: 'from' }} leave={{ opacity: 0 }}
-                                   appear={false} className="img-wrapper" component="ul"
-                    >
-                        <li
-                            style={{ backgroundImage: `url(${this.imgArray[intArray[0]]})` }}
-                            key={intArray[0]}
+                        <BgElement
+                            key="bg"
+                            className="bg"
+                            style={{
+                                backgroundImage: `url(${this.imgArray[0]})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
                         />
-                    </TweenOneGroup>
-                </Arrow>
-                <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={TweenOne}
-                       onMouseEnter={this.nextEnter}
-                       onMouseLeave={this.nextLeave}
-                       animation={{ right: this.state.nextEnter ? 0 : -120 }}
-                >
-                    <div className="arrow"></div>
-                    <TweenOneGroup enter={{ opacity: 0, type: 'from', delay: 200 }} leave={{ opacity: 0 }}
-                                   className="img-wrapper" component="ul"
+                        <div  className={this.props.data.items[0].textPosition} style={{color:this.props.data.items[0].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[0].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[0].textOne}</p>
+                                <p key="p2">{this.props.data.items[0].textTwo}</p>
+                            </QueueAnim>
+                        </div>
+                    </Element>
+                    <Element key="bbb"
+                             prefixCls="banner-user-elem"
                     >
-                        <li
-                            style={{ backgroundImage: `url(${this.imgArray[intArray[1]]})` }}
-                            key={intArray[1]}
+                        <BgElement
+                            key="bg"
+                            className="bg"
+                            style={{
+                                backgroundImage: `url(${this.imgArray[1]})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
                         />
-                    </TweenOneGroup>
-                </Arrow>
-            </BannerAnim>
+                        <div  className={this.props.data.items[1].textPosition} style={{color: this.props.data.items[1].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[1].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[1].textOne}</p>
+                                <p key="p2">{this.props.data.items[1].textTwo}</p>
+                            </QueueAnim>
+                        </div>
+                    </Element>
+                    <Element key="ccc"
+                             prefixCls="banner-user-elem"
+                    >
+                        <BgElement
+                            key="bg"
+                            className="bg"
+                            style={{
+                                backgroundImage: `url(${this.imgArray[2]})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                            }}
+                        />
+                        <div  className={this.props.data.items[2].textPosition} style={{color: this.props.data.items[2].textColor}}>
+                            <QueueAnim name="QueueAnim">
+                                <h1 key="h1">{this.props.data.items[2].textHeader}</h1>
+                            </QueueAnim>
+                            <QueueAnim name="QueueAnim" type="bottom">
+                                <p key="p1">{this.props.data.items[2].textOne}</p>
+                                <p key="p2">{this.props.data.items[2].textTwo}</p>
+                            </QueueAnim>
+                        </div>
+                    </Element>
+                    <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={TweenOne}
+                           onMouseEnter={this.prevEnter}
+                           onMouseLeave={this.prevLeave}
+                           animation={{ left: this.state.prevEnter ? 0 : -120 }}
+                    >
+                        <div className="arrow"></div>
+                        <TweenOneGroup enter={{ opacity: 0, type: 'from' }} leave={{ opacity: 0 }}
+                                       appear={false} className="img-wrapper" component="ul"
+                        >
+                            <li
+                                style={{ backgroundImage: `url(${this.imgArray[intArray[0]]})` }}
+                                key={intArray[0]}
+                            />
+                        </TweenOneGroup>
+                    </Arrow>
+                    <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={TweenOne}
+                           onMouseEnter={this.nextEnter}
+                           onMouseLeave={this.nextLeave}
+                           animation={{ right: this.state.nextEnter ? 0 : -120 }}
+                    >
+                        <div className="arrow"></div>
+                        <TweenOneGroup enter={{ opacity: 0, type: 'from', delay: 200 }} leave={{ opacity: 0 }}
+                                       className="img-wrapper" component="ul"
+                        >
+                            <li
+                                style={{ backgroundImage: `url(${this.imgArray[intArray[1]]})` }}
+                                key={intArray[1]}
+                            />
+                        </TweenOneGroup>
+                    </Arrow>
+                </BannerAnim>
+            </div>
         );
     }
 }
