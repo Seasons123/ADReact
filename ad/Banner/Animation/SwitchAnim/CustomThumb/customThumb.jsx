@@ -1,5 +1,3 @@
-// use jsx to render html, do not modify simple.html
-
 import BannerAnim from '../../BannerAnim/BannerAnim';
 import QueueAnim from '../../QueueAnim/QueueAnim';
 import OneTween from '../../OneTween/OneTween';

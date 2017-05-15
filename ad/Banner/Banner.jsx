@@ -11,6 +11,7 @@ import Vertical from './Animation/SwitchAnim/Vertical/vertical';
 import VerticalOverlay from './Animation/SwitchAnim/VerticalOverlay/verticalOverlay';
 import CustomArrow from './Animation/SwitchAnim/CustomArrow/customArrow';
 import CustomThumb from './Animation/SwitchAnim/CustomThumb/customThumb';
+import FollowMouse from './Animation/SwitchAnim/FollowMouse/followMouse';
 
 export default class Banner extends Component {
 
@@ -85,6 +86,12 @@ export default class Banner extends Component {
             return(
                 <CustomThumb  data={ DATA }>
                 </CustomThumb>
+            );
+        }
+        if(this.props.animType =="followMouse" ||  this.props.animType =="FollowMouse"){
+            return(
+                <FollowMouse  data={ DATA }>
+                </FollowMouse>
             );
         }
     }

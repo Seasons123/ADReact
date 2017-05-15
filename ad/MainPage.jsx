@@ -45,7 +45,7 @@ var MainPage=React.createClass({
               pause={false}
               arrow={true}
               thumb={true}
-              animType={"customThumb"}
+              animType={"followMouse"}
           />
     );
   },
