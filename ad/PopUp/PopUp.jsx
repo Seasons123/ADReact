@@ -2,32 +2,46 @@ import React, { Component, PropTypes } from 'react';
 
 import './css/popup.css';
 
-
-import TopMask from './Animation/Type/TopMask/topMask';
-
-
 export default class PopUp extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            display: "block",
+            position: "fixed"
+        };
+    }
+    handleCloseClick() {
+        this.setState({display: "none"});
+        this.setState({position: ""});
     }
 
     render() {
-        let DATA = {
-            items:this.props.items,
-            width:this.props.width,
-            height:this.props.height,
-            link:this.props.link,
-            type:this.props.type
-        };
 
 
-        if(this.props.type =="topMask" || this.props.type =="TopMask"){
+       if( this.props.position == "bottomRight" || this.props.position == "BottomRight")
             return(
-                <TopMask data={ DATA }>
-                </TopMask>
+                <div  className="item"
+                      style={{width: this.props.width,
+                             marginRight:this.props.distanceX,
+                             marginBottom:this.props.distanceY,
+                             display:this.state.display,
+                             position:this.state.position}}>
+                    <div className="firstLine" style={{width: this.props.width}}>
+                        <span className="close"
+                              onClick={this.handleCloseClick.bind(this)}>X</span>
+                    </div>
+
+                    <a    className={this.props.position}
+                          style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                                  width: this.props.width,
+                                  height:this.props.height,
+                                  display:this.state.display}}
+                          href={this.props.link}>
+                    </a>
+                </div>
             );
-        }
+
     }
 
 }
