@@ -1,5 +1,8 @@
 
 
-https://github.com/minutemailer/react-popup
+觉得这个组件挺不错的：https://github.com/minutemailer/react-popup，
+但是我现在这个项目用不到，我的需求没有这么复杂，因为觉得挺不错的，就保留在这里不删掉了……
 
 MainPage.jsx是这个PopUpAnim组件的应用
+
+Type下面的unused下面的Demo_use_PopUpAnim.jsx的是这个组件的配套使用
