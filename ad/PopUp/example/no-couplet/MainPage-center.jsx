@@ -18,19 +18,24 @@ const IMAGE_DATA = [
 
 
 var MainPage=React.createClass({
-  render:function(){
+    render:function(){
 
-    return(
-        <PopUp
-            items={IMAGE_DATA}
-            width={'800px'}
-            height={'450px'}
-            link={"https://github.com"}
-            position={"center"}
-            mask={true}
-        />
-    );
-  },
+        return(
+            <PopUp
+                items={IMAGE_DATA}
+                width={'800px'}
+                height={'450px'}
+                link={"https://github.com"}
+                position={"center"}
+                distanceX={""}
+                distanceY={""}
+                mask={true}
+                maskColor={'rgba(0,0,0,0.3)'}
+                autoDisappear={false}
+                duration={1600}
+            />
+        );
+    },
 });
 module.exports=MainPage;
 

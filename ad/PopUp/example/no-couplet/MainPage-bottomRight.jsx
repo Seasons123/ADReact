@@ -30,6 +30,7 @@ var MainPage=React.createClass({
             distanceX={"20px"}
             distanceY={"30px"}
             mask={false}
+            autoDisappear={false}
         />
     );
   },

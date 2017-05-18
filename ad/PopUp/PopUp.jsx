@@ -18,6 +18,20 @@ export default class PopUp extends Component {
         this.setState({mask: false});
     }
 
+    // 开始计时自动消失
+    autoDisappear() {
+        if(this.props.autoDisappear) {
+            setTimeout(() => {
+                this.setState({display: "none"});
+            }, this.props.duration);
+        }
+    }
+
+
+    componentDidMount() {
+        this.autoDisappear();
+    }
+
     render() {
 
        if( this.props.position == "bottomRight" || this.props.position == "BottomRight")
@@ -40,7 +54,7 @@ export default class PopUp extends Component {
                               href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
 
@@ -65,7 +79,7 @@ export default class PopUp extends Component {
                               href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
 
@@ -89,7 +103,7 @@ export default class PopUp extends Component {
                               href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
 
@@ -113,7 +127,7 @@ export default class PopUp extends Component {
                               href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
 
@@ -137,7 +151,7 @@ export default class PopUp extends Component {
                               href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
         if( this.props.position == "couplet" || this.props.position == "Couplet"){
@@ -175,7 +189,7 @@ export default class PopUp extends Component {
                              href={this.props.link}>
                         </a>
                     </div>
-                    <div className={this.state.mask?"cover":null}></div>
+                    <div className={this.state.mask?"cover":null} style={{backgroundColor:this.props.maskColor}}></div>
                 </div>
             );
         }
@@ -185,7 +199,6 @@ export default class PopUp extends Component {
 
 
 PopUp.defaultProps = {
-    speed: 1,
     items:[],
     width:'135px',
     height:'180px',
@@ -193,6 +206,9 @@ PopUp.defaultProps = {
     position:"bottomRight",
     distanceX:"20px",
     distanceY:"30px",
-    mask:false
+    mask:false,
+    maskColor:'rgba(0,0,0,0.3)',
+    autoDisappear:false,
+    duration:1000
 };
 
