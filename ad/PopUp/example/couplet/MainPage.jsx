@@ -23,13 +23,13 @@ var MainPage=React.createClass({
     return(
         <PopUp
             items={IMAGE_DATA}
-            width={'800px'}
-            height={'450px'}
+            width={'100px'}
+            height={'360px'}
             link={"https://github.com"}
-            position={"center"}
-            distanceX={"20px"}
-            distanceY={"30px"}
-            mask={true}
+            position={"couplet"}
+            distanceX={"60px"}
+            distanceY={"110px"}
+            mask={false}
         />
     );
   },

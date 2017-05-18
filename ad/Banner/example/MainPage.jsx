@@ -7,7 +7,7 @@ import Banner from './Banner/Banner';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/size5(960.380)/couplet1.jpg'),
+        src: require('./assets/images/size5(960.380)/1.jpg'),
         alt: 'images-1',
         textHeader:'Banner animation demo',
         textOne:'Today is not another day ,today I will create something beautiful ',
@@ -16,7 +16,7 @@ const IMAGE_DATA = [
         textPosition:'upLeft'
     },
     {
-        src: require('./assets/images/size5(960.380)/couplet2.jpg'),
+        src: require('./assets/images/size5(960.380)/2.jpg'),
         alt: 'images-2',
     },
     {

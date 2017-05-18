@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import './css/banner.css';
 import './css/banner-anim.css';
 
+import Default from './Animation/SwitchAnim/Default/default';
 import Slider from './Animation/SwitchAnim/Slider/Slider';
 import Across from './Animation/SwitchAnim/Across/across';
 import AcrossOverlay from './Animation/SwitchAnim/AcrossOverlay/acrossOverlay';
@@ -34,14 +35,21 @@ export default class Banner extends Component {
             thumb:this.props.thumb
         };
 
-
+        /*The default mode*/
+        if(this.props.animType ==" " || this.props.animType == null ){
+            return(
+                <Default data={ DATA }>
+                </Default>
+            );
+        }
         if(this.props.animType =="slider".toLowerCase() || this.props.animType =="slider".toUpperCase() || this.props.animType =="Slider"){
             return(
                 <Slider data={ DATA }>
                 </Slider>
             );
         }
-        if(this.props.animType =="across".toLowerCase() || this.props.animType =="across".toUpperCase() || this.props.animType =="Across"){
+        /*The default mode*/
+        if(this.props.animType =="across".toLowerCase() || this.props.animType =="across".toUpperCase() || this.props.animType =="Across" ){
             return(
                 <Across data={ DATA }>
                 </Across>

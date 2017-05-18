@@ -305,6 +305,7 @@ BannerAnim.defaultProps = {
   ease: 'easeInOutQuad',
   arrow: true,
   thumb: true,
+  autoPlay:true,
   autoPlaySpeed: 5000,
   dragPlay: true,
   onChange: () => {

@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import LeftDiv from './Animation/Type/Couplet/LeftDiv';
-import RightDiv from './Animation/Type/Couplet/RightDiv';
 
 import './css/popup.css';
 
