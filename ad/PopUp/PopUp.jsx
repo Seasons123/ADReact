@@ -184,4 +184,15 @@ export default class PopUp extends Component {
 }
 
 
+PopUp.defaultProps = {
+    speed: 1,
+    items:[],
+    width:'135px',
+    height:'180px',
+    link:"https://github.com",
+    position:"bottomRight",
+    distanceX:"20px",
+    distanceY:"30px",
+    mask:false
+};
 
