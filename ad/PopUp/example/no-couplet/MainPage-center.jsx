@@ -27,8 +27,6 @@ var MainPage=React.createClass({
             height={'450px'}
             link={"https://github.com"}
             position={"center"}
-            distanceX={"20px"}
-            distanceY={"30px"}
             mask={true}
         />
     );
