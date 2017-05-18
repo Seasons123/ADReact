@@ -1,4 +1,4 @@
-/* 第一行关闭按钮 start*/
+
  .itemBottomRight{
      z-index: 1001;
      bottom : 0;
@@ -9,12 +9,12 @@
      bottom : 0;
      left: 0;
  }
-.itemUpRight{
+.itemUpRight,.rightCouplet{
     z-index: 1001;
     top : 0;
     right: 0;
 }
-.itemUpLeft{
+.itemUpLeft,.leftCouplet{
     z-index: 1001;
     top : 0;
     left: 0;
@@ -25,7 +25,6 @@
     position: absolute;
     top:50%;
     left:50%;
-    background: white;
 }
  .firstLine{
      height:20px;
@@ -36,11 +35,7 @@
      color: #666;
      background:rgba(0,0,0,0);
  }
-.itemCenter .firstLine{
-    padding:0 0;
-    background-color:#000;
-    opacity:0.3;
-}
+
  /*关闭按钮*/
  .close{
      display:inline-block;

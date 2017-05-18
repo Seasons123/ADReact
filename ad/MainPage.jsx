@@ -6,6 +6,12 @@ import PopUp from './PopUp/PopUp';
 const IMAGE_DATA = [
     {
         src: require('./assets/images/popup/size2(800.450)/1.jpg')
+    },
+    {
+        src: require('./assets/images/popup/couplet/couplet1.jpg')
+    },
+    {
+        src: require('./assets/images/popup/couplet/couplet2.jpg')
     }
 ];
 
@@ -17,13 +23,13 @@ var MainPage=React.createClass({
     return(
         <PopUp
             items={IMAGE_DATA}
-            width={'800px'}
-            height={'450px'}
+            width={'100px'}
+            height={'360px'}
             link={"https://github.com"}
-            position={"center"}
-            distanceX={"20px"}
-            distanceY={"30px"}
-            mask={true}
+            position={"couplet"}
+            distanceX={"60px"}
+            distanceY={"110px"}
+            mask={false}
         />
     );
   },

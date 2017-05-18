@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import LeftDiv from './Animation/Type/Couplet/LeftDiv';
+import RightDiv from './Animation/Type/Couplet/RightDiv';
 
 import './css/popup.css';
 
@@ -33,8 +35,7 @@ export default class PopUp extends Component {
                             <span className="close"
                                   onClick={this.handleCloseClick.bind(this)}>X</span>
                         </div>
-                        <a    className={this.props.position}
-                              style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                        <a   style={{backgroundImage:'url(' + this.props.items[0].src + ')',
                                       width: this.props.width,
                                       height:this.props.height,
                                       display:this.state.display}}
@@ -83,8 +84,7 @@ export default class PopUp extends Component {
                             <span className="close"
                                   onClick={this.handleCloseClick.bind(this)}>X</span>
                         </div>
-                        <a    className={this.props.position}
-                              style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                        <a  style={{backgroundImage:'url(' + this.props.items[0].src + ')',
                                   width: this.props.width,
                                   height:this.props.height,
                                   display:this.state.display}}
@@ -108,8 +108,7 @@ export default class PopUp extends Component {
                             <span className="close"
                                   onClick={this.handleCloseClick.bind(this)}>X</span>
                         </div>
-                        <a    className={this.props.position}
-                              style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                        <a   style={{backgroundImage:'url(' + this.props.items[0].src + ')',
                                   width: this.props.width,
                                   height:this.props.height,
                                   display:this.state.display}}
@@ -133,8 +132,7 @@ export default class PopUp extends Component {
                             <span className="close"
                                   onClick={this.handleCloseClick.bind(this)}>X</span>
                         </div>
-                        <a    className={this.props.position}
-                              style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                        <a  style={{backgroundImage:'url(' + this.props.items[0].src + ')',
                                   width: this.props.width,
                                   height:this.props.height,
                                   display:this.state.display}}
@@ -144,6 +142,45 @@ export default class PopUp extends Component {
                     <div className={this.state.mask?"cover":null}></div>
                 </div>
             );
+        if( this.props.position == "couplet" || this.props.position == "Couplet"){
+            return (
+                <div>
+                    <div className="leftCouplet"
+                         style={{width: this.props.width,
+                                 marginLeft:this.props.distanceX,
+                                 marginTop:this.props.distanceY,
+                                 display:this.state.display,
+                                 position:this.state.position}}>
+                        <div className="firstLine" style={{width: this.props.width}}>
+                            <span className="close" onClick={this.handleCloseClick.bind(this)}>X</span>
+                        </div>
+                        <a   style={{backgroundImage:'url(' + this.props.items[1].src + ')',
+                                     width: this.props.width,
+                                     height:this.props.height,
+                                     display:this.state.display}}
+                              href={this.props.link}>
+                        </a>
+                    </div>
+                    <div className="rightCouplet"
+                         style={{width: this.props.width,
+                             marginRight:this.props.distanceX,
+                             marginTop:this.props.distanceY,
+                             display:this.state.display,
+                             position:this.state.position}}>
+                        <div className="firstLine" style={{width: this.props.width}}>
+                            <span className="close" onClick={this.handleCloseClick.bind(this)}>X</span>
+                        </div>
+                        <a   style={{backgroundImage:'url(' + this.props.items[2].src + ')',
+                            width: this.props.width,
+                            height:this.props.height,
+                            display:this.state.display}}
+                             href={this.props.link}>
+                        </a>
+                    </div>
+                    <div className={this.state.mask?"cover":null}></div>
+                </div>
+            );
+        }
     }
 
 }
