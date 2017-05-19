@@ -1,0 +1,9 @@
+.adBig{
+    overflow:hidden;
+}
+
+.adSmall{
+    overflow:hidden;
+    top:0;
+    position :fixed;
+}

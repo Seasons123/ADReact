@@ -1,17 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import PopUp from './PopUp/PopUp';
+import Scalable from './Scalable/scalable';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/popup/size2(800.450)/demo1.jpg')
+        src: require('./assets/images/scalable/demoSmall.gif'),
+        width:'960px',
+        height:'80px',
     },
     {
-        src: require('./assets/images/popup/couplet/couplet1.jpg')
-    },
-    {
-        src: require('./assets/images/popup/couplet/couplet2.jpg')
+        src: require('./assets/images/scalable/demoBig.jpg'),
+        width:'960px',
+        height:'450px',
     }
 ];
 
@@ -21,18 +22,14 @@ var MainPage=React.createClass({
   render:function(){
 
     return(
-        <PopUp
+        <Scalable
             items={IMAGE_DATA}
             width={'800px'}
-            height={'450px'}
             link={"https://github.com"}
-            position={"center"}
-            distanceX={"20px"}
-            distanceY={"30px"}
-            mask={true}
-            maskColor={'rgba(0,0,0,0.3)'}
-            autoDisappear={false}
+            position={"top"}
+            autoDisappear={true}
             duration={1600}
+            delay={2000}
         />
     );
   },
