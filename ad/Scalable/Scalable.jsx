@@ -55,11 +55,12 @@ export default class Scalable extends Component {
                 </div>
             </OneTween>
         );
-        return (
-            <div >
-                {bigImage}
-                {smallImage}
-            </div>
+        if( this.props.position == "top" || this.props.position == "Top" )
+            return(
+                <div style={{ width:this.props.width,margin:'0 auto'}}>
+                    {bigImage}
+                    {smallImage}
+                </div>
         );
 
     }
