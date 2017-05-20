@@ -10,13 +10,14 @@ export default class Scalable extends Component {
         this.state = {
             displayBig: "block",
             displaySmall: "block",
+            displaySmallBottom:"none",
             closeDisplay:"block",
             heightBigImage:this.props.items[1].height,
             widthBigImage:this.props.items[1].width,
             animationTop: [{ y: '-1000px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }],
             animationLeft: [{ x: '-2000px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }],
             animationRight: [{ x: '2000px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }],
-
+            animationBottom:[{ y: '2000px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }],
         };
 
     }
@@ -31,6 +32,7 @@ export default class Scalable extends Component {
         if(this.props.autoDisappear) {
             setTimeout(() => {
                 this.setState({heightBigImage: "0px"});
+                this.setState({displaySmallBottom: "block"});
             }, this.props.delay *2);
         }
     }
@@ -42,7 +44,7 @@ export default class Scalable extends Component {
     render() {
 
         let smallImageTop=(
-            <OneTween animation={[{ y: '-1000px' ,height:0, type: 'from', delay: this.props.delay *2 ,duration:this.props.duration }]}>
+            <OneTween animation={[{ y: '-1000px' ,height:0, type: 'from', delay: this.props.delay *2,duration:this.props.duration }]}>
                 <div  className="adSmall" style={{display:this.state.displaySmall}}>
                     <a href={this.props.link}
                        style={{backgroundImage:'url(' + this.props.items[0].src + ')',
@@ -50,18 +52,45 @@ export default class Scalable extends Component {
                            height:this.props.items[0].height,
                            display:this.state.displayBig}}>
                     </a>
+                    <a className="rightAd-close"
+                       style={{display:this.state.closeDisplay}}
+                       onClick={this.handleCloseClick.bind(this)}
+                       href="#">X
+                    </a>
+                </div>
+            </OneTween>
+        );
+        let smallImageBottom=(
+            <OneTween animation={[{ y: '1000px' , type: 'from', delay: this.props.delay *1.5,duration:this.props.duration }]}>
+                <div  className="adSmall" style={{display:this.state.displaySmallBottom}}>
+                    <a href={this.props.link}
+                       style={{backgroundImage:'url(' + this.props.items[0].src + ')',
+                           width: this.props.items[0].width,
+                           height:this.props.items[0].height,
+                           display:this.state.displayBig}}>
+                    </a>
+                    <a className="rightAd-close"
+                       style={{display:this.state.closeDisplay}}
+                       onClick={this.handleCloseClick.bind(this)}
+                       href="#">X
+                    </a>
                 </div>
             </OneTween>
         );
         let smallImageLeft=(
             <div style={{ margin:'0 0'}}>
-                <OneTween animation={[{ x: '-100px' , type: 'from', delay: this.props.delay *2 ,duration:this.props.duration }]}>
+                <OneTween animation={[{ x: '-100px' , type: 'from', delay: this.props.delay *2, duration:this.props.duration }]}>
                     <div  className="adSmall" style={{display:this.state.displaySmall}}>
                         <a href={this.props.link}
                            style={{backgroundImage:'url(' + this.props.items[2].src + ')',
                                width: this.props.items[2].width,
                                height:this.props.items[2].height,
                                display:this.state.displayBig}}>
+                        </a>
+                        <a className="rightAd-close-smallImageLeft"
+                           style={{display:this.state.closeDisplay}}
+                           onClick={this.handleCloseClick.bind(this)}
+                           href="#">X
                         </a>
                     </div>
                 </OneTween>
@@ -76,6 +105,11 @@ export default class Scalable extends Component {
                                width: this.props.items[2].width,
                                height:this.props.items[2].height,
                                display:this.state.displayBig}}>
+                        </a>
+                        <a className="rightAd-close-smallImageLeftRight"
+                           style={{display:this.state.closeDisplay}}
+                           onClick={this.handleCloseClick.bind(this)}
+                           href="#">X
                         </a>
                     </div>
                 </OneTween>
@@ -148,6 +182,28 @@ export default class Scalable extends Component {
                         </OneTween>
                     </div>
                     {this.props.aotoNormalSize?smallImageRight:null}
+                </div>
+            );
+        if( this.props.position == "bottom" || this.props.position == "Bottom" )
+            return(
+                <div style={{ width:this.props.width,margin:'0 auto',position:'fixed',bottom:'0', left:'0', right:'0' ,zIndex:'1000'}}>
+                    <div className="clear"></div>
+                    <OneTween animation={this.props.autoDisappear?this.state.animationBottom:null}>
+                        <div className="adBig" >
+                            <a href={this.props.link}
+                               style={{backgroundImage:'url(' + this.props.items[1].src + ')',
+                                   width: this.state.widthBigImage,
+                                   height:this.state.heightBigImage,
+                                   display:this.state.displayBig}}>
+                            </a>
+                            <a className="rightAd-close"
+                               style={{display:this.state.closeDisplay}}
+                               onClick={this.handleCloseClick.bind(this)}
+                               href="#">X
+                            </a>
+                        </div>
+                    </OneTween>
+                    {this.props.aotoNormalSize?smallImageBottom:null}
                 </div>
             );
 

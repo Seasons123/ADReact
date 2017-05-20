@@ -21,8 +21,22 @@ body{
 .rightAd-close {
     display: block;
     position:absolute;
-    right:40px;
-    top:20px;
+    right:2px;
+    top:2px;
+    height:20px;
+    line-height:20px;
+    width:30px;
+    padding:0 6px;
+    font-size:18px;
+    font-weight:bold;
+    color: #666;
+    text-decoration:none;
+}
+.rightAd-close-smallImageLeftRight{
+    display: block;
+    position:absolute;
+    left:1px;
+    top:2px;
     height:20px;
     line-height:20px;
     width:30px;
@@ -45,4 +59,13 @@ body{
     font-weight:bold;
     color: #666;
     text-decoration:none;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+    height: 0;
 }
