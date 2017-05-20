@@ -1,10 +1,20 @@
+body{
+    overflow: hidden;
+
+}
 .adBig{
     overflow:hidden;
+    position:relative;
 
+}
+.adBig a{
+    background-size: cover;
+    background-position: center;
 }
 
 .adSmall{
     overflow:hidden;
+    position:relative;
 }
 
 /*关闭按钮*/
@@ -12,6 +22,20 @@
     display: block;
     position:absolute;
     right:40px;
+    top:20px;
+    height:20px;
+    line-height:20px;
+    width:30px;
+    padding:0 6px;
+    font-size:18px;
+    font-weight:bold;
+    color: #666;
+    text-decoration:none;
+}
+.leftAd-close {
+    display: block;
+    position:absolute;
+    left:40px;
     top:20px;
     height:20px;
     line-height:20px;

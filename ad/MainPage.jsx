@@ -5,13 +5,13 @@ import Scalable from './Scalable/scalable';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/scalable/topAndBottom/size2(1440)/adSmall.jpg'),
-        width:'1440px',
+        src: require('./assets/images/scalable/topAndBottom/size1(800)/adSmall.jpg'),
+        width:'800px',
         height:'80px',
     },
     {
-        src: require('./assets/images/scalable/topAndBottom/size2(1440)/adBig.jpg'),
-        width:'1440px',
+        src: require('./assets/images/scalable/topAndBottom/size1(800)/adBig.jpg'),
+        width:'800px',
         height:'380px',
     }
 ];
@@ -24,9 +24,9 @@ var MainPage=React.createClass({
     return(
         <Scalable
             items={IMAGE_DATA}
-            width={'1440px'}
+            width={'800px'}
             link={"https://github.com"}
-            position={"top"}
+            position={"right"}
             autoDisappear={true}
             duration={1600}
             delay={2000}
