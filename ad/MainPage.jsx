@@ -30,6 +30,7 @@ var MainPage=React.createClass({
             autoDisappear={true}
             duration={1600}
             delay={2000}
+            aotoNormalSize={false}
         />
     );
   },

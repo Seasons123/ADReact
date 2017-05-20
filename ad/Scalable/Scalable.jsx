@@ -59,7 +59,7 @@ export default class Scalable extends Component {
             return(
                 <div style={{ width:this.props.width,margin:'0 auto'}}>
                     {bigImage}
-                    {smallImage}
+                    {this.props.aotoNormalSize?smallImage:null}
                 </div>
         );
 
