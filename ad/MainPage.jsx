@@ -5,15 +5,20 @@ import Scalable from './Scalable/scalable';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/scalable/topAndBottom/size1(800)/adSmall.jpg'),
+        src: require('./assets/images/scalable/size1(800)/adSmall.jpg'),
         width:'800px',
         height:'80px',
     },
     {
-        src: require('./assets/images/scalable/topAndBottom/size1(800)/adBig.jpg'),
+        src: require('./assets/images/scalable/size1(800)/adBig.jpg'),
         width:'800px',
         height:'380px',
-    }
+    },
+    {
+        src: require('./assets/images/scalable/size1(800)/smallVertical.jpg'),
+        width:'80px',
+        height:'450px',
+    },
 ];
 
 
