@@ -1,9 +1,24 @@
 .adBig{
     overflow:hidden;
+
 }
 
 .adSmall{
     overflow:hidden;
-    top:0;
-    position :fixed;
+}
+
+/*关闭按钮*/
+.rightAd-close {
+    display: block;
+    position:absolute;
+    right:40px;
+    top:20px;
+    height:20px;
+    line-height:20px;
+    width:30px;
+    padding:0 6px;
+    font-size:18px;
+    font-weight:bold;
+    color: #666;
+    text-decoration:none;
 }

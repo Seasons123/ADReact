@@ -10,10 +10,18 @@ export default class Scalable extends Component {
         this.state = {
             displayBig: "block",
             displaySmall: "block",
+            closeDisplay:"block",
             heightBigImage:this.props.items[1].height,
             heightSmallImage:this.props.items[0].height,
+            animation: [{ y: '-1000px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }]
 
         };
+
+    }
+
+    handleCloseClick() {
+        this.setState({displayBig: "none"});
+        this.setState({closeDisplay: "none"});
 
     }
     // 开始计时自动消失
@@ -31,13 +39,18 @@ export default class Scalable extends Component {
 
     render() {
         let bigImage=(
-            <OneTween animation={[{ y: '-500px',opacity: 1, type: 'to', delay: this.props.delay,duration:this.props.duration }]}>
+            <OneTween animation={this.props.autoDisappear?this.state.animation:null}>
                 <div className="adBig" >
                     <a href={this.props.link}
                        style={{backgroundImage:'url(' + this.props.items[1].src + ')',
                            width: this.props.items[1].width,
                            height:this.state.heightBigImage,
                            display:this.state.displayBig}}>
+                    </a>
+                    <a className="rightAd-close"
+                       style={{display:this.state.closeDisplay}}
+                       onClick={this.handleCloseClick.bind(this)}
+                       href="#">X
                     </a>
                 </div>
             </OneTween>
