@@ -5,7 +5,7 @@ import PopUp from './PopUp/PopUp';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/popup/size2(800.450)/demo1.jpg')
+        src: require('./assets/images/popup/size2(1440)(800.450)/demo1.jpg')
     },
     {
         src: require('./assets/images/popup/couplet/couplet1.jpg')

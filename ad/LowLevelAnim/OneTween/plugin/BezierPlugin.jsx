@@ -12,7 +12,7 @@ const _r1 = [];
 const _r2 = [];
 const _r3 = [];
 const _corProps = {};
-const _correlate = ',x,y,z,left,top,right,bottom,marginTop,marginLeft,marginRight,marginBottom,paddingLeft,paddingTop,paddingRight,paddingBottom,backgroundPosition,backgroundPosition_y,';
+const _correlate = ',x,y,z,left,topAndBottom,right,bottom,marginTop,marginLeft,marginRight,marginBottom,paddingLeft,paddingTop,paddingRight,paddingBottom,backgroundPosition,backgroundPosition_y,';
 
 const GsapBezier = {
   Segment(a, b, c, d) {
