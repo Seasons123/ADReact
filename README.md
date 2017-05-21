@@ -14,16 +14,15 @@ node服务器端应用了web框架是Express，服务器程序是devServer.js
 
 
 关于鼠标放上若是自动轮播的话暂停移开继续，也可以这样写，都行
-、、
-onMouseOver = () => {
-      if(this.props.pause && this.props.autoPlay ) {
-        ticker.clear(this.autoPlayId);
+
+    onMouseOver = () => {
+          if(this.props.pause && this.props.autoPlay ) {
+            ticker.clear(this.autoPlayId);
+          }
       }
-  }
 
     onMouseOut = () => {
      if(this.props.pause && this.props.autoPlay ) {
         this.autoPlay();
      }
   }
-、、
