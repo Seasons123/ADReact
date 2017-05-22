@@ -12,9 +12,26 @@ body{
     background-position: center;
 }
 
-.adSmall{
+.adSmallRight{
     overflow:hidden;
-    position:relative;
+    position: fixed;
+    z-index: 1001;
+    top : 0;
+    right: 0;
+}
+.adSmallLeft{
+    overflow:hidden;
+    position: fixed;
+    z-index: 1001;
+    top : 0;
+    left: 0;
+}
+.adSmallBottom{
+    overflow:hidden;
+    position: fixed;
+    z-index: 1001;
+    left:0;
+    bottom: 0;
 }
 
 /*关闭按钮*/
