@@ -235,7 +235,15 @@ export default class Scalable extends Component {
     }
 }
 
-
+Scalable.defaultProps={
+    items:[],
+    width:'800px',
+    link:"https://github.com",
+    position:"right",
+    autoDisappear:true,
+    delay:1600,
+    aotoNormalSize:true
+};
 
 
 
