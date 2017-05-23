@@ -1,4 +1,6 @@
 .marquee_left,
+.marquee_right,
+.marquee_top,
 .marquee_down {
   height: 25px;
   width: 100%;
@@ -6,6 +8,8 @@
   position: relative;
 }
 .marquee_left div,
+.marquee_right div,
+.marquee_top div,
 .marquee_down div {
   display: block;
   width: 100%;
@@ -14,8 +18,10 @@
   position: absolute;
 }
 
-.marquee_left span,
-.marquee_down span {
+.marquee_left a,
+.marquee_right a,
+.marquee_top a,
+.marquee_down a {
 	white-space: nowrap;
 	display: block;
 }
@@ -28,4 +34,14 @@
 @keyframes marquee_left {
   0% { left: 100%; }
   100% { left: -100%; }
+}
+
+@keyframes marquee_right {
+  0% { right: 100%; }
+  100% { right: -100%; }
+}
+
+@keyframes marquee_top {
+  0% { bottom: 100%; }
+  100% { bottom: -100%; }
 }
