@@ -7,10 +7,7 @@ class Marquee extends Component {
 		super(props);
 
 		this.state = {
-			scrollingStatus: 'running',
-			scrollingDir: 'left',
-			scorllingInterval: 20,
-			scrollingTimingFunction: 'linear'
+			scrollingStatus: 'running'
 		}
 	}
 
@@ -23,11 +20,12 @@ class Marquee extends Component {
 	}
 
 	render() {
-		const direction = this.props.direction || this.state.scrollingDir;
-		const interval = this.props.interval || this.state.scorllingInterval;
-		const timingFunction = this.props.timingFunction || this.state.scrollingTimingFunction;
+		const direction = this.props.direction ;
+		const interval = this.props.interval;
+		const timingFunction = this.props.timingFunction;
 		const className = 'marquee_' + direction;
-		const animationStyle = className + ' ' + interval + 's ' + timingFunction + ' infinite ' + this.state.scrollingStatus;
+        const circleCount = this.props.autoRoll? ' infinite ': this.props.rollCount;
+		const animationStyle = className + ' ' + interval + 's ' + timingFunction + ' ' + circleCount + ' ' + this.state.scrollingStatus;
 
 		return (
 			<div style={{width: '80%', margin: '6px auto'}}>
