@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Marquee from './Marquee/Marquee';
+import Interactive from './Interactive/Interactive';
 
 
 
@@ -9,7 +9,8 @@ var MainPage=React.createClass({
   render:function(){
 
     return(
-        <Marquee
+        <Interactive
+            type={'1'}
             text={ 'After all , tomorrow is another day '}
             fontSize={'20px'}
             fontColor={'#323232'}
