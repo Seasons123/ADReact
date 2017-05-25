@@ -11,4 +11,4 @@ render((
             <Route path={window.App.getAppRoute()+"/"} component={MainPage}/>
         </Route>
     </Router>
-), document.getElementById('root'))
+), document.getElementById('root'));
