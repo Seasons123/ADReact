@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM  from 'react-dom';
-import TweenOne, { TweenOneGroup } from 'rc-tween-one';
-import ticker from 'rc-tween-one/lib/ticker';
+import TweenOne, { TweenOneGroup } from '../../../LowLevelAnim/OneTween/index';
+import ticker from '../../../LowLevelAnim/OneTween/ticker';
 
 import '../../css/logoGather.css';
-/*import enquire from 'enquire.js';*/
 
 
 export default class LogoGather extends React.Component {
