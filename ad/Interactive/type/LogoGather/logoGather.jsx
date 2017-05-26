@@ -21,7 +21,7 @@ export default class LogoGather extends React.Component {
         w: 300,
         h: 300,
         pixSize: 15,
-        pointSizeMin: 10,
+        pointSizeMin: 7,
     };
 
     constructor(props) {

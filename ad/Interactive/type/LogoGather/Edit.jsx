@@ -6,9 +6,9 @@ export default class  Edit extends React.Component {
     constructor(props) {
         super(props);
         this.defaultImage = {
-            a: 'https://zos.alipayobjects.com/rmsportal/gsRUrUdxeGNDVfO.svg',
-            b: 'https://zos.alipayobjects.com/rmsportal/TOXWfHIUGHvZIyb.svg',
-            c: 'https://zos.alipayobjects.com/rmsportal/reactLogo.svg',
+            a: 'http://localhost:3000/images/SD.svg',
+            b: 'http://localhost:3000/images/demo.svg',
+            c: 'http://localhost:3000/images/reactLogo.svg',
         };
         this.state = {
             image: this.defaultImage.a,
