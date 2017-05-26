@@ -25,9 +25,11 @@
 
 .logo-gather-demo-wrapper {
     position: relative;
-    background: #019BF0;
+    background: #69c4fb;
     overflow: hidden;
+    width: 800px;
     height: 500px;
+    margin: 0 auto;
 }
 
 .logo-gather-demo-wrapper .point-wrapper {

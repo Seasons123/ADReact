@@ -8,7 +8,7 @@ export default class  Edit extends React.Component {
         this.defaultImage = {
             a: 'https://zos.alipayobjects.com/rmsportal/gsRUrUdxeGNDVfO.svg',
             b: 'https://zos.alipayobjects.com/rmsportal/TOXWfHIUGHvZIyb.svg',
-            c: 'https://zos.alipayobjects.com/rmsportal/NbWTEbiswBhrRBU.svg',
+            c: 'https://zos.alipayobjects.com/rmsportal/reactLogo.svg',
         };
         this.state = {
             image: this.defaultImage.a,

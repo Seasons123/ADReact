@@ -16,7 +16,7 @@ export default class LogoGather extends React.Component {
     };
 
     static defaultProps = {
-        image: 'https://zos.alipayobjects.com/rmsportal/gsRUrUdxeGNDVfO.svg',
+        image: '',
         className: 'logo-gather-demo',
         w: 300,
         h: 300,
@@ -26,7 +26,9 @@ export default class LogoGather extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            image: 'http://localhost:3000/images/reactLogo.svg',
+        };
         this.interval = null;
         this.gather = true;
         this.intervalTime = 9000;
@@ -118,7 +120,7 @@ export default class LogoGather extends React.Component {
             this.dom.removeChild(canvas);
         };
         img.crossOrigin = 'anonymous';
-        img.src = this.props.image;
+        img.src = this.state.image;
     };
 
     gatherData = () => {
