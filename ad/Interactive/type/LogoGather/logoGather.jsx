@@ -20,14 +20,14 @@ export default class LogoGather extends React.Component {
         className: 'logo-gather-demo',
         w: 300,
         h: 300,
-        pixSize: 20,
+        pixSize: 15,
         pointSizeMin: 10,
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            image: 'http://localhost:3000/images/reactLogo.svg',
+            image: 'http://localhost:3000/images/SD.svg',
         };
         this.interval = null;
         this.gather = true;

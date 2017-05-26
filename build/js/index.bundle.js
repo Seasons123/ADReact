@@ -25107,7 +25107,7 @@
 	        };
 	
 	        _this.state = {
-	            image: 'http://localhost:3000/images/reactLogo.svg'
+	            image: 'http://localhost:3000/images/SDU.svg'
 	        };
 	        _this.interval = null;
 	        _this.gather = true;
@@ -25216,7 +25216,7 @@
 	    className: 'logo-gather-demo',
 	    w: 300,
 	    h: 300,
-	    pixSize: 20,
+	    pixSize: 15,
 	    pointSizeMin: 10
 	};
 	exports.default = LogoGather;
