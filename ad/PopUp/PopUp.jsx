@@ -202,7 +202,7 @@ PopUp.defaultProps = {
     items:[],
     width:'135px',
     height:'180px',
-    link:"https://github.com",
+    link:"",
     position:"bottomRight",
     distanceX:"20px",
     distanceY:"30px",
