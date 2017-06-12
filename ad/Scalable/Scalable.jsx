@@ -143,7 +143,7 @@ export default class Scalable extends Component {
 
         if( this.props.position == "top" || this.props.position == "Top" )
             return(
-                <div style={{ width:this.props.width,margin:'0 auto'}}>
+                <div className="bigADTop" style={{ width:this.props.width,margin:'0 auto'}}>
                     <OneTween >
                         <div className="adBig" >
                             <a href={this.props.link}
@@ -164,7 +164,7 @@ export default class Scalable extends Component {
         );
         if( this.props.position == "left" || this.props.position == "Left" )
             return(
-                <div>
+                <div className="bigADLeft" >
                     <div style={{ width:this.props.width,margin:'0 auto'}}>
                         <OneTween animation={this.props.autoDisappear?this.state.animationLeft:null}>
                             <div className="adBig" style={{width: this.props.width}}>
@@ -188,7 +188,7 @@ export default class Scalable extends Component {
             );
         if( this.props.position == "right" || this.props.position == "Right" )
             return(
-                <div>
+                <div className="bigADRight" >
                     <div style={{ width:this.props.width,margin:'0 auto'}}>
                         <OneTween animation={this.props.autoDisappear?this.state.animationRight:null}>
                             <div className="adBig" >
@@ -211,7 +211,7 @@ export default class Scalable extends Component {
             );
         if( this.props.position == "bottom" || this.props.position == "Bottom" )
             return(
-                <div style={{ width:this.props.width,margin:'0 auto',position:'fixed',bottom:'0', left:'0', right:'0' ,zIndex:'1000'}}>
+                <div className="bigADBottom"  style={{ width:this.props.width,margin:'0 auto',position:'fixed',bottom:'0', left:'0', right:'0' ,zIndex:'1000'}}>
                     <div className="clear"></div>
                     <OneTween animation={this.props.autoDisappear?this.state.animationBottom:null}>
                         <div className="adBig" >
