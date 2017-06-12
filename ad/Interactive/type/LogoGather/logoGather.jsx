@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM  from 'react-dom';
-import TweenOne, { TweenOneGroup } from '../../../LowLevelAnim/OneTween/index';
+import OneTween, { OneTweenGroup } from '../../../LowLevelAnim/OneTween/index';
 import ticker from '../../../LowLevelAnim/OneTween/ticker';
 
 import '../../css/logoGather.css';
@@ -75,8 +75,8 @@ export default class LogoGather extends React.Component {
             const r = Math.random() * this.props.pointSizeMin + this.props.pointSizeMin;
             const b = Math.random() * 0.4 + 0.1;
             children.push(
-                <TweenOne className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
-                    <TweenOne
+                <OneTween className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
+                    <OneTween
                         className="point"
                         style={{
                             width: r,
@@ -94,7 +94,7 @@ export default class LogoGather extends React.Component {
                             ease: 'easeInOutQuad',
                         }}
                     />
-                </TweenOne>
+                </OneTween>
             );
         });
         this.setState({
@@ -173,7 +173,7 @@ export default class LogoGather extends React.Component {
     render() {
         return (<div className="logo-gather-demo-wrapper">
             <canvas id="canvas" />
-            <TweenOne
+            <OneTween
                 animation={this.state.boxAnim}
                 className="right-side blur"
                 onMouseEnter={this.onMouseEnter}
@@ -183,7 +183,7 @@ export default class LogoGather extends React.Component {
                 }}
             >
                 {this.state.children}
-            </TweenOne>
+            </OneTween>
         </div>);
     }
 }
