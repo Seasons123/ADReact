@@ -16,7 +16,7 @@ export default class Interactive extends Component {
         /*the first kind ，logoGather*/
         if( this.props.type== "logoGather" || this.props.type== "LogoGather" )
             return(
-                <LogoGather items={this.props.items}
+                <LogoGather items={this.props.content}
                 />
             );
 
