@@ -52,7 +52,18 @@ Marquee.propsTypes = {
 	timingFunction: React.PropTypes.string.isRequired,
 	link:React.PropTypes.string
 };
-
+Marquee.propTypes = {
+    text: PropTypes.string,
+    fontSize:PropTypes.string,
+    fontColor:PropTypes.string,
+    fontFamily:PropTypes.string,
+    link:PropTypes.string,
+    autoRoll:PropTypes.bool,
+    rollCount:PropTypes.number,
+    interval:PropTypes.number,
+    timingFunction:PropTypes.string,
+    direction:PropTypes.string,
+};
 Marquee.defaultProps={
     text: 'After all , tomorrow is another day ',
     fontSize:'20px',
