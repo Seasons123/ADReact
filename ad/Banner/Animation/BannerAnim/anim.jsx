@@ -10,7 +10,7 @@ export default {
     if (type === 'enter') {
       _x = direction === 'next' ? '100%' : '-100%';
     } else {
-      // 时间轴不同，导致中间有空隙， 等修复 twee-one,先加delay
+      // 时间轴不同，导致中间有空隙， 等修复 OneTwee,先加delay
       _x = direction === 'next' ? '-100%' : '100%';
       children = toArrayChildren(children).map(switchChildren.bind(this, hideProps));
     }

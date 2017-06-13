@@ -197,6 +197,19 @@ export default class PopUp extends Component {
 
 }
 
+PopUp.propTypes = {
+    items:PropTypes.object,
+    width: PropTypes.string,
+    height: PropTypes.string,
+    link: PropTypes.string,
+    position: PropTypes.string,
+    distanceX: PropTypes.string,
+    distanceY: PropTypes.string,
+    mask:PropTypes.bool,
+    maskColor:PropTypes.string,
+    autoDisappear:PropTypes.bool,
+    duration:PropTypes.number,
+};
 
 PopUp.defaultProps = {
     items:[],
