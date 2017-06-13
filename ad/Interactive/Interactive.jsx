@@ -25,15 +25,15 @@ export default class Interactive extends Component {
     }
 
 }
-
+const stringOrArray = PropTypes.oneOfType([PropTypes.array, PropTypes.string]);
 Interactive.propTypes = {
-    items:PropTypes.object,
+    content:stringOrArray,
     width: PropTypes.string,
     height:PropTypes.string,
     type:PropTypes.string,
 };
 Interactive.defaultProps={
-    items:[],
+    content:[],
     width:'800px',
     height:'600ox',
     type:"logoGather",
