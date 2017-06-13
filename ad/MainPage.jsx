@@ -9,7 +9,8 @@ const IMAGE_DATA = [
     },
     {
         src: require('./assets/svg/reactLogo.svg')
-    }
+    },
+
 ];
 
 var MainPage=React.createClass({
@@ -17,7 +18,9 @@ var MainPage=React.createClass({
 
         return(
             <Interactive
-                items={IMAGE_DATA}
+                content={IMAGE_DATA}
+                width='800px'
+                height='500ox'
                 type={'logoGather'}
             />
         );

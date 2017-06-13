@@ -25,7 +25,7 @@
 
 .logo-gather-demo-wrapper {
     position: relative;
-    background: #69c4fb;
+    background:url(../../assets/images/Interactive/logoGather/logoGatherBG.png) ;
     overflow: hidden;
     width: 800px;
     height: 500px;

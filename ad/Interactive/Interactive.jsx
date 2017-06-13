@@ -26,5 +26,16 @@ export default class Interactive extends Component {
 
 }
 
-
+Interactive.propTypes = {
+    items:PropTypes.object,
+    width: PropTypes.string,
+    height:PropTypes.string,
+    type:PropTypes.string,
+};
+Interactive.defaultProps={
+    items:[],
+    width:'800px',
+    height:'600ox',
+    type:"logoGather",
+};
 
