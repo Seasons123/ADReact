@@ -234,7 +234,15 @@ export default class Scalable extends Component {
 
     }
 }
-
+Scalable.propTypes = {
+    items:PropTypes.object,
+    width: PropTypes.string,
+    link:PropTypes.string,
+    position:PropTypes.string,
+    autoDisappear:PropTypes.bool,
+    delay:PropTypes.number,
+    aotoNormalSize:PropTypes.bool,
+};
 Scalable.defaultProps={
     items:[],
     width:'800px',
