@@ -7,7 +7,7 @@ import Banner from './Banner/Banner';
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page1.png'),
+        src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page1.jpg'),
         alt: 'images-1',
 
     },
@@ -28,6 +28,12 @@ const IMAGE_DATA = [
         textTwo:'Study hard , play harder',
         textColor:'#323232',
         textPosition:'upRight'
+    },
+    {
+        src: require('./assets/images/banner/fullScreen/page1/pageOneLeft.png'),
+    },
+    {
+        src: require('./assets/images/banner/fullScreen/page1/pageOneRight.png'),
     }
 ];
 

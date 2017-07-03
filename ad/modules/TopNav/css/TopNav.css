@@ -6,7 +6,8 @@
     color: #f0f0f0;
     z-index: 99;
     top: 0;
-    background: url(../../../assets/images/nav/nav_bg.jpg) repeat-x;
+    background-color: rgba(118, 130, 103, 0.3);
+    /*background: url(../../../assets/images/nav/nav_bg.jpg) repeat-x;*/
     -webkit-transition: all ease-in 250ms;
     transition: all ease-in 250ms
 }
@@ -50,7 +51,7 @@
     height: 60px;
     line-height: 60px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     margin-left: 2px;
 }
 

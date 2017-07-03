@@ -60,7 +60,7 @@ h4 {
 }
 .content-template-wrapper {
   width: 100%;
-  background: #fff;
+  /*background: #fff;*/
   height: 100vh;
   border-color: #666;
   position: relative;
@@ -318,7 +318,7 @@ h4 {
 }
 .content0-text {
   display: block;
-  width: 55%;
+  width: 45%;
   height: 150px;
   vertical-align: top;
   position: absolute;
@@ -338,7 +338,7 @@ h4 {
   color: #404040;
 }
 .content0-text p {
-  margin-top: 20px;
+  margin-top: 8px;
 }
 @media screen and (max-width: 767px) {
   .content0-wrapper {
@@ -425,7 +425,7 @@ h4 {
   color: #404040;
 }
 .content1-text p {
-  margin-top: 20px;
+  margin-top: 8px;
 }
 @media screen and (max-width: 767px) {
   .content1-wrapper {
@@ -465,7 +465,7 @@ h4 {
     top: auto;
   }
   .content1-wrapper .content1-text p {
-    margin-top: 20px;
+    margin-top: 8px;
   }
   .content1-wrapper .content1-text h1 {
     font-size: 24px;
