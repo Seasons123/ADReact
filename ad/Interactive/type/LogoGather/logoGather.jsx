@@ -17,7 +17,7 @@ export default class LogoGather extends React.Component {
 
     static defaultProps = {
         image: '',
-        className: 'logo-gather-demo',
+        className: 'nav-gather-demo',
         w: 300,
         h: 300,
         pixSize: 15,

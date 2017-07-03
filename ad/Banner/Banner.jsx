@@ -14,6 +14,7 @@ import CustomArrow from './Animation/SwitchAnim/CustomArrow/customArrow';
 import CustomThumb from './Animation/SwitchAnim/CustomThumb/customThumb';
 import FollowMouse from './Animation/SwitchAnim/FollowMouse/followMouse';
 import VideoBg from './Animation/SwitchAnim/VideoBg/videoBg';
+import FullScreenAnim from './Animation/FullScreenAnim/fullScreenAnim';
 
 export default class Banner extends Component {
 
@@ -107,6 +108,12 @@ export default class Banner extends Component {
             return(
                 <VideoBg  data={ DATA }>
                 </VideoBg>
+            );
+        }
+        if(this.props.animType =="fullScreenAnim" ||  this.props.animType =="FullScreenAnim"){
+            return(
+                <FullScreenAnim  data={ DATA }>
+                </FullScreenAnim>
             );
         }
     }

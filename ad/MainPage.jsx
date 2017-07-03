@@ -1,27 +1,52 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import Interactive from './Interactive/Interactive';
+import Banner from './Banner/Banner';
+
+
 
 const IMAGE_DATA = [
     {
-        src: require('./assets/svg/demo.svg')
+        src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page1.png'),
+        alt: 'images-1',
+
     },
     {
-        src: require('./assets/svg/reactLogo.svg')
+        src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page2.jpg'),
+        alt: 'images-2',
+        textHeader:'Banner animation demo',
+        textOne:'Today is not another day ,today I will create something beautiful ',
+        textTwo:'Study hard , play harder',
+        textColor:'#323232',
+        textPosition:'bottomLeft'
     },
-
+    {
+        src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page3.jpg'),
+        alt: 'images-3',
+        textHeader:'Banner animation demo picture 3',
+        textOne:'Today is not another day ,today I will create something beautiful ',
+        textTwo:'Study hard , play harder',
+        textColor:'#323232',
+        textPosition:'upRight'
+    }
 ];
 
 var MainPage=React.createClass({
     render:function(){
 
         return(
-            <Interactive
-                content={IMAGE_DATA}
-                width='800px'
-                height='500ox'
-                type={'logoGather'}
+            <Banner
+                items={IMAGE_DATA}
+                width={'100%'}
+                height={'100%'}
+                delay={0}
+                duration={1450}
+                autoPlaySpeed={5000}
+                autoPlay={false}
+                pause={false}
+                arrow={true}
+                thumb={false}
+                animType={"fullScreenAnim"}
             />
         );
     },
