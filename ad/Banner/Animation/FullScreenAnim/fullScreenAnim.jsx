@@ -190,7 +190,7 @@ export default class FullScreenAnim extends React.Component {
               <TopNav>
               </TopNav>
               <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto',position:'absolute'}}>
-                <BannerAnim type="across"
+                <BannerAnim type="grid"
                             delay={this.props.data.delay}
                             duration={this.props.data.duration}
                             autoPlaySpeed={this.props.data.autoPlaySpeed}

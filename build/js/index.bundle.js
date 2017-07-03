@@ -38291,7 +38291,7 @@
 	                    { style: { width: this.props.data.width, height: this.props.data.height, margin: '0 auto', position: 'absolute' } },
 	                    _react2.default.createElement(
 	                        _BannerAnim2.default,
-	                        { type: 'across',
+	                        { type: 'grid',
 	                            delay: this.props.data.delay,
 	                            duration: this.props.data.duration,
 	                            autoPlaySpeed: this.props.data.autoPlaySpeed,
