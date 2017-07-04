@@ -35,7 +35,7 @@
 
 
 .header .head .nav .selected {
-    color: #06995c
+    color: #a9d074
 }
 
 /*menu部分*/
@@ -69,7 +69,7 @@
     text-transform: uppercase;
 }
 .nav_menu-item:hover {
-    background-color: #06995c;
+    background-color: #a9d074;
 }
 
 .nav_menu-item:hover .nav_submenu {
@@ -81,7 +81,7 @@
     display: none;
     position: absolute;
     width: 184px;
-    background-color: #06995c;
+    background-color: #a9d074;
 }
 
 .nav_submenu-item a {
