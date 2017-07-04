@@ -79,8 +79,8 @@
  {
   width: 44px;
   height: 65px;
-  /*notice this path, it's just devPath*/
-  background: url(http://localhost:3000/images/rightArrow.png) no-repeat;
+  /*notice this path*/
+  background: url(../../assets/images/banner/specialOneArrow/rightArrow.png) no-repeat;
   display: block;
   content: ' ';
   position: absolute;
@@ -89,8 +89,7 @@
 .banner-anim-arrow-specialOne.prev:after{
   width: 44px;
   height: 65px;
-  /*notice this path, it's just devPath, please make sure you have put the below picture under this folder(build/images) */
-  background: url(http://localhost:3000/images/leftArrow.png) no-repeat;
+  background: url(../../assets/images/banner/specialOneArrow/leftArrow.png) no-repeat;
   display: block;
   content: ' ';
   position: absolute;
