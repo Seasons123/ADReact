@@ -34,7 +34,7 @@
 }
 
 
-.header .head .nav .selected {
+.header .head .nav .selected a{
     color: #a9d074
 }
 
@@ -68,20 +68,12 @@
     line-height: 60px;
     text-transform: uppercase;
 }
-.nav_menu-item:hover {
-    background-color: #a9d074;
+.nav_menu-item a:hover {
+    color: #a9d074;
 }
 
 .nav_menu-item:hover .nav_submenu {
     display: block;
-}
-.nav_submenu {
-    font-weight: 300;
-    text-transform: none;
-    display: none;
-    position: absolute;
-    width: 184px;
-    background-color: #a9d074;
 }
 
 .nav_submenu-item a {

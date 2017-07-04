@@ -69,6 +69,7 @@
   width: 60px\9;
   height: 65px;
   margin-top: -30px;
+  margin-right: 40px;
   /*background: rgba(0, 0, 0, 0.3);*/
 }
 .banner-anim-arrow-specialOne.next {
@@ -79,6 +80,7 @@
  {
   width: 44px;
   height: 65px;
+  margin-right: 40px;
   /*notice this path*/
   background: url(../../assets/images/banner/specialOneArrow/rightArrow.png) no-repeat;
   display: block;
@@ -89,6 +91,7 @@
 .banner-anim-arrow-specialOne.prev:after{
   width: 44px;
   height: 65px;
+  margin-left:40px;
   background: url(../../assets/images/banner/specialOneArrow/leftArrow.png) no-repeat;
   display: block;
   content: ' ';
