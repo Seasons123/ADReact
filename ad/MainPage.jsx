@@ -8,32 +8,19 @@ import Banner from './Banner/Banner';
 const IMAGE_DATA = [
     {
         src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page1.jpg'),
-        alt: 'images-1',
 
     },
     {
         src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page2.jpg'),
-        alt: 'images-2',
-        textHeader:'Banner animation demo',
-        textOne:'Today is not another day ,today I will create something beautiful ',
-        textTwo:'Study hard , play harder',
-        textColor:'#323232',
-        textPosition:'bottomLeft'
     },
     {
         src: require('./assets/images/banner/fullScreen/size2(1920.1047)/page3.jpg'),
-        alt: 'images-3',
-        textHeader:'Banner animation demo picture 3',
-        textOne:'Today is not another day ,today I will create something beautiful ',
-        textTwo:'Study hard , play harder',
-        textColor:'#323232',
-        textPosition:'upRight'
     },
     {
-        src: require('./assets/images/banner/fullScreen/page1/pageOneLeft.png'),
+        src: require('./assets/images/banner/fullScreen/page3/pageOneLeft.png'),
     },
     {
-        src: require('./assets/images/banner/fullScreen/page1/pageOneRight.png'),
+        src: require('./assets/images/banner/fullScreen/page3/pageOneRight.png'),
     }
 ];
 
