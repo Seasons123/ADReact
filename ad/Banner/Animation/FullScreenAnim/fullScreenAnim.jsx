@@ -20,6 +20,8 @@ export default class FullScreenAnim extends React.Component {
           queue: isMode ? 'bottom' : 'right',
           one: isMode ? { y: '+=30', opacity: 0, type: 'from' }
               : { x: '-=30', opacity: 0, type: 'from' },
+          two: isMode ? { y: '-=30', opacity: 0, type: 'from' }
+            : { x: '+=30', opacity: 0, type: 'from' },
       };
     this.state = {
       isMode: false,
@@ -32,7 +34,7 @@ export default class FullScreenAnim extends React.Component {
                            backgroundPosition: 'center',
                        }}
             />
-              <div id="content_2_0" className="content-template-wrapper content-half-wrapper content0-wrapper" style={{cursor:'pointer'}}>
+              <div id="content_2_0" className="content-template-wrapper content-half-wrapper content0-wrapper">
                   <div className="content-template content0">
                       <OneTween
                           key="img0"
@@ -53,31 +55,34 @@ export default class FullScreenAnim extends React.Component {
                           ease={['easeOutCubic', 'easeInCubic']}
                           id="content_2_0-textWrapper"
                       >
-                          <h1 key="h1" id="content_2_0-title" style={{color:'#3ab1dc',fontSize:'18px'}}>
+                          <h1 key="h_2_0" id="content_2_0-title" style={{color:'#3ab1dc',fontSize:'18px'}}>
                               夏令营时间
                           </h1>
-                          <p key="p" id="content_2_0-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_0" id="content_2_0-content" style={{color:'#666',fontSize:'14px'}}>
                               第一期：7月03日—7月12日（已报满）
                           </p>
-                          <p key="p1" id="content_2_1-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_1" id="content_2_1-content" style={{color:'#666',fontSize:'14px'}}>
                               第二期：7月17日—7月26日（招生中……）
                           </p>
-                          <p key="p2" id="content_2_2-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_2" id="content_2_2-content" style={{color:'#666',fontSize:'14px'}}>
                               第三期：7月31日—8月09日（招生中……）
                           </p>
-                          <p key="p3" id="content_2_3-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_3" id="content_2_3-content" style={{color:'#666',fontSize:'14px'}}>
                               第四期：8月14日—8月23日（招生中……）
                           </p>
-                          <p key="p4" id="content_2_4-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_4" id="content_2_4-content" style={{color:'#666',fontSize:'14px'}}>
                               7:00-8:00早饭
                           </p>
-                          <p key="p5" id="content_2_5-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_2_5" id="content_2_5-content" style={{color:'#666',fontSize:'14px'}}>
                               8:40-11:40训练馆训练
+                          </p>
+                          <p key="p_2_6"  id="content_2_6-content" >
+                              <a href="https://github.com" style={{ cursor:'pointer',color:'#3ab1dc',fontSize:'14px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
                           </p>
                       </QueueAnim>
                   </div>
               </div>
-              <div id="content_3_0" className="content-template-wrapper content-half-wrapper content1-wrapper" style={{cursor:'pointer'}}>
+              <div id="content_3_0" className="content-template-wrapper content-half-wrapper content1-wrapper">
                   <div className="content-template content1">
                       <QueueAnim
                           className="content1-text"
@@ -87,31 +92,34 @@ export default class FullScreenAnim extends React.Component {
                           ease={['easeOutCubic', 'easeInCubic']}
                           id="content_3_0-textWrapper"
                       >
-                          <h1 key="h1" id="content_3_0-title" style={{color:'#31b5a9',fontSize:'18px'}}>
+                          <h1 key="h_3_0" id="content_3_0-title" style={{color:'#31b5a9',fontSize:'18px'}}>
                               暑假期课
                           </h1>
-                          <p key="p" id="content_3_0-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_0" id="content_3_0-content" style={{color:'#666',fontSize:'14px'}}>
                               时间：2017年7月13日-2017年8月25日期间
                           </p>
-                          <p key="p1" id="content_3_1-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_1" id="content_3_1-content" style={{color:'#666',fontSize:'14px'}}>
                               共计20课时，周一到周五，周末休息。
                           </p>
-                          <p key="p2" id="content_3_2-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_2" id="content_3_2-content" style={{color:'#666',fontSize:'14px'}}>
                               上午8:30—10:30    下午15:00—17:00
                           </p>
-                          <p key="p3" id="content_3_3-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_3" id="content_3_3-content" style={{color:'#666',fontSize:'14px'}}>
                               送一套训练服。
                           </p>
-                          <p key="p4" id="content_3_4-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_4" id="content_3_4-content" style={{color:'#666',fontSize:'14px'}}>
                               学生自由选择时间，随到随学，学满20课时为准。
                           </p>
-                          <p key="p5" id="content_3_5-content" style={{color:'#666',fontSize:'14px'}}>
+                          <p key="p_3_5" id="content_3_5-content" style={{color:'#666',fontSize:'14px'}}>
                               价格：1350元
+                          </p>
+                          <p key="p_3_6" id="content_3_6-content" >
+                              <a  href="https://github.com" style={{ cursor:'pointer',color:'#31b5a9',fontSize:'14px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
                           </p>
                       </QueueAnim>
                       <OneTween
                           key="img1"
-                          animation={animType.one}
+                          animation={animType.two}
                           className="content1-img"
                           id="content_3_0-imgWrapper"
                           resetStyleBool
