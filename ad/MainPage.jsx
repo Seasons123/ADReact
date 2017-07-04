@@ -51,6 +51,7 @@ var MainPage=React.createClass({
                 autoPlay={false}
                 pause={false}
                 arrow={true}
+                arrowDefault={false}
                 thumb={false}
                 animType={"fullScreenAnim"}
             />

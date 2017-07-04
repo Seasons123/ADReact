@@ -33,6 +33,7 @@ export default class Banner extends Component {
             autoPlay:this.props.autoPlay,
             pause:this.props.pause,
             arrow:this.props.arrow,
+            arrowDefault:this.props.arrowDefault,
             thumb:this.props.thumb
         };
 

@@ -8,8 +8,9 @@ class Arrow extends Component {
   render() {
     let className = this.props.className;
     const defaultClass = `${className}-default`;
+    const specialOneClass = `${className}-specialOne`;
     className = `${className} ${this.props.prefixCls || ''}`.trim();
-    className = !this.props.default ? className : `${className} ${defaultClass}`.trim();
+    className = !this.props.arrowDefault ? `${className} ${specialOneClass}`.trim() : `${className} ${defaultClass}`.trim();
     className = `${className} ${this.props.arrowType}`;
     const props = { ...this.props };
     [
@@ -32,6 +33,7 @@ Arrow.propTypes = {
   component: PropTypes.any,
   arrowType: PropTypes.string,
   default: PropTypes.bool,
+  arrowDefault:PropTypes.bool,
   next: PropTypes.func,
   prev: PropTypes.func,
   elemHeight: PropTypes.number,

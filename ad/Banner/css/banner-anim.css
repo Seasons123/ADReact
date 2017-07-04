@@ -61,6 +61,40 @@
   bottom: 17px;
   left: 8px;
 }
+
+/*special arrow start*/
+.banner-anim-arrow-specialOne {
+  position: absolute;
+  width: 44px;
+  width: 60px\9;
+  height: 65px;
+  margin-top: -30px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.banner-anim-arrow-specialOne.next {
+  right: 0;
+}
+.banner-anim-arrow-specialOne.next:before,
+.banner-anim-arrow-specialOne.next:after
+ {
+  width: 2px;
+  height: 15px;
+  background: url(../../assets/images/banner/specialOneArrow/rightArrow.png) no-repeat;
+  display: block;
+  content: ' ';
+  position: absolute;
+}
+.banner-anim-arrow-specialOne.prev:before,
+.banner-anim-arrow-specialOne.prev:after{
+  width: 2px;
+  height: 15px;
+  background: url(../../assets/images/banner/specialOneArrow/leftArrow.png) no-repeat;
+  display: block;
+  content: ' ';
+  position: absolute;
+}
+/*special arrow end*/
+
 .banner-anim-thumb {
   position: absolute;
   bottom: 0;
