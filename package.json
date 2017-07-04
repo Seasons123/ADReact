@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "react plug-in",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "nstore": "^0.5.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.x",
     "babel-core": "^6.5.2",
@@ -23,7 +25,8 @@
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "enquire": "^0.0.2"
   },
   "scripts": {
     "clean": "rm -rf dist",
