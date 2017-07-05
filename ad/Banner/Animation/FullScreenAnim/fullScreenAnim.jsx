@@ -159,7 +159,7 @@ export default class FullScreenAnim extends React.Component {
                           </p>
                           <OneTween
                               animation={{ x: '+=20', yoyo: true, repeat: -1, duration: 1000 }}
-                              className="banner1-icon"
+                              className="banner2-icon"
                               key="icon2"
                           >
                               <a href="https://github.com" key="button2" id="content_0_2-button" style={{ cursor:'pointer',color:'#333',fontSize:'18px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>

@@ -183,12 +183,13 @@ h4 {
 }
 .banner1-icon {
   bottom: 8px;
-  font-size: 24px;
   margin-top: 8px;
-  /*position: absolute;
-  left: 50%;
-  margin-left: -12px;*/
-  /*color: @template-text-color-light;*/
+}
+.banner2-icon {
+  margin-top: 8px;
+  position: absolute;
+  left: 25%;
+  bottom: -50%; /*some weird*/
 }
 @media screen and (max-width: 767px) {
   .banner0-wrapper {
