@@ -26,3 +26,6 @@ npm run server
         this.autoPlay();
      }
   }
+
+
+四、感谢star的朋友 :flower:
