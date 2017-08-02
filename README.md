@@ -25,7 +25,5 @@ npm run server
      if(this.props.pause && this.props.autoPlay ) {
         this.autoPlay();
      }
-  }
-
-
-四、感谢star的朋友 
+  }    
+                          
