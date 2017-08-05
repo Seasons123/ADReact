@@ -25,4 +25,5 @@ npm run server
      if(this.props.pause && this.props.autoPlay ) {
         this.autoPlay();
      }
-  }
+  }    
+                          
