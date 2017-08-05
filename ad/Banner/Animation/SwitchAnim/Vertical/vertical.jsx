@@ -81,6 +81,7 @@ export default class Vertical extends React.Component {
                             autoPlay={this.props.data.autoPlay}
                             pause={this.props.data.pause}
                             arrow={this.props.data.arrow}
+                            arrowDefault={this.props.data.arrowDefault}
                             thumb={this.props.data.thumb}>
                     {this.state.children}
 
