@@ -1,7 +1,7 @@
 import BannerAnim from '../../BannerAnim/BannerAnim';
-import QueueAnim from '../../../../LowLevelAnim/QueueAnim/QueueAnim';
-import OneTween from '../../../../LowLevelAnim/OneTween/OneTween';
-import OneTweenGroup  from '../../../../LowLevelAnim/OneTween/OneTweenGroup';
+import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
+import OneTween from '../../../../LowLevelAnim/SingleAnim/OneTween';
+import OneTweenGroup  from '../../../../LowLevelAnim/SingleAnim/OneTweenGroup';
 import React from 'react';
 
 import '../../../css/assets/index.css';

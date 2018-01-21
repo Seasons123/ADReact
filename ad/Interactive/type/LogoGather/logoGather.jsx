@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM  from 'react-dom';
-import OneTween, { OneTweenGroup } from '../../../LowLevelAnim/OneTween/index';
-import ticker from '../../../LowLevelAnim/OneTween/ticker';
+import OneTween, { OneTweenGroup } from '../../../LowLevelAnim/SingleAnim/index';
+import ticker from '../../../LowLevelAnim/SingleAnim/ticker';
 
 import '../../css/logoGather.css';
 

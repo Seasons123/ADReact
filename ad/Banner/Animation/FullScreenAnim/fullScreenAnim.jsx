@@ -4,8 +4,8 @@ import '../../css/banner.css';
 import '../../css/banner-anim.css';
 import '../../css/fullScreenAnim/antMotion_style.css';
 
-import QueueAnim from '../../../LowLevelAnim/QueueAnim/QueueAnim';
-import OneTween from '../../../LowLevelAnim/OneTween/OneTween';
+import QueueAnim from '../../../LowLevelAnim/MultiAnim/QueueAnim';
+import OneTween from '../../../LowLevelAnim/SingleAnim/OneTween';
 import BannerAnim from '../BannerAnim/BannerAnim';
 import TopNav from '../../../modules/TopNav/TopNav';
 const { Element } = BannerAnim;

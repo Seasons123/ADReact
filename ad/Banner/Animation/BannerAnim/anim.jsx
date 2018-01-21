@@ -1,6 +1,6 @@
 import React, { cloneElement } from 'react';
 import { toArrayChildren, setAnimCompToTagComp, switchChildren } from './utils';
-import ticker from '../../../LowLevelAnim/OneTween/ticker';
+import ticker from '../../../LowLevelAnim/SingleAnim/ticker';
 
 export default {
   across(elem, type, direction, animData, elemOffset, hideProps) {

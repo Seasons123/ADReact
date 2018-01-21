@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import OneTween  from '../LowLevelAnim/OneTween/OneTween';
+import OneTween  from '../LowLevelAnim/SingleAnim/OneTween';
 
 import './css/scalable.css';
 
