@@ -6,7 +6,7 @@
 import {
   checkStyleName,
   createMatrix,
-} from 'style-utils';
+} from '../style-utils';
 const _RAD2DEG = 180 / Math.PI;
 const _r1 = [];
 const _r2 = [];

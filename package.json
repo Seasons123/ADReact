@@ -29,7 +29,6 @@
     "react-router": "^2.0.1",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "style-utils": "^0.1.14",
     "tween-functions": "^1.2.0",
     "url-loader": "^0.5.7",
     "velocity-animate": "^1.2.3",
