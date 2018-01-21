@@ -49,11 +49,10 @@ var MainPage=React.createClass({
                 arrow={true}
                 arrowDefault={true}
                 thumb={true}
-                animType={"videoBg"}
+                animType={"customThumb"}
             />
         );
     },
 });
 module.exports=MainPage;
-
 

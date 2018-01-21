@@ -12,7 +12,15 @@ export default class FollowMouse extends React.Component {
     render() {
         return (
             <div  style={{ width:this.props.data.width, height:this.props.data.height,margin:'0 auto'}}>
-                <BannerAnim type="across">
+                <BannerAnim type="across"
+                            delay={this.props.data.delay}
+                            duration={this.props.data.duration}
+                            autoPlaySpeed={this.props.data.autoPlaySpeed}
+                            autoPlay={this.props.data.autoPlay}
+                            pause={this.props.data.pause}
+                            arrow={this.props.data.arrow}
+                            arrowDefault={this.props.data.arrowDefault}
+                            thumb={this.props.data.thumb}>
                     <Element key="aaa"
                              prefixCls="banner-user-elem"
                              followParallax={{

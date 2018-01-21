@@ -28,5 +28,5 @@ npm run server
   }
 
 
-四、[version 2](https://github.com/Seasons123/ADReact-v2) 20171222
+四、[version 1](https://github.com/Seasons123/ADReact-v2) 截止20180121
 
