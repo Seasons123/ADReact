@@ -1,6 +1,6 @@
 import BannerAnim from '../../BannerAnim/BannerAnim';
 import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
-import OneTween from '../../../../LowLevelAnim/SingleAnim/OneTween';
+import SingleAnim from '../../../../LowLevelAnim/SingleAnim/SingleAnim';
 import React from 'react';
 
 import '../../../css/banner.css';
@@ -47,10 +47,10 @@ export default class FollowMouse extends React.Component {
                             <QueueAnim id="queue" key="queue">
                                 <h1 key="h1" id="title">{this.props.data.items[0].textHeader}</h1>
                             </QueueAnim>
-                            <OneTween animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText">
+                            <SingleAnim animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText">
                                 <p key="p1">{this.props.data.items[0].textOne}</p>
                                 <p key="p2">{this.props.data.items[0].textTwo}</p>
-                            </OneTween>
+                            </SingleAnim>
                         </div>
                     </Element>
                     <Element key="element2" prefixCls="banner-user-elem" >
@@ -97,10 +97,10 @@ export default class FollowMouse extends React.Component {
                             <QueueAnim id="queue2" key="queue">
                                 <h1 key="h1" id="title2">{this.props.data.items[2].textHeader}</h1>
                             </QueueAnim>
-                            <OneTween animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText2">
+                            <SingleAnim animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText2">
                                 <p key="p1">{this.props.data.items[2].textOne}</p>
                                 <p key="p2">{this.props.data.items[2].textTwo}</p>
-                            </OneTween>
+                            </SingleAnim>
                         </div>
                     </Element>
                 </BannerAnim>

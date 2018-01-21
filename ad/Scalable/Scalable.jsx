@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import OneTween  from '../LowLevelAnim/SingleAnim/OneTween';
+import SingleAnim  from '../LowLevelAnim/SingleAnim/SingleAnim';
 
 import './css/scalable.css';
 
@@ -69,7 +69,7 @@ export default class Scalable extends Component {
     render() {
 
         let smallImageTop=(
-            <OneTween animation={[{ y: '-1000px' ,height:0, type: 'from', delay: this.props.delay *2,duration:this.state.duration }]}>
+            <SingleAnim animation={[{ y: '-1000px' ,height:0, type: 'from', delay: this.props.delay *2,duration:this.state.duration }]}>
                 <div  className="adSmall" style={{display:this.state.displaySmall}}>
                     <a href={this.props.link}
                        style={{backgroundImage:'url(' + this.props.items[0].src + ')',
@@ -83,10 +83,10 @@ export default class Scalable extends Component {
                        href="#">X
                     </a>
                 </div>
-            </OneTween>
+            </SingleAnim>
         );
         let smallImageBottom=(
-            <OneTween animation={[{ y: '1000px' , type: 'from', delay: this.props.delay *1.5,duration:this.state.duration }]}>
+            <SingleAnim animation={[{ y: '1000px' , type: 'from', delay: this.props.delay *1.5,duration:this.state.duration }]}>
                 <div  className="adSmallBottom" style={{display:this.state.displaySmallBottom}}>
                     <a href={this.props.link}
                        style={{backgroundImage:'url(' + this.props.items[0].src + ')',
@@ -100,11 +100,11 @@ export default class Scalable extends Component {
                        href="#">X
                     </a>
                 </div>
-            </OneTween>
+            </SingleAnim>
         );
         let smallImageLeft=(
             <div style={{ margin:'0 0'}}>
-                <OneTween animation={[{ x: '-100px' , type: 'from', delay: this.props.delay *2, duration:this.state.duration }]}>
+                <SingleAnim animation={[{ x: '-100px' , type: 'from', delay: this.props.delay *2, duration:this.state.duration }]}>
                     <div  className="adSmallLeft" style={{display:this.state.displaySmall}}>
                         <a href={this.props.link}
                            style={{backgroundImage:'url(' + this.props.items[2].src + ')',
@@ -118,12 +118,12 @@ export default class Scalable extends Component {
                            href="#">X
                         </a>
                     </div>
-                </OneTween>
+                </SingleAnim>
             </div>
         );
         let smallImageRight=(
             <div style={{ margin:'0 0',float:'right'}}>
-                <OneTween animation={[{ x: '2000' , type: 'from', delay: this.props.delay *2 ,duration:this.state.duration }]}>
+                <SingleAnim animation={[{ x: '2000' , type: 'from', delay: this.props.delay *2 ,duration:this.state.duration }]}>
                     <div  className="adSmallRight" style={{display:this.state.displaySmall}}>
                         <a href={this.props.link}
                            style={{backgroundImage:'url(' + this.props.items[2].src + ')',
@@ -137,14 +137,14 @@ export default class Scalable extends Component {
                            href="#">X
                         </a>
                     </div>
-                </OneTween>
+                </SingleAnim>
             </div>
         );
 
         if( this.props.position == "top" || this.props.position == "Top" )
             return(
                 <div className="bigADTop" style={{ width:this.props.width,margin:'0 auto'}}>
-                    <OneTween >
+                    <SingleAnim >
                         <div className="adBig" >
                             <a href={this.props.link}
                                style={{backgroundImage:'url(' + this.props.items[1].src + ')',
@@ -158,7 +158,7 @@ export default class Scalable extends Component {
                                href="#">X
                             </a>
                         </div>
-                    </OneTween>
+                    </SingleAnim>
                     {this.props.aotoNormalSize?smallImageTop:null}
                 </div>
         );
@@ -166,7 +166,7 @@ export default class Scalable extends Component {
             return(
                 <div className="bigADLeft" >
                     <div style={{ width:this.props.width,margin:'0 auto'}}>
-                        <OneTween animation={this.props.autoDisappear?this.state.animationLeft:null}>
+                        <SingleAnim animation={this.props.autoDisappear?this.state.animationLeft:null}>
                             <div className="adBig" style={{width: this.props.width}}>
                                 <a href={this.props.link}
                                    style={{backgroundImage:'url(' + this.props.items[1].src + ')',
@@ -180,7 +180,7 @@ export default class Scalable extends Component {
                                    href="#">X
                                 </a>
                             </div>
-                        </OneTween>
+                        </SingleAnim>
                     </div>
                     {this.props.aotoNormalSize?smallImageLeft:null}
                 </div>
@@ -190,7 +190,7 @@ export default class Scalable extends Component {
             return(
                 <div className="bigADRight" >
                     <div style={{ width:this.props.width,margin:'0 auto'}}>
-                        <OneTween animation={this.props.autoDisappear?this.state.animationRight:null}>
+                        <SingleAnim animation={this.props.autoDisappear?this.state.animationRight:null}>
                             <div className="adBig" >
                                 <a href={this.props.link}
                                    style={{backgroundImage:'url(' + this.props.items[1].src + ')',
@@ -204,7 +204,7 @@ export default class Scalable extends Component {
                                    href="#">X
                                 </a>
                             </div>
-                        </OneTween>
+                        </SingleAnim>
                     </div>
                     {this.props.aotoNormalSize?smallImageRight:null}
                 </div>
@@ -213,7 +213,7 @@ export default class Scalable extends Component {
             return(
                 <div className="bigADBottom"  style={{ width:this.props.width,margin:'0 auto',position:'fixed',bottom:'0', left:'0', right:'0' ,zIndex:'1000'}}>
                     <div className="clear"></div>
-                    <OneTween animation={this.props.autoDisappear?this.state.animationBottom:null}>
+                    <SingleAnim animation={this.props.autoDisappear?this.state.animationBottom:null}>
                         <div className="adBig" >
                             <a href={this.props.link}
                                style={{backgroundImage:'url(' + this.props.items[1].src + ')',
@@ -227,7 +227,7 @@ export default class Scalable extends Component {
                                href="#">X
                             </a>
                         </div>
-                    </OneTween>
+                    </SingleAnim>
                     {this.props.aotoNormalSize?smallImageBottom:null}
                 </div>
             );

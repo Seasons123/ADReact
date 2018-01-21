@@ -1,4 +1,4 @@
-const OneTween = require('./OneTween');
-OneTween.OneTweenGroup = require('./OneTweenGroup');
-OneTween.easing = require('./easing');
-module.exports = OneTween;
+const SingleAnim = require('./SingleAnim');
+SingleAnim.OneTweenGroup = require('./OneTweenGroup');
+SingleAnim.easing = require('./easing');
+module.exports = SingleAnim;

@@ -11,7 +11,7 @@ function noop() {
 
 const perFrame = Math.round(1000 / 60);
 
-class OneTween extends Component {
+class SingleAnim extends Component {
   constructor() {
     super(...arguments);
     this.rafID = -1;
@@ -214,7 +214,7 @@ class OneTween extends Component {
 
 const objectOrArray = PropTypes.oneOfType([PropTypes.object, PropTypes.array]);
 
-OneTween.propTypes = {
+SingleAnim.propTypes = {
   component: PropTypes.any,
   componentReplace: PropTypes.string,
   animation: objectOrArray,
@@ -231,7 +231,7 @@ OneTween.propTypes = {
   updateReStart: PropTypes.bool,
 };
 
-OneTween.defaultProps = {
+SingleAnim.defaultProps = {
   component: 'div',
   reverseDelay: 0,
   attr: 'style',
@@ -239,5 +239,5 @@ OneTween.defaultProps = {
   willChange: true,
   updateReStart: true,
 };
-OneTween.plugins = plugins;
-export default OneTween;
+SingleAnim.plugins = plugins;
+export default SingleAnim;

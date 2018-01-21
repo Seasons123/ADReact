@@ -1,6 +1,6 @@
 import BannerAnim from '../../BannerAnim/BannerAnim';
 import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
-import OneTween from '../../../../LowLevelAnim/SingleAnim/OneTween';
+import SingleAnim from '../../../../LowLevelAnim/SingleAnim/SingleAnim';
 import React from 'react';
 
 import '../../../css/banner.css';
@@ -119,7 +119,7 @@ export default class CustomThumb extends React.Component {
                             </QueueAnim>
                         </div>
                     </Element>
-                    <Thumb prefixCls="user-thumb" key="thumb" component={OneTween}
+                    <Thumb prefixCls="user-thumb" key="thumb" component={SingleAnim}
                            animation={{ bottom: this.state.enter ? 0 : -70 }}
                     >
                         {thumbChildren}

@@ -1,6 +1,6 @@
 import BannerAnim from '../../BannerAnim/BannerAnim';
 import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
-import OneTween from '../../../../LowLevelAnim/SingleAnim/OneTween';
+import SingleAnim from '../../../../LowLevelAnim/SingleAnim/SingleAnim';
 import OneTweenGroup  from '../../../../LowLevelAnim/SingleAnim/OneTweenGroup';
 import React from 'react';
 
@@ -157,7 +157,7 @@ export default class CustomArrow extends React.Component {
                             </QueueAnim>
                         </div>
                     </Element>
-                    <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={OneTween}
+                    <Arrow arrowType="prev" key="prev" prefixCls="user-arrow" component={SingleAnim}
                            onMouseEnter={this.prevEnter}
                            onMouseLeave={this.prevLeave}
                            animation={{ left: this.state.prevEnter ? 0 : -120 }}
@@ -172,7 +172,7 @@ export default class CustomArrow extends React.Component {
                             />
                         </OneTweenGroup>
                     </Arrow>
-                    <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={OneTween}
+                    <Arrow arrowType="next" key="next" prefixCls="user-arrow" component={SingleAnim}
                            onMouseEnter={this.nextEnter}
                            onMouseLeave={this.nextLeave}
                            animation={{ right: this.state.nextEnter ? 0 : -120 }}

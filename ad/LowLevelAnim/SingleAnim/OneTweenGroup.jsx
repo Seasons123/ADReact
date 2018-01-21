@@ -1,5 +1,5 @@
 import React, { PropTypes, Component, createElement } from 'react';
-import OneTween from './OneTween';
+import SingleAnim from './SingleAnim';
 import {
   dataToArray,
   toArrayChildren,
@@ -102,7 +102,7 @@ class OneTweenGroup extends Component {
       animation = appear && this.props.enter || null;
     }
     onChange = this.onChange.bind(this, animation, child.key, type);
-    const children = (<OneTween
+    const children = (<SingleAnim
       {...child.props}
       willChange={this.props.willChange}
       key={child.key}
@@ -134,7 +134,7 @@ class OneTweenGroup extends Component {
       }
       return this.isTween[child.key] &&
         this.getCoverAnimation(child, i, this.isTween[child.key]) ||
-        React.createElement(OneTween, { ...child.props, component: child.type, key: child.key });
+        React.createElement(SingleAnim, { ...child.props, component: child.type, key: child.key });
     });
   }
 

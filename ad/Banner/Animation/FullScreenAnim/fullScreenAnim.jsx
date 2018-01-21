@@ -5,7 +5,7 @@ import '../../css/banner-anim.css';
 import '../../css/fullScreenAnim/antMotion_style.css';
 
 import QueueAnim from '../../../LowLevelAnim/MultiAnim/QueueAnim';
-import OneTween from '../../../LowLevelAnim/SingleAnim/OneTween';
+import SingleAnim from '../../../LowLevelAnim/SingleAnim/SingleAnim';
 import BannerAnim from '../BannerAnim/BannerAnim';
 import TopNav from '../../../modules/TopNav/TopNav';
 const { Element } = BannerAnim;
@@ -57,7 +57,7 @@ export default class FullScreenAnim extends React.Component {
                           </p>
 
                       </QueueAnim>
-                      <OneTween
+                      <SingleAnim
                           animation={{ y: '-=20', yoyo: true, repeat: -1, duration: 1000 }}
                           className="banner0-icon"
                           key="icon"
@@ -65,7 +65,7 @@ export default class FullScreenAnim extends React.Component {
                           <span  key="button" id="content_0_0-button" style={{color:'#1dc282'}}>
                               报名
                           </span>
-                      </OneTween>
+                      </SingleAnim>
               </div>
           </Element>,
           <Element key="element3" prefixCls="banner-user-elem" >
@@ -78,7 +78,7 @@ export default class FullScreenAnim extends React.Component {
               />
               <div id="content_2_0" className="content-template-wrapper content-half-wrapper content0-wrapper">
                   <div className="content-template content0">
-                      <OneTween
+                      <SingleAnim
                           key="img0"
                           animation={animType.one}
                           className="content0-img"
@@ -88,7 +88,7 @@ export default class FullScreenAnim extends React.Component {
                          <span id="content_2_0-img" style={{marginTop:'15%'}}>
                             <img width="100%"  src={this.props.data.items[3].src} />
                          </span>
-                      </OneTween>
+                      </SingleAnim>
                       <QueueAnim
                           className="content0-text"
                           type={animType.queue}
@@ -118,13 +118,13 @@ export default class FullScreenAnim extends React.Component {
                           <p key="p_2_5" id="content_2_5-content" style={{color:'#666',fontSize:'14px'}}>
                               8:40-11:40训练馆训练
                           </p>
-                          <OneTween
+                          <SingleAnim
                               animation={{ x: '+=20', yoyo: true, repeat: -1, duration: 1000 }}
                               className="banner1-icon"
                               key="icon1"
                           >
                               <a href="https://github.com" key="button1" id="content_0_1-button" style={{ cursor:'pointer',color:'#333',fontSize:'18px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
-                          </OneTween>
+                          </SingleAnim>
                       </QueueAnim>
 
                   </div>
@@ -157,15 +157,15 @@ export default class FullScreenAnim extends React.Component {
                           <p key="p_3_4" id="content_3_5-content" style={{color:'#666',fontSize:'14px'}}>
                               送一套训练服。价格：1350元
                           </p>
-                          <OneTween
+                          <SingleAnim
                               animation={{ x: '+=20', yoyo: true, repeat: -1, duration: 1000 }}
                               className="banner2-icon"
                               key="icon2"
                           >
                               <a href="https://github.com" key="button2" id="content_0_2-button" style={{ cursor:'pointer',color:'#333',fontSize:'18px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
-                          </OneTween>
+                          </SingleAnim>
                       </QueueAnim>
-                      <OneTween
+                      <SingleAnim
                           key="img1"
                           animation={animType.two}
                           className="content1-img"
@@ -175,7 +175,7 @@ export default class FullScreenAnim extends React.Component {
                          <span id="content_3_0-img" style={{marginTop:'30px'}}>
                             <img width="100%"  src={this.props.data.items[4].src} />
                          </span>
-                      </OneTween>
+                      </SingleAnim>
 
                   </div>
               </div>
