@@ -110,7 +110,7 @@ const placeholderKeyPrefix = 'ant-queue-anim-placeholder-';
 const noop = () => {
 };
 
-class QueueAnim extends React.Component {
+class MultiAnim extends React.Component {
   constructor() {
     super(...arguments);
 
@@ -441,7 +441,7 @@ class QueueAnim extends React.Component {
   }
 }
 
-QueueAnim.propTypes = {
+MultiAnim.propTypes = {
   component: React.PropTypes.any,
   interval: React.PropTypes.any,
   duration: React.PropTypes.any,
@@ -456,7 +456,7 @@ QueueAnim.propTypes = {
   appear: React.PropTypes.bool,
 };
 
-QueueAnim.defaultProps = {
+MultiAnim.defaultProps = {
   component: 'div',
   interval: 100,
   duration: 450,
@@ -471,4 +471,4 @@ QueueAnim.defaultProps = {
   appear: true,
 };
 
-export default QueueAnim;
+export default MultiAnim;

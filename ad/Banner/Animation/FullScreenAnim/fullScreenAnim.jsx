@@ -4,7 +4,7 @@ import '../../css/banner.css';
 import '../../css/banner-anim.css';
 import '../../css/fullScreenAnim/antMotion_style.css';
 
-import QueueAnim from '../../../LowLevelAnim/MultiAnim/QueueAnim';
+import MultiAnim from '../../../LowLevelAnim/MultiAnim/MultiAnim';
 import SingleAnim from '../../../LowLevelAnim/SingleAnim/SingleAnim';
 import BannerAnim from '../BannerAnim/BannerAnim';
 import TopNav from '../../../modules/TopNav/TopNav';
@@ -35,7 +35,7 @@ export default class FullScreenAnim extends React.Component {
                        }}
             />
               <div id="content_0_0" className="banner0">
-                      <QueueAnim
+                      <MultiAnim
                           type={['bottom', 'top']}
                           delay={200}
                           className="banner0-wrapper"
@@ -56,7 +56,7 @@ export default class FullScreenAnim extends React.Component {
                               运动热体育携手山东体育学院举行 “羽毛球夏令营” ，让孩子们感受到大学校园的氛围是我们的初衷，让孩子们快速的提高羽毛球技战术水平是我们的目标，让孩子们学会独立、学会拼搏是我们的希望！
                           </p>
 
-                      </QueueAnim>
+                      </MultiAnim>
                       <SingleAnim
                           animation={{ y: '-=20', yoyo: true, repeat: -1, duration: 1000 }}
                           className="banner0-icon"
@@ -89,7 +89,7 @@ export default class FullScreenAnim extends React.Component {
                             <img width="100%"  src={this.props.data.items[3].src} />
                          </span>
                       </SingleAnim>
-                      <QueueAnim
+                      <MultiAnim
                           className="content0-text"
                           type={animType.queue}
                           key="text0"
@@ -125,13 +125,13 @@ export default class FullScreenAnim extends React.Component {
                           >
                               <a href="https://github.com" key="button1" id="content_0_1-button" style={{ cursor:'pointer',color:'#333',fontSize:'18px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
                           </SingleAnim>
-                      </QueueAnim>
+                      </MultiAnim>
 
                   </div>
               </div>
               <div id="content_3_0" className="content-template-wrapper content-half-wrapper content1-wrapper">
                   <div className="content-template content1">
-                      <QueueAnim
+                      <MultiAnim
                           className="content1-text"
                           type={animType.queue}
                           key="text1"
@@ -164,7 +164,7 @@ export default class FullScreenAnim extends React.Component {
                           >
                               <a href="https://github.com" key="button2" id="content_0_2-button" style={{ cursor:'pointer',color:'#333',fontSize:'18px',fontWeight:'wight',textDecoration:'none'}}>点击报名</a>
                           </SingleAnim>
-                      </QueueAnim>
+                      </MultiAnim>
                       <SingleAnim
                           key="img1"
                           animation={animType.two}

@@ -1,5 +1,5 @@
 import BannerAnim from '../../BannerAnim/BannerAnim';
-import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
+import MultiAnim from '../../../../LowLevelAnim/MultiAnim/MultiAnim';
 import SingleAnim from '../../../../LowLevelAnim/SingleAnim/SingleAnim';
 import React from 'react';
 
@@ -44,9 +44,9 @@ export default class FollowMouse extends React.Component {
                             }}
                         />
                         <div  className={this.props.data.items[0].textPosition} style={{color:this.props.data.items[0].textColor}}>
-                            <QueueAnim id="queue" key="queue">
+                            <MultiAnim id="queue" key="queue">
                                 <h1 key="h1" id="title">{this.props.data.items[0].textHeader}</h1>
-                            </QueueAnim>
+                            </MultiAnim>
                             <SingleAnim animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText">
                                 <p key="p1">{this.props.data.items[0].textOne}</p>
                                 <p key="p2">{this.props.data.items[0].textTwo}</p>
@@ -62,13 +62,13 @@ export default class FollowMouse extends React.Component {
                                    }}
                         />
                         <div  className={this.props.data.items[1].textPosition} style={{color: this.props.data.items[1].textColor}}>
-                            <QueueAnim name="QueueAnim">
+                            <MultiAnim name="Queue">
                                 <h1 key="h1">{this.props.data.items[1].textHeader}</h1>
-                            </QueueAnim>
-                            <QueueAnim name="QueueAnim" type="bottom">
+                            </MultiAnim>
+                            <MultiAnim name="Queue" type="bottom">
                                 <p key="p1">{this.props.data.items[1].textOne}</p>
                                 <p key="p2">{this.props.data.items[1].textTwo}</p>
-                            </QueueAnim>
+                            </MultiAnim>
                         </div>
                     </Element>
                     <Element key="ccc"
@@ -94,9 +94,9 @@ export default class FollowMouse extends React.Component {
                             }}
                         />
                         <div  className={this.props.data.items[2].textPosition} style={{color:this.props.data.items[2].textColor}}>
-                            <QueueAnim id="queue2" key="queue">
+                            <MultiAnim id="queue2" key="queue">
                                 <h1 key="h1" id="title2">{this.props.data.items[2].textHeader}</h1>
-                            </QueueAnim>
+                            </MultiAnim>
                             <SingleAnim animation={{ y: 50, opacity: 0, type: 'from', delay: 200 }} id="JText2">
                                 <p key="p1">{this.props.data.items[2].textOne}</p>
                                 <p key="p2">{this.props.data.items[2].textTwo}</p>

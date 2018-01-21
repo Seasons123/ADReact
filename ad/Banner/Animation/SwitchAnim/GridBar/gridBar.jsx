@@ -5,7 +5,7 @@ import '../../../css/banner.css';
 import '../../../css/banner-anim.css';
 
 
-import QueueAnim from '../../../../LowLevelAnim/MultiAnim/QueueAnim';
+import MultiAnim from '../../../../LowLevelAnim/MultiAnim/MultiAnim';
 import BannerAnim from '../../BannerAnim/BannerAnim';
 const { Element } = BannerAnim;
 const BgElement = Element.BgElement;
@@ -25,13 +25,13 @@ export default class GridBar extends React.Component {
                                }}
                     />
                     <div  className={this.props.data.items[0].textPosition} style={{color:this.props.data.items[0].textColor}}>
-                        <QueueAnim name="QueueAnim">
+                        <MultiAnim name="Queue">
                             <h1 key="h1">{this.props.data.items[0].textHeader}</h1>
-                        </QueueAnim>
-                        <QueueAnim name="QueueAnim" type="bottom">
+                        </MultiAnim>
+                        <MultiAnim name="Queue" type="bottom">
                             <p key="p1">{this.props.data.items[0].textOne}</p>
                             <p key="p2">{this.props.data.items[0].textTwo}</p>
-                        </QueueAnim>
+                        </MultiAnim>
                     </div>
                 </Element>,
                 <Element key="element2" prefixCls="banner-user-elem" >
@@ -43,13 +43,13 @@ export default class GridBar extends React.Component {
                                }}
                     />
                     <div  className={this.props.data.items[1].textPosition} style={{color: this.props.data.items[1].textColor}}>
-                        <QueueAnim name="QueueAnim">
+                        <MultiAnim name="Queue">
                             <h1 key="h1">{this.props.data.items[1].textHeader}</h1>
-                        </QueueAnim>
-                        <QueueAnim name="QueueAnim" type="bottom">
+                        </MultiAnim>
+                        <MultiAnim name="Queue" type="bottom">
                             <p key="p1">{this.props.data.items[1].textOne}</p>
                             <p key="p2">{this.props.data.items[1].textTwo}</p>
-                        </QueueAnim>
+                        </MultiAnim>
                     </div>
                 </Element>,
                 <Element key="element3" prefixCls="banner-user-elem" >
@@ -61,13 +61,13 @@ export default class GridBar extends React.Component {
                                }}
                     />
                     <div  className={this.props.data.items[2].textPosition} style={{color: this.props.data.items[2].textColor}}>
-                        <QueueAnim name="QueueAnim">
+                        <MultiAnim name="Queue">
                             <h1 key="h1">{this.props.data.items[2].textHeader}</h1>
-                        </QueueAnim>
-                        <QueueAnim name="QueueAnim" type="bottom">
+                        </MultiAnim>
+                        <MultiAnim name="Queue" type="bottom">
                             <p key="p1">{this.props.data.items[2].textOne}</p>
                             <p key="p2">{this.props.data.items[2].textTwo}</p>
-                        </QueueAnim>
+                        </MultiAnim>
                     </div>
                 </Element>
             ],
