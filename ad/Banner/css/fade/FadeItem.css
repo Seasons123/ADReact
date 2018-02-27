@@ -1,0 +1,27 @@
+.fade{
+    position:relative;
+}
+.fade .upLeft{
+    position:absolute;
+    left:60px;
+    top:10px;
+    z-index: 1000;
+}
+.fade .bottomLeft{
+    position:absolute;
+    left:60px;
+    bottom:10px;
+    z-index: 1000;
+}
+.fade .upRight{
+    position:absolute;
+    right:60px;
+    top:10px;
+    z-index: 1000;
+}
+.fade .bottomRight{
+    position:absolute;
+    right:60px;
+    bottom:10px;
+    z-index: 1000;
+}

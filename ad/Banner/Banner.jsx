@@ -4,6 +4,7 @@ import './css/banner-anim.css';
 
 import Default from './Animation/SwitchAnim/Default/default';
 import Slider from './Animation/SwitchAnim/Slider/Slider';
+import Fade from './Animation/SwitchAnim/Fade/Fade';
 import Across from './Animation/SwitchAnim/Across/across';
 import AcrossOverlay from './Animation/SwitchAnim/AcrossOverlay/acrossOverlay';
 import Grid from './Animation/SwitchAnim/Grid/grid';
@@ -50,7 +51,12 @@ export default class Banner extends Component {
                 </Slider>
             );
         }
-        /*The default mode*/
+        if(this.props.animType =="fade".toLowerCase() || this.props.animType =="fade".toUpperCase() || this.props.animType =="Fade"){
+            return(
+                <Fade data={ DATA }>
+                </Fade>
+            );
+        }
         if(this.props.animType =="across".toLowerCase() || this.props.animType =="across".toUpperCase() || this.props.animType =="Across" ){
             return(
                 <Across data={ DATA }>
