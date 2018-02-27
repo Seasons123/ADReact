@@ -32,13 +32,13 @@ export default class BannerItem extends Component {
                       </li>
                 )
               }
-              else{
+             /* else{
                   li[i]=(
                       <li className='fade'>
                               <img src={item.src} alt={item.alt} style={{opacity:0}}/>
                       </li>
                   )
-              }
+              }*/
         }
 
         return (
