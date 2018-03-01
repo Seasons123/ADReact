@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM  from 'react-dom';
-import OneTween, { OneTweenGroup } from '../../../LowLevelAnim/SingleAnim/index';
+import SingleAnim, { OneTweenGroup } from '../../../LowLevelAnim/SingleAnim/index';
 import ticker from '../../../LowLevelAnim/SingleAnim/ticker';
 
 import '../../css/graphFocus.css';
@@ -173,7 +173,7 @@ export default class GraphFocus extends React.Component {
     render() {
         return (<div className="logo-gather-demo-wrapper">
             <canvas id="canvas" />
-            <OneTween
+            <SingleAnim
                 animation={this.state.boxAnim}
                 className="right-side blur"
                 onMouseEnter={this.onMouseEnter}
@@ -183,7 +183,7 @@ export default class GraphFocus extends React.Component {
                 }}
             >
                 {this.state.children}
-            </OneTween>
+            </SingleAnim>
         </div>);
     }
 }
