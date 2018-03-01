@@ -1,6 +1,6 @@
 import  { TweenOneGroup } from 'rc-tween-one';
 import { Input, Button, InputNumber, Radio, Icon } from 'antd';
-import '../../css/logoGather.css';
+import '../../css/graphFocus.css';
 
 export default class  Edit extends React.Component {
     constructor(props) {

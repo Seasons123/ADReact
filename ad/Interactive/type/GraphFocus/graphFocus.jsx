@@ -3,10 +3,10 @@ import ReactDOM  from 'react-dom';
 import OneTween, { OneTweenGroup } from '../../../LowLevelAnim/SingleAnim/index';
 import ticker from '../../../LowLevelAnim/SingleAnim/ticker';
 
-import '../../css/logoGather.css';
+import '../../css/graphFocus.css';
 
 
-export default class LogoGather extends React.Component {
+export default class GraphFocus extends React.Component {
     static propTypes = {
         image: React.PropTypes.string,
         w: React.PropTypes.number,

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import LogoGather from './type/LogoGather/logoGather';
+import GraphFocus from './type/GraphFocus/graphFocus';
 
 
 export default class Interactive extends Component {
@@ -16,7 +16,7 @@ export default class Interactive extends Component {
         /*the first kind ，logoGather*/
         if( this.props.type== "logoGather" || this.props.type== "LogoGather" )
             return(
-                <LogoGather items={this.props.content}
+                <GraphFocus items={this.props.content}
                 />
             );
 
