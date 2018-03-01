@@ -75,8 +75,8 @@ export default class GraphFocus extends React.Component {
             const r = Math.random() * this.props.pointSizeMin + this.props.pointSizeMin;
             const b = Math.random() * 0.4 + 0.1;
             children.push(
-                <OneTween className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
-                    <OneTween
+                <SingleAnim className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
+                    <SingleAnim
                         className="point"
                         style={{
                             width: r,
@@ -94,7 +94,7 @@ export default class GraphFocus extends React.Component {
                             ease: 'easeInOutQuad',
                         }}
                     />
-                </OneTween>
+                </SingleAnim>
             );
         });
         this.setState({
