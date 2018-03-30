@@ -1,0 +1,40 @@
+.outer{
+    width: 100%;
+    top: 30px;
+    left: 0;
+    z-index: 10;
+}
+
+.main{
+    margin-top: 20px;
+    float: left;
+    width:500px;
+    height: 400px;
+}
+
+.forceLayout{
+    border:1px solid rgba(102,102,102,0.47)
+}
+/*力导向图*/
+.forceLine {
+    stroke: #bce2f9;
+    stroke-width: 2 ;
+}
+
+.forceCircle {
+    stroke: #bce2f9;
+    stroke-width: 2 ;
+}
+
+.forceText {
+    /*fill: black ;*/
+    text-anchor: middle ;
+    /*font-size: 20px;
+    font-family: arial;*/
+
+    color: #666666;
+    cursor: default;
+    font-size: 11px;
+}
+
+/*力导向图 end*/

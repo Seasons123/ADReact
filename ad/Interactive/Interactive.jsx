@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import GraphFocus from './type/GraphFocus/graphFocus';
+import ForceDirectedGraph from './type/ForceDirectedGraph/ForceDirectedGraph';
 
 
 export default class Interactive extends Component {
@@ -13,10 +14,16 @@ export default class Interactive extends Component {
 
     render() {
 
-        /*the first kind ，logoGather*/
-        if( this.props.type== "logoGather" || this.props.type== "LogoGather" )
+        /*the first kind ，GraphFocus*/
+        if( this.props.type== "graphFocus" || this.props.type== "GraphFocus" )
             return(
                 <GraphFocus items={this.props.content}
+                />
+            );
+        /*the secend kind ，ForceDirectedGraph*/
+        if( this.props.type== "forceDirectedGraph" || this.props.type== "ForceDirectedGraph" )
+            return(
+                <ForceDirectedGraph items={this.props.content}
                 />
             );
 
