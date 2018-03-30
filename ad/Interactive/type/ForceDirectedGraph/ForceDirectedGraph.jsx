@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import d3 from 'd3';
-
 import '../../css/forceDirectedGraph.css';
 
 export default class ForceDirectedGraph extends React.Component {
@@ -11,16 +10,16 @@ export default class ForceDirectedGraph extends React.Component {
     }
     componentDidMount() {
 
-        var width  = 500;	//SVG绘制区域的宽度
-        var height = 400;	//SVG绘制区域的高度
+        let width  = this.width;	//SVG绘制区域的宽度
+        let height = this.height;	//SVG绘制区域的高度
 
-        var svg = d3.select(".forceLayout")			//选择<body>
+        let svg = d3.select(".forceLayout")			//选择<body>
             .append("svg")			//在<body>中添加<svg>
             .attr("width", width)	//设定<svg>的宽度属性
             .attr("height", height);//设定<svg>的高度属性
 
         //1.确定初始数据
-        var nodes = [ { name: "0" ,text:"快乐"   },
+        let nodes = [ { name: "0" ,text:"快乐"   },
             { name: "1" ,text:"健康"},
             { name: "2" ,text:"开心"   },
             { name: "3" ,text:"微笑"  },
@@ -28,7 +27,7 @@ export default class ForceDirectedGraph extends React.Component {
             { name: "5" ,text:"包容"  },
             { name: "6" ,text:"阳光"  } ];
 
-        var edges = [  { source : 0  , target: 1 } ,
+        let edges = [  { source : 0  , target: 1 } ,
             { source : 0  , target: 2 } ,
             { source : 0  , target: 3 } ,
             { source : 1  , target: 4 } ,
@@ -37,7 +36,7 @@ export default class ForceDirectedGraph extends React.Component {
         ];
 
         //2.转换数据
-        var force = d3.layout.force()
+        let force = d3.layout.force()
             .nodes(nodes)	//设定顶点数组
             .links(edges)	//设定边数组
             .size([width,height])	//设定作用范围
@@ -50,17 +49,17 @@ export default class ForceDirectedGraph extends React.Component {
         console.log(edges);
 
         //3.绘制
-        var color = d3.scale.category20();
+        let color = d3.scale.category20();
 
         //绘制连线
-        var lines = svg.selectAll(".forceLine")
+        let lines = svg.selectAll(".forceLine")
             .data(edges)
             .enter()
             .append("line")
             .attr("class","forceLine");
 
         //绘制节点
-        var circles = svg.selectAll(".forceCircle")
+        let circles = svg.selectAll(".forceCircle")
             .data(nodes)
             .enter()
             .append("circle")
@@ -72,7 +71,7 @@ export default class ForceDirectedGraph extends React.Component {
             .call(force.drag);
 
         //绘制文字
-        var texts = svg.selectAll(".forceText")
+        let texts = svg.selectAll(".forceText")
             .data(nodes)
             .enter()
             .append("text")
