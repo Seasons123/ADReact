@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-
 import Banner from './Banner/Banner';
 
 
@@ -49,7 +48,7 @@ var MainPage=React.createClass({
                 arrow={true}
                 arrowDefault={true}
                 thumb={true}
-                animType={"videoBg"}
+                animType={"vertical"}
             />
         );
     },

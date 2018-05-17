@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-
 import Banner from './Banner/Banner';
-
 
 
 const IMAGE_DATA = [
