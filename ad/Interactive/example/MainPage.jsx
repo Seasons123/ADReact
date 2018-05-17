@@ -18,7 +18,7 @@ var MainPage=React.createClass({
     return(
         <Interactive
             items={IMAGE_DATA}
-            type={'logoGather'}
+            type={'graphFocus'}
         />
     );
   },
