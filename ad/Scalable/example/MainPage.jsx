@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-
 import Scalable from './Scalable/scalable';
 
 const IMAGE_DATA = [

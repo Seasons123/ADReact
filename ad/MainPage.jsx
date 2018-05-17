@@ -1,11 +1,23 @@
 import React from 'react';
 import { render } from 'react-dom';
-import PopUp from './PopUp/PopUp';
+import Scalable from './Scalable/scalable';
 
 const IMAGE_DATA = [
-    {src: require('./assets/images/popup/size2(800.450)/demo1.jpg')},
-    {src: require('./assets/images/popup/couplet/couplet1.jpg')},
-    {src: require('./assets/images/popup/couplet/couplet2.jpg')}
+    {
+        src: require('./assets/images/scalable/size1(800)/adSmall.jpg'),
+        width:'800px',
+        height:'80px',
+    },
+    {
+        src: require('./assets/images/scalable/size1(800)/adBig.jpg'),
+        width:'800px',
+        height:'380px',
+    },
+    {
+        src: require('./assets/images/scalable/size1(800)/smallVertical.jpg'),
+        width:'80px',
+        height:'450px',
+    },
 ];
 
 
@@ -14,22 +26,16 @@ var MainPage=React.createClass({
     render:function(){
 
         return(
-            <PopUp
+            <Scalable
                 items={IMAGE_DATA}
                 width={'800px'}
-                height={'450px'}
                 link={"https://github.com"}
-                position={"center"}
-                distanceX={""}
-                distanceY={""}
-                mask={true}
-                maskColor={'rgba(0,0,0,0.3)'}
-                autoDisappear={false}
-                duration={1600}
+                position={"right"}
+                autoDisappear={true}
+                delay={1600}
+                aotoNormalSize={true}
             />
         );
     },
 });
 module.exports=MainPage;
-
-
