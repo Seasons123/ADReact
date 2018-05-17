@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-
 import Interactive from './Interactive/Interactive';
 
 const IMAGE_DATA = [
