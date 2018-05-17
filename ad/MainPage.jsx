@@ -16,14 +16,16 @@ var MainPage=React.createClass({
         return(
             <PopUp
                 items={IMAGE_DATA}
-                width={'135px'}
-                height={'180px'}
+                width={'800px'}
+                height={'450px'}
                 link={"https://github.com"}
-                position={"bottomRight"}
-                distanceX={"20px"}
-                distanceY={"30px"}
-                mask={false}
+                position={"center"}
+                distanceX={""}
+                distanceY={""}
+                mask={true}
+                maskColor={'rgba(0,0,0,0.3)'}
                 autoDisappear={false}
+                duration={1600}
             />
         );
     },
