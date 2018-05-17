@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM  from 'react-dom';
-import SingleAnim, { OneTweenGroup } from '../../../LowLevelAnim/SingleAnim/index';
-import ticker from '../../../LowLevelAnim/SingleAnim/ticker';
+import OneTween, { OneTweenGroup } from 'rc-tween-one';
+import ticker from 'rc-tween-one/lib/ticker';
 
 import '../../css/graphFocus.css';
 
 
-export default class GraphFocus extends React.Component {
+export default class graphFocus extends React.Component {
     static propTypes = {
         image: React.PropTypes.string,
         w: React.PropTypes.number,
@@ -75,8 +75,8 @@ export default class GraphFocus extends React.Component {
             const r = Math.random() * this.props.pointSizeMin + this.props.pointSizeMin;
             const b = Math.random() * 0.4 + 0.1;
             children.push(
-                <SingleAnim className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
-                    <SingleAnim
+                <OneTween className="point-wrapper" key={i} style={{ left: item.x, top: item.y }}>
+                    <OneTween
                         className="point"
                         style={{
                             width: r,
@@ -94,7 +94,7 @@ export default class GraphFocus extends React.Component {
                             ease: 'easeInOutQuad',
                         }}
                     />
-                </SingleAnim>
+                </OneTween>
             );
         });
         this.setState({
@@ -173,7 +173,7 @@ export default class GraphFocus extends React.Component {
     render() {
         return (<div className="logo-gather-demo-wrapper">
             <canvas id="canvas" />
-            <SingleAnim
+            <OneTween
                 animation={this.state.boxAnim}
                 className="right-side blur"
                 onMouseEnter={this.onMouseEnter}
@@ -183,7 +183,7 @@ export default class GraphFocus extends React.Component {
                 }}
             >
                 {this.state.children}
-            </SingleAnim>
+            </OneTween>
         </div>);
     }
 }
