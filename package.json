@@ -22,7 +22,7 @@
     "enquire": "^0.0.2",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.13.1",
     "raf": "^3.3.2",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
