@@ -1,68 +1,70 @@
-# Marquee (跑马灯) 组件文档
+# Marquee Component Documentation
 
-## 一、Marquee (跑马灯) 组件介绍 (Marquee Component Introduction)
+[中文版](./README.zh-CN.md)
 
-Marquee 组件用于在网页中创建水平滚动的文本效果，通常用于展示公告、通知、新闻头条或任何需要动态吸引用户注意力的简短信息。它可以使静态文本内容以动画的形式循环展示。
+## 1. Marquee Component Introduction
 
-## 二、主要功能 (Key Features)
+The Marquee component is used to create horizontal scrolling text effects on a webpage, typically for displaying announcements, notifications, news headlines, or any brief information that needs to dynamically catch the user's attention. It allows static text content to be displayed in a loop with animation.
 
-*   **水平文本滚动:** 主要实现文本从右向左或从左向右的滚动效果。
-*   **内容可定制:** 支持自定义滚动的文本内容。
-*   **样式可配置:** 允许自定义文本的字体大小、颜色和字体家族。
-*   **超链接支持:** 滚动的文本可以作为一个整体链接到指定的URL。
-*   **滚动行为控制:**
-    *   可调整滚动速度 (通过 `interval` 定义单次滚动时长)。
-    *   可设置 CSS 动画的时间函数 (`timingFunction`)。
-    *   可指定滚动方向 (`direction`)。
-*   **循环控制:** 支持无限循环滚动或固定次数的滚动。
-*   **悬停暂停:** 当鼠标悬停在 Marquee 组件上时，可以暂停文本的滚动。
+## 2. Key Features
 
-## 三、Props (参数说明)
+*   **Horizontal Text Scrolling:** Primarily implements text scrolling from right to left or left to right.
+*   **Customizable Content:** Supports custom text content for scrolling.
+*   **Configurable Style:** Allows customization of font size, color, and font family.
+*   **Hyperlink Support:** The scrolling text can act as a whole link to a specified URL.
+*   **Scrolling Behavior Control:**
+    *   Adjustable scrolling speed (defined via `interval` for single scroll duration).
+    *   Configurable CSS animation timing function (`timingFunction`).
+    *   Specifiable scrolling direction (`direction`).
+*   **Loop Control:** Supports infinite looping or a fixed number of scrolls.
+*   **Pause on Hover:** Text scrolling can be paused when the mouse hovers over the Marquee component.
 
-以下是 Marquee 组件可接受的参数列表：
+## 3. Props
 
-| Prop 名称        | 类型    | 默认值                               | 描述                                                                     | 示例                         |
+The following is the list of parameters accepted by the Marquee component:
+
+| Prop Name        | Type    | Default Value                        | Description                                                                     | Example                         |
 | ---------------- | ------- | ------------------------------------ | ------------------------------------------------------------------------ | ---------------------------- |
-| `text`           | String  | `'After all , tomorrow is another day '` | 要滚动的文本内容。                                                       | `'最新消息：今日天气晴朗'`     |
-| `fontSize`       | String  | `'20px'`                             | 文本的字体大小。                                                         | `'16px'`                     |
-| `fontColor`      | String  | `'#323232'`                          | 文本的颜色。                                                             | `'#FF0000'`                  |
-| `fontFamily`     | String  | `'Microsoft YaHei'`                  | 文本的字体。                                                             | `'Arial, sans-serif'`        |
-| `link`           | String  | `"https://github.com/Seasons123"`    | 文本点击后跳转的URL。如果为空字符串或未提供，则文本不可点击。            | `'https://www.example.com'`  |
-| `autoRoll`       | Boolean | `true`                               | 是否无限循环滚动。如果设置为 `true`，则 `rollCount` 参数将被忽略。         | `false`                      |
-| `rollCount`      | Number  | `2`                                  | 当 `autoRoll` 为 `false` 时，文本滚动的总次数。                          | `3`                          |
-| `interval`       | Number  | `20`                                 | 完成一次完整的滚动所需的时间 (单位: 秒)。此值越小，滚动速度越快。           | `10`                         |
-| `timingFunction` | String  | `'linear'`                           | CSS 动画的时间函数，控制滚动的加速度曲线。                               | `'ease-in-out'`              |
-| `direction`      | String  | `'left'`                             | 文本滚动的方向。通常支持 `'left'` (向左滚动) 和 `'right'` (向右滚动)。 | `'right'`                    |
+| `text`           | String  | `'After all , tomorrow is another day '` | The text content to scroll.                                                       | `'Latest News: Sunny weather today'`     |
+| `fontSize`       | String  | `'20px'`                             | Font size of the text.                                                         | `'16px'`                     |
+| `fontColor`      | String  | `'#323232'`                          | Color of the text.                                                             | `'#FF0000'`                  |
+| `fontFamily`     | String  | `'Microsoft YaHei'`                  | Font family of the text.                                                             | `'Arial, sans-serif'`        |
+| `link`           | String  | `"https://github.com/Seasons123"`    | URL to jump to when text is clicked. If empty or not provided, text is not clickable.            | `'https://www.example.com'`  |
+| `autoRoll`       | Boolean | `true`                               | Whether to scroll infinitely. If `true`, the `rollCount` parameter is ignored.         | `false`                      |
+| `rollCount`      | Number  | `2`                                  | Total number of times to scroll when `autoRoll` is `false`.                          | `3`                          |
+| `interval`       | Number  | `20`                                 | Time required to complete one full scroll (in seconds). Smaller values mean faster speed.           | `10`                         |
+| `timingFunction` | String  | `'linear'`                           | CSS animation timing function to control the scroll's acceleration curve.                               | `'ease-in-out'`              |
+| `direction`      | String  | `'left'`                             | Direction of text scrolling. Usually supports `'left'` and `'right'`. | `'right'`                    |
 
-## 四、使用示例 (Usage Example)
+## 4. Usage Example
 
-以下是一个基本的 Marquee 组件使用示例：
+Here is a basic usage example of the Marquee component:
 
 ```jsx
 import React from 'react';
-import Marquee from './Marquee'; // 假设 Marquee 组件在当前目录或已正确配置路径
+import Marquee from './Marquee'; // Assuming Marquee component is in the current directory or path is correctly configured
 
 function MyNewsTicker() {
     return (
         <div>
             <Marquee
-                text="这是一条重要的滚动新闻，点击这里查看详情！"
+                text="This is an important scrolling news, click here for details!"
                 fontSize="18px"
                 fontColor="#FF0000"
                 fontFamily="SimSun, serif"
                 link="http://example.com/news-article"
-                autoRoll={true} // 无限滚动
-                interval={15}   // 15秒完成一次滚动
-                direction="left" // 向左滚动
+                autoRoll={true} // Infinite scrolling
+                interval={15}   // 15 seconds per scroll
+                direction="left" // Scroll left
                 timingFunction="linear"
             />
 
             <Marquee
-                text="此消息仅滚动3次。"
+                text="This message scrolls only 3 times."
                 fontSize="16px"
                 fontColor="#0000FF"
-                autoRoll={false} // 关闭无限滚动
-                rollCount={3}    // 滚动3次
+                autoRoll={false} // Disable infinite scroll
+                rollCount={3}    // Scroll 3 times
                 interval={10}
             />
         </div>
@@ -72,9 +74,9 @@ function MyNewsTicker() {
 export default MyNewsTicker;
 ```
 
-## 五、示例页面 (Example Page)
+## 5. Example Page
 
-项目内提供了一个可运行的 Marquee 组件示例，位于：
+An executable Marquee component example is available in the project at:
 [`ad/Marquee/example/MainPage.jsx`](./example/MainPage.jsx)
 
-您可以参考此文件来了解 Marquee 组件在实际项目中的具体用法和配置方式。该示例通常会演示组件的多种功能和参数配置。
+You can refer to this file to understand the specific usage and configuration of the Marquee component in a real project. This example typically demonstrates various features and parameter configurations.

@@ -1,52 +1,54 @@
-# ad 项目文档
+# ad Project Documentation
 
-## 一、项目介绍 (Project Introduction)
+[中文版](./README.zh-CN.md)
 
-`ad` 是一个基于 React 的组件库，旨在帮助开发者快速构建动态、交互式的广告元素及其他丰富的网页内容。本组件库具有高度的灵活性和可扩展性，能够适应多种复杂的应用场景，不仅仅局限于广告，还可以用于创建各种引人入胜的用户界面元素。
+## 1. Project Introduction
 
-## 二、主要组件 (Key Components)
+`ad` is a React-based component library designed to help developers quickly build dynamic and interactive advertising elements as well as other rich web content. This library features high flexibility and extensibility, adapting to various complex application scenarios beyond just advertisements, and can be used to create engaging user interface elements.
 
-本库提供了一系列预设组件，方便开发者直接使用：
+## 2. Key Components
 
-*   **Banner (轮播图):** 用于创建图片或内容轮播效果，支持自动播放、手动切换等多种配置。
-*   **Interactive (交互式图表/元素):** 提供构建交互式图表或动态元素的工具，增强用户参与度。
-*   **LowLevelAnim (底层动画库):** 封装了底层的动画实现，为上层组件提供动画支持，也方便开发者自定义复杂动画。
-*   **Marquee (跑马灯):** 实现文字或内容的滚动展示效果，常用于通知、公告等场景。
-*   **PopUp (弹出窗口):** 用于创建模态对话框、提示框等弹出式窗口。
-*   **Scalable (可缩放容器):** 提供一个可以根据内容或父容器动态调整大小的容器组件。
+This library provides a set of preset components for developers to use directly:
 
-## 三、安装 (Installation)
+*   **Banner:** Used for creating image or content carousel effects, supporting multiple configurations like auto-play and manual switching.
+*   **Interactive:** Tools for building interactive charts or dynamic elements to enhance user engagement.
+*   **LowLevelAnim (Low-level Animation Library):** Encapsulates low-level animation implementations, providing animation support for upper-level components and allowing developers to customize complex animations.
+*   **Marquee:** Implements scrolling text or content display effects, commonly used for notifications, announcements, etc.
+*   **PopUp:** Used for creating modal dialogs, alerts, and other pop-up windows.
+*   **Scalable:** A container component that can dynamically adjust its size based on the content or parent container.
 
-在项目根目录下运行以下命令来安装项目所需的依赖：
+## 3. Installation
+
+Run the following command in the project root directory to install the required dependencies:
 
 ```bash
 npm install
 ```
 
-## 四、开发 (Development)
+## 4. Development
 
-本项目使用 Express (`devServer.js`) 作为本地开发服务器，用于运行示例页面或进行组件的本地开发调试。执行以下命令启动开发服务器：
+This project uses Express (`devServer.js`) as a local development server for running example pages or for local development and debugging of components. Execute the following command to start the development server:
 
 ```bash
 npm run server
 ```
-该命令会启动一个热更新的开发环境，方便实时查看代码变更的效果。
+This command will start a hot-reloading development environment, making it easy to see code changes in real-time.
 
-## 五、构建 (Building)
+## 5. Building
 
-根据不同环境的需要，可以执行以下命令来打包项目：
+Depending on the environment's needs, you can execute the following commands to package the project:
 
-### 开发构建 (Development Build)
+### Development Build
 
-此命令会以开发模式打包，并监听文件变化进行自动重新构建：
+This command packages the project in development mode and watches for file changes to automatically rebuild:
 
 ```bash
 npm run build
 ```
 
-### 生产构建 (Production Build)
+### Production Build
 
-此命令会以生产模式打包，进行代码压缩和优化，适用于部署到生产环境：
+This command packages the project in production mode, performing code compression and optimization, suitable for deployment to production environments:
 
 ```bash
 npm run dist
@@ -54,7 +56,7 @@ npm run dist
 
 ---
 
-**注意:**
-*   `npm run build` 脚本通常配置为 `NODE_ENV=development webpack --progress --colors --watch`。
-*   `npm run dist` 脚本通常配置为 `NODE_ENV=production webpack --progress --colors`。
-具体配置请参考 `package.json` 文件中的 `scripts` 部分。
+**Note:**
+*   The `npm run build` script is typically configured as `NODE_ENV=development webpack --progress --colors --watch`.
+*   The `npm run dist` script is typically configured as `NODE_ENV=production webpack --progress --colors`.
+Refer to the `scripts` section in the `package.json` file for specific configurations.
