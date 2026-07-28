@@ -2,6 +2,8 @@
 
 [中文版](./README.zh-CN.md)
 
+This repository is an open-source implementation of my master’s thesis, *Design and Implementation of a React-Based Frontend Advertising Component Library* (Shandong University, 2018). It has been continuously maintained and refactored since graduation, so some implementation details may differ from the original thesis. For academic references, please rely on the thesis text; for the latest engineering implementation, please refer to this repository.
+
 ## 1. Project Introduction
 
 `ad` is a React-based component library designed to help developers quickly build dynamic and interactive advertising elements as well as other rich web content. This library features high flexibility and extensibility, adapting to various complex application scenarios beyond just advertisements, and can be used to create engaging user interface elements.
