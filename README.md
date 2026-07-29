@@ -1,7 +1,5 @@
 # ad Project Documentation
 
-[中文版](./README.zh-CN.md)
-
 This repository is an open-source implementation of my master’s thesis, *Design and Implementation of a React-Based Frontend Advertising Component Library* (Shandong University, 2018). It has been continuously maintained and refactored since graduation, so some implementation details may differ from the original thesis. For academic references, please rely on the thesis text; for the latest engineering implementation, please refer to this repository.
 
 ## 1. Project Introduction
