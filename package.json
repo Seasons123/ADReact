@@ -20,7 +20,7 @@
     "css-loader": "^0.23.1",
     "deep-eql": "^2.0.2",
     "enquire": "^0.0.2",
-    "express": "^4.13.4",
+    "express": "^4.18.2",
     "file-loader": "^0.8.5",
     "node-sass": "^3.4.2",
     "raf": "^3.3.2",
